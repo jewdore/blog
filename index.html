@@ -11,7 +11,7 @@ title: jewdore cage
     {% endfor %}
   </ul>
   <h1>Blog Posts2</h1>
-  {{ site.post_url}}
+  {{ site.post_url }}
   <ul class="posts">
     {% for post in site.post_url %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/blog{{ post.url }}">{{ post.title }}a</a></li>
