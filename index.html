@@ -11,8 +11,7 @@ title: jewdore cage
     {% endfor %}
   </ul>
   <h1>Blog Posts2</h1>
-  {{ site.baseurl }}
-  <ul class="posts">
+  <ul class="posts">a
     {% for post in site.post %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/blog{{ post.url }}">{{ post.title }}a</a></li>
     {% endfor %}
