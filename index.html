@@ -10,12 +10,16 @@ title: jewdore cage
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-  <h1>Blog Posts2</h1>
-  <ul class="posts">
-    {% for post in site.categories.list %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/blog{{ post.url }}">{{ post.title }}a</a></li>
-    {% endfor %}
-  </ul>
+  <h1>Category</h1>
+2<ul>
+3    //这里使用了 Jekyll 语法，会被编译，所以加多个"\"
+4    {% for category in site.categories %}
+5    <li><a href="/categories/{{ category | first }}" title="view all
+6posts">{{ category | first }} {{ category | last | size }}</a>
+7    </li>
+8    {% endfor %}
+9</ul>
+  
 
   
 </div>
