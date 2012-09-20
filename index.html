@@ -10,14 +10,7 @@ title: jewdore cage
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-  <h1>Category</h1>
-<ul>
-    
-    {% for category in site.categories %}
-    <li><a href="/categories/{{ category | first }}" title="view {{ category | first }}">{{ category | first }} {{ category | last | size }}</a>
-    </li>
-    {% endfor %}
-</ul>
+   
   
 
   

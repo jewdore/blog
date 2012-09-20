@@ -1,2 +1,5 @@
-safe:false
-baseurl:/blog/
+safe:        false
+auto:        false
+baseurl:     /blog
+
+ 
