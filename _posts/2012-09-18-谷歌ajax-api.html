@@ -1,0 +1,9 @@
+---
+layout: default
+title: 谷歌ajax search api
+category: technology
+---
+<p>今天遇到个问题：我想采集谷歌的搜索结果。</p>
+<p>可想而知，我遇到的挫折。谷歌的搜索结果是加密的，这个让我很是苦恼。</p>
+<p>不过幸好，谷歌还提供了ajax search api接口，可以通过这个来解决。</p>
+<p>我的解决思路是：先通过这个接口获得json，通过php分析这个json，得到里面的url，将url合并起来，弄到一个txt里面。现在有url了，接下来就可以使用火车头，采集了。</p>
