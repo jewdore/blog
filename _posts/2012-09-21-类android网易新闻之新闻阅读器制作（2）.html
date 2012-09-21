@@ -1,0 +1,8 @@
+---
+layout: post
+title: 类Android网易新闻之新闻阅读器制作（2）
+---
+
+<p>转自我的个人博客-蝶舞菜花</p><p>完成splash之后，便开始制作列表页。就像之前说的，列表页具有更新和分页的功能，这两个功能都是很常见的。为了使列表支持拖动刷新功能，这里我用到了一个开源插件PullToRefreshListView，这个开源的组件可以使列表页拥有拖动更新的功能。</p><p>这是由johannilsson以及众位其好友的研究成果，并已 Apache 2.0 协议开源托管在 Github：https://github.com/johannilsson/android-pulltorefresh，具体效果图如下：</p><p>他的原理是继承listview，并利用headview，配合上ontouch和onscroll来检测用户下拉和上滑的动作来实现这种效果。</p><p>有了PullToRefreshListView之后，我们的列表就有了下拉更新功能，再配合上footview我们就可以实现分页功能了。至此，UI部分没什么好讲的。再来看看工作线程，我们大概要建立两个工作线程，一个负责更新，一个负责取当前列表及其分页。</p><p>这里我们既可以使用Thread+Handler+Message的方式，也可以是用AsyncTask来建立工作线程，</p><p>如更新部分我们使用了AsyncTask：</p>privateclassGetDataTaskextendsAsyncTask&lt;Void,Void,List&lt;News&gt;&gt;{@OverrideprotectedList&lt;News&gt;doInBackground(Void...params){//Simulatesabackgroundjob.//更新获取数据try{if(ApplicationEx.isNetworkConnected(CiReader.this)){List&lt;News&gt;updatelist=HttpDataService.getNewsListForUpdate(CiReader.this,cur_tab,firstItem,LIMIT);//存储if(updatelist!=null&amp;&amp;!updatelist.isEmpty()){Iterator&lt;News&gt;iter=updatelist.iterator();while(iter.hasNext()){Newsnews=iter.next();news.storageNews(CiReader.this);((LinkedList&lt;News&gt;)list).addFirst(news);}}}}catch(Exceptione){e.printStackTrace();}returnlist;}@OverrideprotectedvoidonPostExecute(List&lt;News&gt;result){//mListItems.addFirst("Addedafterrefresh...");if(!ApplicationEx.isNetworkConnected(CiReader.this)){Tools.displayMsg(CiReader.this,"无网络连接");}//CallonRefreshCompletewhenthelisthasbeenrefreshed.pulltorefreshlist.onRefreshComplete();super.onPostExecute(result);}}
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

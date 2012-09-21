@@ -1,0 +1,8 @@
+---
+layout: post
+title: 在github上fork（叉）别人的项目，以及添加submodule
+---
+
+<p>1.fork别人</p><p>github上面每个项目都有一个fork按钮，点击这个按钮，可以复制一份项目到你的仓库列表当中。</p><p>2.fork别人后检出到本地</p><p>你想进行修改的话，需要将仓库复制到本地，在本地新建一个文件夹</p><pre class="brush:shell;gutter:false;">mkdir mydircd mydirgit init git remote add origin git@github.com:WeweTom/dotemacs.git git pull</pre><pre class="brush:shell;gutter:false;">新建一个文件夹mydir进入文件夹mydir初始化仓库为仓库添加源地址从源地址获（拉）取源代码</pre><p>如果添加源地址出错，要删除原来的错误源地址</p><pre class="brush:shell;gutter:false;">git remote rm origin</pre><p>然后再添加源地址，否则会报错，已经有源地址</p><p>如果有依赖其它的submodule</p><p>git submodule init</p><p>git submodule update</p><p>3.为本地仓库添加submodule。（更详细的移步这里）比如，分别为sub1，来自于本地的仓库，ShareJS，来自于github</p><p>在本地建立仓库：</p><pre class="brush:shell">mkdir sub1 //子仓库cd sub1git initcd ..mkdir main_prj //主仓库cd main_prjgit init</pre><p>为主仓库main_prj添加两个子模块sub1和ShareJS：</p><pre class="brush:shell">git submodule add 【sub1的绝对路径&mdash;&mdash;如果用相对路径我没有添加成功】sub1 //比如我的是 git submodule add e:/xampplite/htdocs/test/sub1/ sub1git submodule add http://github.com/WeweTom/ShareJS.git</pre><p>这样就可以独立的维护子仓库和主仓库了</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

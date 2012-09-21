@@ -1,0 +1,8 @@
+---
+layout: post
+title: 开发基于Safari的wap网站时，本地数据存储(sessionStorage localStorage sqlite)小结
+---
+
+<p>开发基于Safari的wap网站，有时可能需要保存一些数据在客户端，</p><p>那么保存数据，就是保存到Safari浏览器的存储空间里，</p><p>实现方式有三种：</p><p>  1、sessionStorage</p><p>  2、localStorage</p><p>  3、sqlite</p><p>sessionStorage localStorage 是html5的新特性，比较新的手机浏览器都支持，二者区别是，sessionStorage 保存的数据，在你关闭浏览器后，就清空了，localStorage保存的数据一直都存在。</p><p>sqlite是嵌在浏览器的一个数据库，浏览器开放一些接口，使得你的wap网站通过js，可以存储一些数据</p><p>通过js，创建数据库，建表，插入或查询数据等等。</p><p>sessionStorage localStorage 保存数据都是以键&#20540;对的形式，你可以在PC上用Chrome 或Safari的开发工具的resource里找到</p><p>localStorage保存比较简单的数据 如[key,value]，比较方便</p><p>如果保存比较复杂的数据形式，可以看下边这个文章</p><p>https://github.com/knadh/localStorageDB</p><p>但本人的问题是，如果是查询一条记录，它每次都得把字符串读一遍，效率会不会比sqlite低啊 ？</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

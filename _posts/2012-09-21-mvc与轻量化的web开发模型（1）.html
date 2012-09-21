@@ -1,0 +1,8 @@
+---
+layout: post
+title: MVC与轻量化的WEB开发模型（1）
+---
+
+<p>提到MVC的时候总会有人想到ASP.NET MVC。其实倒不是，MVC更多的是一种思想。而ASP.NET MVC只是把这些给具体的实现了而已。MVC模式的缺点是由于它没有明确的定义，所以完全理解MVC模式并不是很容易。如果想看下MVC的一些理论知识，可以看下这篇。http://zh.wikipedia.org/wiki/MVC</p><p>而流程侧如下。</p><p>OK,举例说明什么是MVC.</p><p>1：去商店买东西，付款拿到东西走人。</p><p>2：在有的地方可以付款，然后拿小票，然后再去买东西走人。</p><p>付款到取货的流程就是控制器。这两种形式其实很贴近与WebForm和Mvc的现实模型。第一种任何地方都可以付然后直接取货，第二种统一到一起进行支付然后有小票发货。</p><p>尽管有许多人都捍卫着WebForm或者ASP.NET MVC，争辩到底那种方式好或者不好，都是以偏概全，因为条条大路通罗马。选择你自己的支付方式就行了。求同存异。现实中也没见的上面的两种支付方法灭绝。</p><p>网上说的很多WebForm的缺点，比如依赖HttpContent,难以单元测试，ViewState。现在这些早就被人解决了，webform依然可以进行mock，ViewState也可以关闭。而个人认为WebForm的缺点就是曾经看过了一个系统，后台aspx文件800多个，于是打开后台目录哥头晕了。</p><p>首先看下其他的语言对于mvc的web开发模型是如何设计的。为什么不使用ASP.NET MVC，可以看下本文最下边。</p><p>ROR（Ruby on Rails）的。这个几乎是所有mvc的鼻祖。ASP.NET MVC就是这个的C#版。</p><pre class="brush:ruby;gutter:true;">class IndexController &lt; ApplicationController       def Index       endend</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: THREE.js 学习笔记（一）
+---
+
+一. 获取THREE.js<p>three.js的代码托管在github上面，https://github.com/mrdoob/three.js/</p><p>我们可以用git来获取代码，闲麻烦的话也可以直接下载zip文件。</p>二. 目录结构<p>拿到代码后先看下three.js的目录结构</p><p>|-build</p><p> |-custom</p><p> |-Three.js</p><p>|-examples</p><p>|-gui</p><p>|-src</p><p> |-cameras</p><p> |-core</p><p> |-extras</p><p> |-lights</p><p> |-materials</p><p> |-objects</p><p> |-renderers</p><p> |-scenes</p><p> |-textures</p><p> |-Three.js</p><p>|-utils</p><p> |-compiler</p><p> |-exporters</p><p> |-build.bat</p><p> |-build.sh</p><p> |-build.xml</p><p> |-build_all.bat</p><p> |-build_all.sh</p><ol>build目录下是源代码连接压缩过后的js文件，而连接和压缩源代码的工具放在utils目录下，在utils目录下还有一个exporters目录，是各种模型导出工具，插件，有blender和max的导出插件，还有把fbx转成THREE.js场景文件的python脚本。examples目录下都是three.js的示例，值得一提的是，里面有很多实用的shader脚本和js脚本可以拿来在自己的项目里用，比如js/ShaderExtra.js提供了很多现成的shader代码，js/postprocessing下提供了封装起来的几种常用的后处理的接口gui下面是一些封装后的ui接口src当然就是重头戏了，three.js的源代码都在这个目录下，src里下的各个子目录也很好的体现了three.js的构成，像camera，light，object这些都是一个场景（scene）的基础对象，而scenes下面则是对整个场景的管理代码，像scene graph的实现，renderers下是核心渲染器的实现，three.js对于场景和渲染器分离的还不错，可以用不同的renderer渲染同一个场景，当然对于一些WebGL支持的高级特性，使用其它的renderer肯定是不行的。还有一个extras目录是在核心代码之上的一些未程序提供便利的接口，比如提供了一些常用的camera，material，light。utils目录上面已提过</ol>三. example分析 - webgl trackballcamera earth<p>examples目录下有该示例</p><p>在这个example里我们能够看到：</p>一个最基本的three.js应用需要有的东西camera的创建以及camera control的添加基本形体的创建，材质的创建粒子系统的创建，这个会后面讲。<p>这里不会逐行逐行代码的分析，而是对于每个特性挑出代码来讲。</p><p>一个three.js应用的基本结构。</p><p>不管用什么写3d应用，c++的ogre，flash的pv3d，js的o3d，又或者使用场景编辑器，一个3d场景所需要的最基本的东西都是一样的，一个主要的camera，一个主要的scene。</p><p>当然一般的场景里都会有物体，有灯光，每个物体都有材质。我们在three.js中可以一个个手动创建，也可以直接加载一个记录场景数据的json文件。</p><p>创建一个scene</p><pre>scene = new THREE.Scene();</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

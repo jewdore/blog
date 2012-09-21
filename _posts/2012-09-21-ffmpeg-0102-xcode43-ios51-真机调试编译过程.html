@@ -1,0 +1,8 @@
+---
+layout: post
+title: ffmpeg-0.10.2 xcode4.3 IOS5.1  真机调试编译过程
+---
+
+<p>折腾了一下午总算把这个搞定了，之前在模拟器上运行iFrameExtractor怎么样都可以，但是在真机上总报错。到处查文章，找到的资料大多的ios4.x系列的，ffmpeg的版本也不太一样，因此折腾出来后把详细过程记录在这里，一来方便自己下次什么还需要再玩一遍，二来供有需要的人查找，不用绕我当初走的一些弯路。</p><p>首先下载以下工程代码：iFrameExtractor(https://github.com/lajos/iFrameExtractor), gas-preprocessor(https://github.com/yuvi/gas-preprocessor), ffmpeg(http://ffmpeg.org/download.html)。</p><p>把iFrameExtractor工程目录下的那个ffmpeg删掉，里面的ffmpeg版本实在太老。将自己下载的ffmpeg代码解压拷贝到iFrameExtractor目录下。 把gas-preprocessor.pl放到工程目录，或者干脆直接丢到/usr/bin下也成。 使用ffmpeg下面的configure来进行编译设置。</p><p>编译成真机调试还是模拟器调试的关键在于CC的类型，是用于编译macos程序的gcc还是供iPhone platform程序使用的gcc，以及config参数中arch是指定成x86还是armv7。 Xcode4.3中iPhone platform编译的gcc路径如下：/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/llvm-gcc IOS5.1的SDK目录为：/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk 用于真机调试的configure运行参数如下：</p><p>export DEVRoot=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developerexport SDKRoot=$DEVRoot/SDKs/iPhoneOS5.1.sdkexport CC=$DEVRoot/usr/bin/llvm-gcc</p><pre>./configure \--cc=${CC} \--as="gas-preprocessor.pl ${CC}" \--sysroot=${SDKRoot} \--enable-cross-compile \--target-os=darwin \--arch=arm \--cpu=cortex-a8 \--extra-cflags="-arch armv7" \--extra-ldflags="-arch armv7 -isysroot ${SDKRoot}" \--enable-pic \--disable-doc \--disable-ffplay \--disable-ffserver \--disable-gpl \--disable-shared \--enable-static \--disable-mmx \--disable-debug \--enable-decoder=h264  \--disable-asm</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

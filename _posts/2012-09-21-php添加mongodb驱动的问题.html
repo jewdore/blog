@@ -1,0 +1,8 @@
+---
+layout: post
+title: PHP添加mongodb驱动的问题
+---
+
+<p>Windows下mongodb的php驱动在此下载：https://github.com/mongodb/mongo-php-driver/downloads</p><p>选择其中的mongo-1.1.4.zip下载，其中包含了各种版本的驱动</p><p>每个驱动文件都只能用于与其对应版本的PHP。</p><p>这些文件名中，php5.2/5.3表示版本；</p><p>vc6/8/9表示运行PHP的服务器环境，vc6表示Apache环境，vc9表示IIS环境，vc8不太清楚&gt;...&lt;</p><p>ts表示开启了Thread Safety模式。</p><p>所以，在选择合适的驱动文件之前，你最好看下phpinfo，查看自己php的配置。</p><p>//-----------------------------------------------------------------------</p><p>扩展知识：</p><p>1. PHP的VC6与VC9</p><p>　　PHP官方网站中有如下一段话：</p><pre>Which version do I choose?If you are using PHP with Apache 1 or Apache2 from apache.org you need to use the VC6 versions of PHPIf you are using PHP with IIS you should use the VC9 versions of PHPVC6 Versions are compiled with the legacy Visual Studio 6 compilerVC9 Versions are compiled with the Visual Studio 2008 compiler and have improvements in performance and stability. The VC9 versions require you to have the Microsoft 2008 C++ Runtime (x86) or the Microsoft 2008 C++ Runtime (x64) installedDo NOT use VC9 version with apache.org binaries</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

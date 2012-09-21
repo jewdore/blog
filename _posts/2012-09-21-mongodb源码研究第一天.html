@@ -1,0 +1,8 @@
+---
+layout: post
+title: Mongodb源码研究-------第一天
+---
+
+<p>编译Mongodb源码（x64）:</p><p>参考了代震军老师的博客，地址：http://www.cnblogs.com/daizhj/archive/2011/03/07/1973764.html</p><p>代老师的代码是在x86下编译的，换成x64之后会稍微有一些小小的改动</p><p>mongodb：r2.0.0-rc2 下载地址：https://github.com/mongodb/mongo/</p><p>IDE：VS2010</p><p>boost库版本：1.42.0 原先使用了1.47.0这个版本，但是会出现编译错误，重新编译1.42.0的boost库之后，正常。</p><p>boost 1.42.0下载地址：http://www.boost.org/users/history/version_1_42_0.html</p><p>编译boost库的过程和代老师所说大致相同，只不过要在编译命令后面加一行，表示以64位指令编译boost代码。</p><p>重复的过程不再列出来，这里仅列出改动后的编译参数（红色是新加的命令）：</p><p>bjamstagevariant=debug--stagedir="d:\boost_1_42_0"--with-filesystem--with-thread--with-date_time--with-program_options--layout=versionedthreading=multitoolset=msvc-10.0address-model=64</p><p>其他的步骤都一样，但是不需要修改项目配置，默认情况下会自动将mongod这个项目编译成64位。</p><p>mongod代码初探：</p><p>只是初略的看了一下pch.h和pch.cpp</p><p>pch.h主要做了2件事情：</p><ol>定义了程序的退出状态，声明程序退出的处理函数。进行了简单的初始化，声明了：void doPreServerStatupInits();</ol><p>pch.cpp</p><p>　　额，水平有限，没有觉得它干了什么。。。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

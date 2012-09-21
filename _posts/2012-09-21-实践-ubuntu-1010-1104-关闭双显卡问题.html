@@ -1,0 +1,8 @@
+---
+layout: post
+title: 实践 Ubuntu 10.10/11.04 关闭双显卡问题
+---
+
+<p>Ubuntu 关闭双显卡目前有两种方法：</p>建立一个脚本/usr/local/sbin/vgaswitcher#!/bin/bashif [ &quot;$(whoami)&quot; != &quot;root&quot; ]; then echo &quot;Use as root&quot; exit 1fiif [ -z &quot;$1&quot; ]; then cmd=&quot;OFF&quot;else if [ &quot;$1&quot; = &quot;-i&quot; ]; then cmd=&quot;DIGD&quot; elif [ &quot;$1&quot; = &quot;-d&quot; ]; then cmd=&quot;DDIS&quot; else cmd=$1 fifiif ([ &quot;$cmd&quot; != &quot;OFF&quot; ] &amp;&amp; [ &quot;$cmd&quot; != &quot;DDIS&quot; ] &amp;&amp; [ &quot;$cmd&quot; != &quot;DIGD&quot; ]); then echo &quot;Bad Command!&quot; exit 1fiecho &quot;$cmd&quot; &gt; /sys/kernel/debug/vgaswitcheroo/switchcat /sys/kernel/debug/vgaswitcheroo/switch然后再建立一个启动脚本/etc/init.d/vgaswitch #!/bin/bashif [ &quot;$1&quot; != &quot;start&quot; ]; then exit;fi/usr/local/sbin/vgaswitcher/usr/local/sbin/vgaswitcher -i都建立好以后，执行如下命令：1 sudo chmod +x /usr/local/sbin/vgaswitcher /etc/init.d/vgaswitch &amp;&amp; sudo update-rc.d vgaswitch defaults重启就可以禁用掉独显了~<p>方法2：</p><p>　1. 安装acpi_call模块</p><p>　　sudo apt-get install git</p><p>　　git clone git://github.com/mkottman/acpi_call.git</p><p>　　cd acpi_call</p><p>　　make</p><p>　　sudo insmod acpi_call.ko</p><p>　　./test_off.sh</p><p>　　如果有提示OK证明独显已经关掉了</p><p>亲自体验结果:</p><p>显卡已经poweroff,但是</p>两种方法都会造成运行VMware虚拟机之后 将无法关机和重新启动 Ubuntu系统如果你需要Vmware虚拟机，请不要使用上面两种方法！我没有测试没有Vmware 运行的情况，如果你出现关机不能，也请不要使用上面方法关显卡。
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

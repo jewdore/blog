@@ -1,0 +1,8 @@
+---
+layout: post
+title: .NET 4 上的REST 框架
+---
+
+<p>两种常见的分布式应用架构风格包括：DO（分布式对象）、RPC（远程过程调用）。这两种架构风格在企业应用中得到了广泛的应 用，然而，Web架构的设计者们却有意避免采用这两种架构风格。主要的原因是运行Web应用的互联网环境，与运行企业应用的企业内网环境有很大的差别。 那么，互联网环境有哪些独有的特点呢？ 1. 可伸缩性要求难以预测和无法控制：一个Web应用的并发访问量，是开发者难以预测和无法控制的。 2. 安全性要求难以预测和无法控制：一个Web应用所接受的请求格式，是开发者难以预测和无法控制的，有可能出现大量恶意构造的请求格式。 3. 松耦合至关重要：因为存在着大量异构的系统，必须要追求最大限度的松耦合。 4. 简单性至关重要：不可引入复杂的编程模型，必须降低开发者开发Web应用的门槛。</p><p>软件应用所处的运行环境会对其架构设计产生巨大影响。设计软件应用的架构，一定要深入考虑软件所处的运行环境。脱离开软件所处的运行环境，比较不同架构 之间的优劣是没有意义的。</p><p>REST这种架构风格，正是为面向互联网的Web应用量身定制的。它由一组架构约束组成： 1. 客户-服务器 2. 无状态 3. 缓存 4. 统一接口 5. 分层系统 6. 按需代码（可选）</p><p>上述内容来自《REST实战》译者序。.NET上的分布式应用架构风格从WCF开始统一了Remoting，SOAP，以及对REST的支持。现在我们来看下最新的.NET平台上都有哪些REST框架和工具库：</p><ol>WCF WebHttp Services in .NET 4 ：WCF 3.5开始支持REST，实现方式上还是RPC 方式，Windows Communication Foundation (WCF)Web HTTP 编程模型可以向非 SOAP 终结点公开 WCF 服务操作。文档地址 http://msdn.microsoft.com/zh-cn/library/bb412169.aspxASP.NETWeb Api：这是完全按照HTTP模型实现的REST，目前还处于预览版，ASP.NET Web API允许开发人员通过HTTP开放他们的应用程序、数据和服务。这允许开发人员可以充分利用HTTP作为应用程序的协议，应用程序可以和丰富的客户端进行交互，不仅仅是浏览器、移动设备、桌面应用还是其他的后端服务。 Open Rasta：OpenRasta是一个基于MIT协议开源的支持.NET 2.0以上的Rest开发框架，重点围绕这资源和HTTP方法开发的REST框架。文档地址：https://github.com/openrasta/openrasta-stable/wiki<em>Service Stack</em> ：是一个高性能的开源 .NET/Mono REST服务框架 地址：http://www.servicestack.net/RestSharp ：这只是一个支持WindowsPhone，Mono for Android， MonoTouch跨平台的Rest 客户端开发库。地址：http://restsharp.org/<p>Hammock是个免费开源的框架，托管在github上 对网络操作进行了很好的封装，包含OAuth。地址：https://github.com/danielcrenna/hammock</p></ol>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

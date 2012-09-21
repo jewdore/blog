@@ -1,0 +1,8 @@
+---
+layout: post
+title: 初试rails 3.1
+---
+
+<p>一直使用的是Rails 3.0.10，Rails 3.1出来也有一段时间了，今天尝试了一下</p><p>老规矩建立工程后，首先发现的，就是目录有变化，JS，CSS之类不在默认放在public中，而是放在assets文件夹中，而且assets文件夹有三个，分别在app，vender和lib下，而原来的public文件夹，则只放了404等几个异常html</p><p>按照官方的说法，app下的的assets存入自定义的JS和CSS，vender下存放一些第三方库中带的JS和CSS，而lib下而存放项目中的一些通用库</p><p>项目建立后，启动，很有可能会出错，大致是缺少javascript runtime之类的错误，这是因为3.1某些方面需要动态的生成JS及对JS进行压缩等，所以需要安装一个第三方的JS库，</p><p>可用的javascript runtime https://github.com/sstephenson/execjs#readme</p><p>我的系统是CentOS，安装的是<code>therubyracer，</code>安装好后在gemfile中加入引用。安装完成后，如果报错权限受限的之类的，可以运行 chcon -t textrel_shlib_t '/usr/local/ruby/lib/ruby/gems/1.9.1/gems/therubyracer-0.9.4/ext/v8/v8.so'命令，可能需要重新启动系统才有效</p><p>这次的一个很大的改进，就是会把多个JS和CSS文件，合成为一个文件，这样在访问量大时，可以大大的减少并发数量，加快网页加载速度，在develep模式下，似乎是并没有启用的样子，但是在production环境下，确实是启用的。</p><p>使用production环境时，首先要预编译JS和CSS文件，需要进入工程根目录后，运行 bundle exec rake assets:precompile，否则会报错，说&ldquo;没有预编译CSS，JS&rdquo;之类的错误</p><p>暂时就尝试了这么多，下次继续</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

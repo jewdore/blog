@@ -1,0 +1,8 @@
+---
+layout: post
+title: mac下node js安装
+---
+
+<p>　　一向不喜欢追求刚刚新鲜出炉的事物的我，终于在node js出来一年后开始迈出脚步。</p><p>　　废话少说，先把环境给配置好。google "mac node"，出来几条结果，提供的方法基本一样，遂开始实践之。附google后的安装步骤：</p><p>　　1、安装xcode、git；</p><p>　　2、使用git将node源码拉到本地 git://github.com/ry/node.git</p><p>　　3、./configure</p><p>　　4、make</p><p>　　5、make install</p><p>　　还好之前有装过xcode、git，要不然光下载安装个xcode，今天晚上的时间完全报销(托网络不给力的福)。有了这两个玩意，安装应该轻松搞定。然而却出来几个问题，首先./configure的时候，有几个东西没有: openssl -&gt; not found, library -&gt; not found, fdatasync(2) with c++ -&gt; no。然后make的时候悲催的报错了：build failed: -&gt; task failed(err #1):...。</p><p>　　之后，我又重复了好几遍，都是没有成功，开始怀疑是否是openssl， library rt缺失导致的，准备装openssl神马的，顺便群里面问了句，有朋友建议使用node 0.6.1，然后跑到github上，download了最新版本的源码，重复google上的安装步骤，'build' finished successfully, 'install' finished successfully，搞定！原来是版本问题，当然具体是版本内部的什么问题，这里先不深究了，helloworld先出来再说。</p><p>　　安装成功后，将官网上的helloworld程序copy一份保存为helloworld.js到node安装目录下，</p><p>　　</p><pre>var http = require('http');http.createServer(function(req, res){    res.writeHead(200, {'Content-Type': 'text/plain'});    res.end('Hello World\n');}).listen(8808, '127.0.0.1');console.log('Server running at http://127.0.0.1:8808');</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: github笔记
+---
+
+<p>cd</p><p>cat 查询文件</p><p>mkdir [name] 新建目录</p><p>git init 初始化本地目录</p><p>查看目录内容</p><p>ls 显示当前目录内容</p><p>git ls-remote origin</p><p>git ls-remote .</p><p>测试连接</p><p>ssh -T git@github.com</p><p>本地修改</p><p>git add .</p><p>git commit -m ""</p><p>git commit -a</p><p>git rm (-f 删除暂存) (--cached 删除跟踪文件)</p><p>推送到远程仓库</p><p>git remote add origin git@github.com:[account name]/[repo name].git    //origin 远程仓库的本地别名</p><p>git remote rm origin //删除本地别名</p><p>git push -u origin master //提交到远程</p><p>git pull origin master //合并到本地</p><p>拷贝fork的项目到本地</p><p>git clone git@github.com:[accountname]/[repo name].git</p><p>获取新版本</p><p>git pull [本地别名] 自动合并到当前项目</p><p>git fetch [本地别名] 获取文件但不合并</p><p>git merge[本地别名]/master 合并文件到项目，有冲突时提示</p><p>查看日志</p><p>git log</p><p>git stash //暂存当前工作</p><p>git stash pop //还原当前工作</p><p>git stash list //查看暂存版本</p><p>git stash apply stash@{0}//取出对应版本</p><p>git stash clear //清空暂存</p><p>文件状态分两种：untracked,tracked</p><p>tracked又分为：unmodified,modified,staged</p><p>git status //查看文件状态</p><p>git diff //查询修改细节</p><p>git add 可使modified-&gt;staged (deleted-&gt;staged 需要git add -A )</p><p>git commid 提交staged(git commit -a 先暂存再提交跳过git add)</p><p>gitignore</p><p>touch .gitignore //创建忽略文件</p><p>git rm --cached [filename] //删除已经追踪的文件</p><p>git branch [name] //创建分支</p><p>git branch //浏览所有分支</p><p>git checkout [name] //切换当前分支</p><p>git diff //查看冲突</p><p>参考：http://gitbook.liuhui998.com/index.html</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

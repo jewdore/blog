@@ -1,0 +1,8 @@
+---
+layout: post
+title: macos 安装lighttpd
+---
+
+<p>新入手macbook，使用macos 安装使用lighttpd 记录下过程，以供下次参考：</p><p>安装：</p><ol>网上搜索，大部分使用MacPorts进行安装，不过似科自己的Xcode Tools没有安装成功，所以无法使用。所以选用 Homebrew 进行简单安装即可。Homebrew 安装比较简单（因为macos自带了runy）,使用如下命令：</ol><p>　　　　curl http://gist.github.com/raw/323731/install_homebrew.rb -o /tmp/install_homebrew.rb</p><p>　　　　ruby /tmp/install_homebrew.rb</p><p style="padding-left: 30px;">　　如果curl下载失败，使用浏览器打开URL，另存为rb文件，使用ruby执行安装</p><p style="padding-left: 60px;">安装完成之后，就有以下指令可以使用</p><p style="padding-left: 60px;">brew search 搜索brew info 查询brew list 已安装了哪些套件brew update 更新 homebrew 自己brew install 安裝套件</p><p style="padding-left: 60px;"></p><p style="padding-left: 30px;">3，安装目录：/usr/local/Cellar/lighttpd/ 默认安装，估计通过别的方式可以修改路径，暂未研究</p><p style="padding-left: 30px;"></p><p>启动：</p><p>　　</p><p>　　1，启动lihgttp，需要指定配置文件，命令如下：</p><p>　　 cd /usr/local/Cellar/lighttpd/1.4.28</p><p>　　./sbin/lighttpd -f ./config/lighttpd.conf    </p><p>     其中， config目录，安装完成时没有，需要手动复制，可以从手动下载的源码包里找到，其它地方不知道哪里找了。</p><p> </p><p> 2， 修改lighttpd.conf 项， 包括路径之类的，随实际情况以进行修改</p><p>启动lighttpd</p><pre class="sh_log sh_sourceCode">部分错误解决：</pre><pre class="sh_log sh_sourceCode">1， I will not set gid to 0 lighttpd     。。  修改lighttpd.conf的启动用户名和密码</pre><pre class="sh_log sh_sourceCode">2,  server.network-backend  = "linux-sendfile" 该项目， macos不支持，所以需要注释掉</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

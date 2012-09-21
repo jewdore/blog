@@ -1,0 +1,8 @@
+---
+layout: post
+title: 快速实现一个简单的bigpipe模型
+---
+
+<p>先描述几个概念：</p><p>Pagelet：页面功能模块化的单位</p><p>BigPipeClient：解释并呈现Pagelet的客户端，可以是javascript或服务器端语言编写（如c#）</p><p>其实重点在于模块化以及模块化之后随之带来的好处，功能开发分工，页面级别的功能隔离、功能降级等都可以以模块为单位进行，从而简化web项目的模型，在这个基础上再构建一系列的开发框架来支撑这种开发模式即可</p><p>先看一下Pagelet的定义：</p><pre class="alt">   1:      /// &lt;summary&gt;</pre><pre>   2:      /// 模块</pre><pre class="alt">   3:      /// &lt;/summary&gt;</pre><pre>   4:      public class Pagelet</pre><pre class="alt">   5:      {</pre><pre>   6:          /// &lt;summary&gt;</pre><pre class="alt">   7:          /// 模块标识</pre><pre>   8:          /// &lt;/summary&gt;</pre><pre class="alt">   9:          public string Name { get; set; }</pre><pre>  10:          /// &lt;summary&gt;</pre><pre class="alt">  11:          /// 获取数据Url</pre><pre>  12:          /// &lt;/summary&gt;</pre><pre class="alt">  13:          public string Url { get; set; }</pre><pre>  14:          /// &lt;summary&gt;</pre><pre class="alt">  15:          /// 目标容器</pre><pre>  16:          /// &lt;/summary&gt;</pre><pre class="alt">  17:          public string Target { get; set; }</pre><pre>  18:          /// &lt;summary&gt;</pre><pre class="alt">  19:          /// HTML内容模板</pre><pre>  20:          /// &lt;/summary&gt;</pre><pre class="alt">  21:          public string Template { get; set; }</pre><pre>  22:  </pre><pre class="alt">  23:          //and so on</pre><pre>  24:      }</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

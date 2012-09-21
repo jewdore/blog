@@ -1,0 +1,8 @@
+---
+layout: post
+title: XML解析
+---
+
+一般在iOS平台下，比较常用的XML解析类库有如下几种：*NSXMLParser，http://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSXMLParser_Class/Reference/Reference.html，这是一个SAX方式解析XML的类库，默认包含在iOSSDK中，使用也比较简单。*libxml2，http://xmlsoft.org/，是一套默认包含在iOSSDK中的开源类库，它是基于C语言的API，所以使用起来可能不如NSXML方便。这套类库同时支持DOM和SAX解析，libxml2的SAX解析方式还是非常酷的，因为它可以边读取边解析，尤其是在从网上下载一个很大的XML文件，就可以一边下载一边对已经下载好的内容进行解析，极大的提高解析效率。*http://www.tbxml.co.uk/TBXML/TBXML_Free.html，这是一套轻量级的DOM方式的XML解析类库，有很好的性能和低内存占用，不过它不对XML格式进行校验，不支持XPath，并且只支持解析，不支持对XML进行修改。**TouchXML，https://github.com/TouchCode/TouchXML，这也是一套DOM方式的XML解析类库，支持XPath，不支持XML的修改。**KissXML，http://code.google.com/p/kissxml/，这是一套基于TouchXML的XML解析类库，和TouchXML相比，支持了XML的修改。**TinyXML，http://www.grinninglizard.com/tinyxml/，这是一套小巧的基于C语言的DOM方式进行XML解析的类库，支持对XML的读取和修改，不*直接支持XPath，需要借助另一个相关的类库TinyXPath才可以支持XPath。**GDataXML，http://code.google.com/p/gdata-objectivec-client/source/browse/trunk/Source/XMLSupport/，这是一套Google开发的**DOM方式XML解析类库，支持读取和修改XML文档，支持XPath方式查询。*那么对于如何在项目中选择合适的XML解析类库呢？网上已经有人对这几款XML类库做过分析和对比，可参考《HowToChooseTheBestXMLParserforYouriPhoneProject》http://www.raywenderlich.com/553/how-to-chose-the-best-xml-parser-for-your-iphone-project一文，基本比较准确和客观，文中建议：*如果是读取很小的XML文档，性能基本上没有什么差别，不过从调用的方便性来说，建议使用TouchXML、KissXML或GDataXML*如果是需要读取和修改XML文档，建议使用KissXML或GDataXML*如果需要读取非常大的XML文档，则建议使用libxml2或TBXML*如果你不想去调用第三方类库，那么使用NSXML也可以
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

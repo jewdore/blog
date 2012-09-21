@@ -1,0 +1,8 @@
+---
+layout: post
+title: iphone-common-codes-ccteam源代码 CCUISearchBar.m
+---
+
+<pre>//  //  CCUISearchBar.m  //  CCFC  //  //  Created by xichen on 11-12-27.  //  Copyright 2011 ccteam. All rights reserved.  //    #import "CCUISearchBar.h"          @implementation UISearchBar(cc)      // set the searchBar to be transparent  - (void)setTransparent  {          [[self.subviews objectAtIndex:0] removeFromSuperview];  }      // create a common searchBar  + (UISearchBar *)createCommonSearchBar:(CGRect)rect  {          UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:rect];          return [searchBar autorelease];  }      // remove the background of the searchbar  - (void)removeBackground  {          for(UIView *subview in self.subviews)          {                  if([subview isMemberOfClass:NSClassFromString(@"UISearchBarBackground")])                  {                          [subview removeFromSuperview];                          break;                  }          }  }      @end</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

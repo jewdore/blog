@@ -1,0 +1,8 @@
+---
+layout: post
+title: HTML5开发——轻量级JSON存储解决方案Lawnchair.js
+---
+
+<p>Lawnchair是一个轻量级的移动应用程序数据持久化存储方案，同时也是客户端JSON文档存储方法，优点是短小，语法简洁，扩展性比较好。</p><p>现在做HTML5移动应用除了LocalStorage的兼容性比较好之外，SQL web database以及IndexedDB都处在僵局中，虽然有人叫嚣着&ldquo;我们应该干掉 LocalStorage API&rdquo;，但那是后话，现在也没得选择。</p><p>Lawnchair有个曾经的官网：http://westcoastlogic.com/lawnchair/，不过这个站点提供的源码版本过时了，而且还有错误。</p><p>需要下载的话，最新版本在https://github.com/brianleroux/lawnchair</p><p>应用示例【应用的是dom Storage】：</p><pre>var store = new Lawnchair({name:'testing'}, function(store) {    // 需要保存的对象    var me = {key:'brian'};    // 保存    store.save(me);    store.get('brian', function(me) {        console.log(me);    });});</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

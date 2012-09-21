@@ -1,0 +1,8 @@
+---
+layout: post
+title: Windows下安装和使用UglifyJS对JavaScript进行压缩或美化
+---
+
+<p>新的安装方式见Windows下使用NodeJS和npm安装UglifyJS对JavaScript进行压缩或美化</p><p>UglifyJS是一个非常好的js的压缩工具，会进行如下的代码压缩：</p>foo[&ldquo;bar&rdquo;] ==&gt; foo.bar删除{}块var a = 10; var b = 20; ==&gt; var a=10,b=20;1 +2 * 3 ==&gt; 7连续的代码块会合并成一个if (foo) bar(); else baz(); ==&gt; foo?bar():baz();if (!foo) bar(); else baz(); ==&gt; foo?baz():bar();if (foo) bar(); ==&gt; foo&amp;&amp;bar();if (!foo) bar(); ==&gt; foo||bar();if (foo) return bar(); else return baz(); ==&gt; return foo?bar():baz();if (foo) return bar(); else something(); ==&gt; {if(foo)return bar();something()}删除一些无法访问的代码<p>但是UglifyJS是建立在Node.js上的，而Node只有Linux的版本，所以我们只能在Cygwin中模拟Linux的环境。</p><p>之前的两篇文章是转载的，实际操作后发现却不行，在Cygwin环境下Node.js很难编译过。</p><p>所以花费了一天的时间做了这个安装包，安装好Cygwin之后直接将打包的文件覆盖到安装目录就可以了。</p><p>一、下载并安装Cygwin，点击这里下载。一路Next等待安装完成。</p><p>二、下载文件解压到安装Cygwin的目录中。</p><p>好了到这里就算安装完成了，下面做下测试：</p><p>在 home/用户名/ 下面创建一个js，名称为aaa.js内容为：</p><p>function test(sss, yyy){ ///test if(sss &gt; yyy) { return sss; } else return yyy;}</p><p>压缩js方式如下：</p><p>运行Cygwin，输入 uglifyjs aaa.js &gt; aaa.min.js 会生成一个aaa.min.js文件，内容如下：</p><p>function test(a,b){return a&gt;b?a:b}</p><p>js美化方式如下：</p><p>输入 uglifyjs &ndash;b aaa.min.js &gt; aaa.b.js 会生成一个aaa.b.js文件，内容如下：</p><p>function test(a, b) { return a &gt; b ? a : b;}</p><p>更多说明请参见：https://github.com/mishoo/UglifyJS</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

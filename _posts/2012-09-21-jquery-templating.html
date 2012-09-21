@@ -1,0 +1,8 @@
+---
+layout: post
+title: jQuery Templating
+---
+
+<p>　　据ScottGu的博客上说微软贡献的三个jQuery特性Templating，Data-Linking，Globalization已通过jQuery的审核成为其正式插件。并且Templating特性将在jQuery1.5中成为内置特性。在园子里看了下发现还没有这方面的中文资料。趁着今天放假，翻译一下ScottGu发布在博客上的介绍文章。小弟能力有限，难免会有纰漏之处，还望各位大牛指教。本篇先来介绍Templating。</p>jQuery 模板支持<p>客户端模板可以让jQuery开发人员便捷的在客户端生成并渲染HTML用户界面。模板支持用一种简单的语法使开发或设计人员来显示地指定他们希望生成的HTML。然后开发人员便可以通过编程方式调用客户端的模板，并向其传递JavaScript对象以完成数据驱动的内容渲染。这些JavaScript对象可以基于从服务器端获取的任意数据。</p><p>由于jQuery templating技术还处于与社区沟通完善阶段，最终版本可能会与下面的介绍有很大的不同。这篇博志只是为了让你对templating有一个更加直观的认识，以及现在该特性是如何工作的（你可以从jQuery core team-http://github.com/jquery/jquery-tmpl下载原型版或从我的团队站点http://github.com/nje/jquery-tmpl下载最新的提交版）。</p><p>jQuery客户端模板</p><p>你可以通过将内容嵌入到&lt;script type="text/html"&gt;标签来创建客户端jQuery模板。例如，下面的HTML包含一个&lt;div&gt;模板容器，该客户端jQuery模板（嵌入在&lt;script type="text/html"&gt; 元素内）&ldquo;contactTemplate&rdquo; 能够动态的显示一个联系方式列表。</p><p> </p><p>表达式{{= name }}和 {{= phone }}被用来显示传递给模板的&ldquo;contact&rdquo;对象的姓名和电话号。</p><p>我们可以使用模板来显示一个单独的对象或一个对象数组。下面的JavaScript代码展示了应该如何使用上面的模板来渲染一个JavaScript的&ldquo;contact&rdquo;对象数组。render()方法将数据渲染成字符串，并将字符串附加到&ldquo;contactContainer&rdquo; DIV元素。</p><p> </p><p>当页面被加载后，模板渲染并生成contacts列表。这些都是在客户端的浏览器上进行的：</p><p>模板指令和条件性显示逻辑</p><p>目前的模板提案支持一套精简的模板指令，包括if，else，和each。我们非常谨慎，力争让模板指令最简。以鼓励人们将更多的复杂逻辑置于模板外。</p><p>尽管这套模板指令较简单但却非常有用。试想，比如每个contact可以没有或拥有多个电话号码。这些contacts可以用下面的JavaScript数组来展现：</p><p>下面的模板展示了如何来使用if和each模板指令来条件性循环显示每个contact中的电话号码：</p><p> </p><p>如果contact中有不止一个电话号码则可以使用each模板指令逐一显示每个号码：</p><p> </p><p>由jQuery团队设计的模板指令是可扩展的。你可以根据需要很方便的创建新的模板指令来扩充基础模板指令集。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

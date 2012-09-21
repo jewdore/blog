@@ -1,0 +1,8 @@
+---
+layout: post
+title: ubuntu下安装node.js
+---
+
+<style><!--.console-view{background-color:#333;color:#fff; padding:10px;}--></style>  <p>1,首先安装一下依赖包</p>  <p class="console-view">sudo apt-get install g++ curl libssl-dev apache2-utils</p>  <p>2,安装必备的git</p>  <p class="console-view">sudo apt-get install git-core</p>  <p>3,通过git下载node</p>  <p class="console-view">git clone git://github.com/ry/node.git</p>  <p>4,解压</p>  <p class="console-view">wget http://nodejs.org/dist/node-v0.1.96.tar.gz    gunzip node-v0.1.96.tar.gz     tar -xf node-v0.1.96.tar</p>  <p>5,安装</p>  <p class="console-view">cd node    ./configure     make     sudo make install</p>  <p>6,简单的小例子</p>  <pre class="brush: javascript;">var http = require('http'); var url = ('ajax.googleapis.com') var google = http.createClient(80, url); var text = "Hello World from node!"; var requestUrl = '/ajax/services/language/translate?v=1.0&amp;q=' +                  escape(text) + '&amp;langpair=en%7Cfr' var request = google.request('GET', requestUrl, {"host": "ajax.googleapis.com"}); request.end(); request.addListener('response', function (response) { var body = '';   response.addListener('data', function (chunk) {     body += chunk; });     response.addListener("end", function() { var jsonData = JSON.parse(body);       console.log(jsonData.responseData.translatedText); }) });</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

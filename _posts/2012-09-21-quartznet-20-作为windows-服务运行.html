@@ -1,0 +1,8 @@
+---
+layout: post
+title: Quartz.Net 2.0 作为Windows 服务运行
+---
+
+<p>(更新2011-10-17 quartz.net2.0官网已发布。作者lahma也在github重新注册了quartznet的帐号，所以github地址变更了https://github.com/quartznet/quartznet)</p><p>Quartz.Net 2.0还没正式发布，但是咱还是喜欢尝鲜。:) 从Github下载源码，自己生成吧！(刚接触quartz 在网上很多链接仍指向sourceforge,项目现在已经移到github了) 下载完源码，看一下代码目录结构： 要将Quartz.Net作为Windows服务运行，当然需要build server project</p><p>for visual studio 2008 and .net 3.5 打开Quartz.Server.2008.sln 然后F6生成解决方案，项目生成文件在 build\3.5\Debug\Quartz.Server</p><p>for visual studio 2010 and .net 4.0 打开Quartz.Server.2010.sln 然后F6生成解决方案，项目生成文件在 build\4.0\Debug\Quartz.Server</p><p>接下来在服务器安装Quartz Service (需要以管理员权限运行) cd 进入 Quartz.Server.exe所在目录，然后 Quartz.Server.exe install    </p><p>需要卸载服务 执行命令 Quartz.Server.exe uninstall done. 如看原文，请走这里Installing Quartz.Net 2.0 as a Windows Service</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

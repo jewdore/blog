@@ -1,0 +1,8 @@
+---
+layout: post
+title: 视差滚动(Parallax Scrolling )效果页面的实现
+---
+
+<p>P.s. 博主前端新手，还请大家包涵了~</p><p>令可见我的独立博客,欢迎各位高手指教</p><p>视差滚动(Parallax Scrolling)效果页面的鼻祖，当属那款Nike Betterworld页面了（现已改版），页面上的图片、文字等内容随着滚轮的滚动而以不同的速度滚动，形成了一种新颖独特的视觉效果。其基本原理是让多层背景以不同的速度移动。</p><p>比如下面这个页面：</p>cultural solutions uk<p>这里还有21个精彩的视差滚动示例</p>视差滚动的历史<p>视差滚动其实有着很悠久的历史了，维基百科上指出,这种效果来自于2D卷轴游戏，比如经典的超级玛丽，细细回顾，当电视机(:-P)屏幕随着马里奥大叔的跑动而滚动时，天空的云朵并不是以相同速度而滚动的。</p><p>而如今，伟大的Web设计师们，把这个生动奇妙的效果用在了Web上。视差滚动效果页面很适合专题网站的制作，比如公司的招聘页面，新产品发布介绍页面，相关活动页面等。</p>视差滚动的原理<p>上面已经提及，其基本原理是让多层背景以不同的速度移动。即通过JavaScript时刻获取当前页面以滚动的高度，并以不同速度调整各个元素背景图的高度。由于笔者js水平有限，无法独立完成视差滚动js代码的编写，因为目前网络上暂时没有任何与视差滚动的实现有关的资料，在此提供一个好用的jQuery插件，以供参考。</p>视差滚动的实现jQuery Parallax插件<p>教程（英文）: http://www.ianlunn.co.uk/blog/code-tutorials/recreate-nikebetterworld-parallax/</p><p>Demo在这里  github</p>使用方法：<p>jQuery Parallax 的使用很简单，以创建Demo中的页面为例，首先写好基本的HTML，也就是header,footer以及4个div元素用于盛放内容。</p><p>同时在&lt;head&gt;标签中引用该插件的js文件和jQuery库。并在&lt;script&gt;标签中添加以下代码：</p><pre>&lt;script type="text/javascript"&gt;$(document).ready(function(){    //.parallax(xPosition, adjuster, inertia, outerHeight) options:    //xPosition - Horizontal position of the element    //adjuster - y position to start from    //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling    //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport    $('#div1').parallax("50%", 73, 0, true);    });&lt;/script&gt;</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: Scribe核心分析
+---
+
+<p>Facebook Scribe日志聚合系统有三个核心内容：Configurarion（配置）、Running Scribe Server（运行服务器）、Logging messages（记录日志）</p>Logging Messages(记录日志)<p>Scribe 执行下面thrift接口：</p><pre>enum ResultCode{  OK,  TRY_LATER}struct LogEntry{  1:  string category,  2:  string message}service scribe extends fb303.FacebookService{  ResultCode Log(1: list messages);}</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

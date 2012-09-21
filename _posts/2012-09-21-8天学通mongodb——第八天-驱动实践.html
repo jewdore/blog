@@ -1,0 +1,8 @@
+---
+layout: post
+title: 8天学通MongoDB——第八天 驱动实践
+---
+
+<p>  作为系列的最后一篇，得要说说C#驱动对mongodb的操作，目前驱动有两种：官方驱动和samus驱动，不过我个人还是喜欢后者，</p><p>因为提供了丰富的linq操作，相当方便。</p><p>官方驱动：https://github.com/mongodb/mongo-csharp-driver/downloads。下载后，还提供了一个酷似msdn的帮助文档。</p><p>samus驱动：https://github.com/samus/mongodb-csharp/downloads。</p><p>下面就具体看看samus驱动，https://github.com/samus/mongodb-csharp/blob/master/examples/Simple/Main.cs上面提供了</p><p>一个简单的demo，大体上看看我们就知道怎么玩了。</p><p>一： 实践</p><p>1：我们建立一个Person实体，MongoAlias特性表示取别名，这里的ID值将会覆盖掉数据库自动生成的_id。</p><pre> 1 #region 数据实体 2     /// &lt;summary&gt; 3 /// 数据实体 4 /// &lt;/summary&gt; 5     public class Person 6     { 7         [MongoAlias("_id")] 8         public string ID { get; set; } 9 10         public string Name { get; set; }11 12         public int Age { get; set; }13 14         public DateTime CreateTime { get; set; }15     }16     #endregion</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

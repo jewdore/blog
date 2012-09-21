@@ -1,0 +1,8 @@
+---
+layout: post
+title: 小试MVVM（0）
+---
+
+<p>MVVM是最近比较热的设计模式，最近无事，小试一把。</p>  <p>以前有MVC，后来又有MVP，到了WPF/Silverlight中就是MVVM了。实际上这些模式大同小异，特别是MVP和MVVM，甚至可以说MVVM就是MVP的变形而已。</p>  <p>在MVC模式中，View和Model没有完全隔离，Controler起到连接View和Model的作用。</p>    <p>在MVP模式中，View和Model没有直接的关系了，Presenter处于中间位置。这些都不详细说了，下面说说MVVM。</p>    <p>下图是MVVM的架构，可以看见和MVP非常相似，只不过用ViewModel代替了Presenter。</p>        <p>那么ViewModel和Presenter有什么区别呢？区别主要是在实现上。在MVP中，Presenter需要对View进行操作，一般情况下，为了解耦，通常定义一个IView接口，Presenter通过IView接口与UI交互；在MVVM中，一般是不用定义IView接口的，那么ViewModel怎么与UI交互呢，则是依靠Binding。</p>  <p>Binding技术在VB6的时代就已经有了，Martin Fowler甚至总结了一个使用Binding的“表模式”。但是一直到WPF之前，Binding在实际应用中用的并不多，主要原因就是不好使。大多数应用现在都是DDD，有一个领域模型，把一个领域模型绑定到UI上需要大量繁琐的工作。</p>  <p>到了WPF，Binding技术获得了新生。现在Binding可以简单的绑定到任何一个对象实例上，再结合Command模式，就诞生了MVVM。</p>  <p>现在通过一个小例子了解一下MVVM及其相关技术，在此备忘。</p>  <p>我选择的例子是RSS阅读器，界面布局参考Google Reader，就先不贴图了，大概说一下布局。简单起见，UI布局分左右两边，左边显示订阅的Feed，右边显示FeedItem。</p>  <p>我会把每次的代码提交到github上，今天就先到这，下次正式开始。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

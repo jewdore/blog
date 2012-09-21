@@ -1,0 +1,8 @@
+---
+layout: post
+title: 模拟器与真机下ffmpeg的编译方法
+---
+
+<p>参考来自：http://www.cocoachina.com/bbs/read.php?tid=79169&amp;keyword=ffmpeg</p><p>一、编译ffmpeg模拟器版本</p><p>1、到https://github.com/gabriel/ffmpeg-iphone-build下载ffmpeg-iphone-build</p><p>2、先将gas-preprocessor.pl拷贝到/usr/sbin/目录中。</p><p>3、到ffmpeg官网上下载ffmpeg源码</p><p>下载地址：source snapshot</p><p>4、在终端下定位到ffmpeg的目录下运行</p><pre>./configure --disable-doc --disable-ffmpeg --disable-ffplay --disable-ffserver --enable-cross-compile --arch=arm --target-os=darwin --cc=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc --as='gas-preprocessor/gas-preprocessor.pl /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc' --sysroot=/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk --cpu=cortex-a8 --extra-cflags='-arch armv7' --extra-ldflags='-arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk' --enable-pic --enable-decoder=rawvideo --disable-asm</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

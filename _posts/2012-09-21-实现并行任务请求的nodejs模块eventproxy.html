@@ -1,0 +1,8 @@
+---
+layout: post
+title: 实现并行任务请求的nodejs模块--eventProxy
+---
+
+<p>最近，项目中用到nodejs，经常在访问后台API服务器时，需要并行发送请求，试过用callback嵌套循环，但访问时间是由几个请求时间的总和，在请求数量很多的时候，时间会很长，经我们技术经理推荐，用到了nodejs的一个模块，eventProxy ，是nodejs社区很活跃的@朴灵开发的，将串行请求改成并行请求，减少响应时间，很明显的提高了效率，</p><p>实例代码：</p><pre class="brush:javascript;gutter:false;">var EventProxy = require("eventproxy.js").EventProxy;var proxy = new EventProxy();var render = function (template, data, l10n){    return _.template(template, data);};proxy.assign("template", "data", "l10n", render);$.get("template", function (template) {    // something    proxy.trigger("template", template);});$.get("data", function (data) {    // something    proxy.trigger("data", data);});$.get("l10n", function (l10n) {    // something    proxy.trigger("l10n", l10n);});</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

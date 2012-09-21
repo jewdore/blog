@@ -1,0 +1,8 @@
+---
+layout: post
+title: xcode4.2.1 中使用 sbjson 的 3.1版本来解析json字符串
+---
+
+<p>http://blog.csdn.net/remote_roamer/article/details/7021640</p><p>1，访问 SBJson的项目官网，并且下载https://github.com/stig/json-framework/downloads</p><p> 注意:按照作者的说明，</p>SBJson v3.1alpha3 - source and API docs for Mac and iOS development, now with ARC support!只有在3.1的版本上，才支持xcode 4.2中开启ARC的功能。所以我使用这个版本。<p>2.依然采用源代码编译的方式。把SBJson下载后解开的 目录中的classes目录拖拉到 项目中。</p><p>3.在项目的h文件中引入#import "SBJson.h"。不再使用#import "JSON.h"</p><p>4.测试用的json字符串是： {"userInfo":{"userName":"徐泽宇","sex":"男"}}</p><p>5.测试代码是 ：</p>[cpp]view plaincopy<object id="ZeroClipboardMovie_1" width="18" height="18" align="middle" bgcolor="#ffffff" data="http://static.blog.csdn.net/scripts/ZeroClipboard/ZeroClipboard.swf" type="application/x-shockwave-flash"><param name="src" value="http://static.blog.csdn.net/scripts/ZeroClipboard/ZeroClipboard.swf" /><param name="loop" value="loop" /><param name="menu" value="false" /><param name="quality" value="best" /><param name="allowscriptaccess" value="always" /><param name="allowfullscreen" value="false" /><param name="pluginspage" value="http://www.macromedia.com/go/getflashplayer" /><param name="flashvars" value="id=1&amp;width=18&amp;height=18" /><param name="wmode" value="transparent" /></object>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

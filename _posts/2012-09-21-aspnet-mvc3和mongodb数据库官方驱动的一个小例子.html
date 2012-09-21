@@ -1,0 +1,8 @@
+---
+layout: post
+title: ASP.NET MVC3和MongoDB数据库官方驱动的一个小例子
+---
+
+11.5留言：C#11.5.1 安装C#驱动程序<p>C#驱动程序就是一个dll文件，可以从Github(https://github.com/mongodb/mongo-csharp-driver/downloads)上下载。网站上提供msi和zip压缩包两种格式。前者需要安装（自解压）后者需要用解压缩软件解压，根据个人喜欢自行选择，不管选择何种格式最好得到都是一样的。</p><p>这里我们选择zip格式，下载和选择合适的地方解压后得到两个文件MongoDB.Bson.dll和MongoDB.Driver.dll。其中MongoDB.Bson.dll是提供BSON序列化另外一个与数据库通信，我们需要添加这两个dll到项目的引用中。</p>11.5.2 使用C#驱动程序<p>我们需要使用添加MongoDB.Driver这个命名空间的引用来与MongoDB服务端通信：</p><pre>using MongoDB.Driver; namespace IntroMongo.Models{    public class MongoWrapper    {        public static MongoDatabase GetDatabase()        {            MongoServerSettings settings = new MongoServerSettings();            settings.Server = new MongoServerAddress("localhost", 27017);            MongoServer server = new MongoServer(settings);            var database = server.GetDatabase("MessageDB");            return database;        }    }}</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: jbpm5.1介绍（4）
+---
+
+<p>eclipse插件</p><p>需求Eclipse的3.6或更新版本 </p><p>Graphiti框架，使用更新站点</p><p>可以直接下载更新Graphiti</p><p>http://download.eclipse.org/graphiti/updates/0.7.1/</p><p>更新bpmn2.0插件</p><p>http://codehoop.com/bpmn2</p><p>也可以直接从网站上下载后到本地更新，下载地址</p><p>https://github.com/droolsjbpm/bpmn2-eclipse-editor</p><p>使用eclipse创建hellojbpm</p><p>打开eclipse，新建jbpm project</p><p>输入工程名，然后都是下一步</p><p>最后完成，工程就创建完成了。</p><p>修改流程定义</p><p>加入两个Script Task，然后修改其属性，点击节点然后在下方面板中修改属性</p><p>在Action加入要执行的代码，可以是java也可以是Mvel角本</p><p>加完之后，可以看到流程如下图</p><p>执行测试流程，流程将直接走到结束并且经过两个Script Task并且输出内容</p><pre class="brush:csharp;gutter:false;">public class ProcessTest {public static final void main(String[] args) {try {// load up the knowledge baseKnowledgeBase kbase = readKnowledgeBase();StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");// start a new process instanceksession.startProcess("com.sample.bpmn.hello");logger.close();} catch (Throwable t) {t.printStackTrace();}}private static KnowledgeBase readKnowledgeBase() throws Exception {KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();kbuilder.add(ResourceFactory.newClassPathResource("sample.bpmn"), ResourceType.BPMN2);return kbuilder.newKnowledgeBase();}}</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: 发布个c#版的HandlerSocket客户端类库
+---
+
+<p>HandlerSocket 是一个mysql 数据库的插件，它可以绕过mysql的查询分析和优化的过程，直接与innodb存储引擎进行交互。尤其是当大多数数据都被innodb缓存到内存中的时候，</p><p>查询分析和优化过程就会是整个查询处理过程的瓶颈。通过使用HandlerSocket可以绕过这个瓶颈，从而提升性能。这要比mysql+memched要有优势，因为HandlerSocket不需要处理缓存失效的问题。下面看下HsClient访问mysql的一个例子代码</p>1usingSystem;2usingSystem.Collections.Generic;3usingSystem.Linq;4usingSystem.Text;5usingHsClient;67namespaceHsClientTest8{9classProgram10{11privatestaticHsIndexSessionFactoryclient=newHsIndexSessionFactory("192.168.200.9",9999);12staticvoidMain(string[]args)13{14HsIndexSessionsession=null;15try16{17session=client.OpenIndex(0,"test","FUser","PRIMARY",18newstring[]{"UserId","Nickname","Email"});1920HsResultSetrs=session.Find(HsOperator.GreatEqual,newstring[]{"0"},20,0);2122while(rs.Next())23{24Console.WriteLine("id:{0},nickname:{1},email:{2}",rs.GetInt(0),rs.GetString(1),rs.GetString(2));25}2627intcount=session.Update(HsOperator.Equal,newstring[]{"6"},1,0,newstring[]{"6","c#","x@x.net"});28Console.WriteLine("updatecount{0}",count);293031count=session.Delete(HsOperator.Equal,newstring[]{"6"},1,0);32Console.WriteLine("deletecount{0}",count);333435boolinsertResult=session.Insert(newstring[]{"6","haha","you@aa.ss"});36Console.WriteLine("insertsuccess{0}",insertResult);37}38finally39{40if(session!=null)41{42session.Close();43}44}454647//closeallsocketintheend48client.Shutdown();49Console.ReadKey();50}51}52}
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

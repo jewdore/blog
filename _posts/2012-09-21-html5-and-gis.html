@@ -1,0 +1,8 @@
+---
+layout: post
+title: HTML5 And GIS
+---
+
+HTML5 And GISESRI Shapefile - HTML5 Viewerhttp://mapperz.blogspot.com/2010/07/esri-shapefile-html5-viewer.html<p>This is a neat way to display ESRI Shapefiles online without using any GIS software.(Note: Not compatible with Internet Explorer)</p><p>Two shapefiles are displayed here cities of the world and associated text along with Countries of the World with a line style and polygon fill style.Notes: Keep shapefiles as small as possible, smaller shapefiles returns faster display results.Faster than ArcIMS in some cases. But depends on the hosting server.</p><p>Mapperz Version, styles and fills changed, though seems slower, compare the difference.</p><p>The two files required are the .shp (geometry in lat/lng WGS84) and the .dbf (Table)http://mapperz.110mb.com/shape/simple.html</p><p>source code changed:var map = new Map('map', [ // country shapes new Layer('http://mapperz.110mb.com/shape/110m_admin_0_countries', { fillStyle: '#76e97c', strokeStyle: '#18841D', lineWidth: '0.5' }), // dots for cities new Layer('http://mapperz.110mb.com/shape/110m_populated_places', { fillStyle: '#8A2BE2', /*textHalo: '3', textStroke: 'white',*/ textFill: 'rgba(255, 0, 0, 0.6)', textProp: 'Name', font: 'bold 9px sans-serif' })</p><p> ]); Links [source code:]http://github.com/RandomEtc/shapefile-js</p><p>More complex version involves 10 shapefile layers.http://s3.amazonaws.com/shapefile-js/naturalearthdata.html</p><p>source:http://badassjs.com/post/845509816/rendering-binary-shapefiles-with-javascript</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

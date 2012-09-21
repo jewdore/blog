@@ -1,0 +1,8 @@
+---
+layout: post
+title: IPython安装过程 @win7 64bit
+---
+
+<p>为了尝试一下IPython的使用，今天折腾了很久的从安装包msi文件安装，最后无法成功运行，无奈在可以连外网的机器windows7 64bit环境，重新安装了一次，为了避免后来人少走弯路，记录安装过程（前提是已经安装了官方的Python环境）：</p><ol>由于是64bit环境的，官方提示最好是从源代码安装，所以首先安装官方的步骤，安装<tt class="xref py py-mod docutils literal">setuptools：</tt>参照页面：http://pypi.python.org/pypi/setuptools，自己选择是32bit还是64bit的windows，这里我下载ez_setup.py，运行之后setuptools自动安装好了。下载IPython最新的源代码包，并解压到本地磁盘。下载地址：https://github.com/ipython/ipython/downloads进入cmd，进入解压后的源代码目录，执行命令：<tt class="docutils literal">python setupegg.py install</tt><tt class="docutils literal">执行后，可以看到提示安装成功。IPython会安装到你的Python目录下的scripts下面，我本地是C:\Python27\Scripts\IPython.exe</tt><tt class="docutils literal">IPython推荐安装readline，下面安装readline。 同样的去 https://launchpad.net/pyreadline/+download 下载readline源码包，解压后进入源码目录，执行python setup.py install 安装。</tt><tt class="docutils literal">最后，为了方便，把IPython的目录加入path环境变量。</tt></ol><p>转载本文，请注明来自：http://www.cnblogs.com/helloLinux/archive/2011/09/27/2193457.html</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

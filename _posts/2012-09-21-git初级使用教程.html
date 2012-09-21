@@ -1,0 +1,8 @@
+---
+layout: post
+title: Git初级使用教程
+---
+
+什么是 Git？ <blockquote> <p>Git 是一款免费的、开源的、分布式的版本控制系统。旨在快速高效地处理无论规模大小的任何软件工程。</p> <p>每一个 Git克隆 都是一个完整的文件库，含有全部历史记录和修订追踪能力，不依赖于网络连接或中心服务器。其最大特色就是“分支”及“合并”操作非常快速、简便。</p></blockquote> <p>Git优势</p> <blockquote> <p>Git 最大的优势就是“快”！对于大型的联合开发项目，用 SVN 进行版本控制管理时速度很慢，但是用 Git 就快很多。</p> <p>Git还有最大的一个优势就是支持分布式开发。</p> <p>基本上SVN有的功能Git都有,并且毫不逊色。</p></blockquote> <p>怎么使用Git</p> <blockquote> <p>使用git需要一个托管账户：注册地址。https://github.com/signup/free</p></blockquote>  <blockquote> <p>TortoiseGit 的安装</p> <p>在安装 TortoiseGit (http://code.google.com/p/tortoisegit/downloads/list)之前，你的 Windows PC 上仍然必须先安装 msysgit(http://code.google.com/p/msysgit/downloads/list)。因为此程序提供了 Git 核心。而且安装顺序是：先安装 msysgit，然后安装 TortoiseGit。如果你弄反了，就必须进入 TortoiseGit 的设置界面（右键菜单上 TortoiseGit -&gt; Settings -&gt; General -&gt; MSysGit -&gt; Path），手动指定 Git 核心文件的位置（例如 c:\Program Files\Git\bin）。</p> <p>安装步骤没啥好说的, 我使用是默认的安装。</p> <p>配置之前我们需要生成一个密钥,也就是使用SSH方式,或者使用gihub登录验证的方式.也就是在每次push时候会让你输入用户名和密码之后push。</p> <p>这里先介绍用SSH方式.</p> <p>在TortoiseGit 安装目录下找到Puttygen.这是生成密钥的一个工具。</p> <p>可以参考这篇文章来设置http://rongjih.blog.163.com/blog/static/335744612010619111042465/</p> <p>之后在Github的个人账户设置里 点击SSH Public Keys--》Add another public key</p> <p>添加一个新Key，也就是用Puttygen生成的公钥。</p> <p>然后打开TortoiseGit –&gt;settings</p>  <p>Git.exe 配置的是msysgit得路径..</p>  <p>设置Git账户,Signing key 就是刚才在Github账户设置中保存的公钥</p>  <p>Remote 这是个名字，起一个自己知道的就可以。</p> <p>URL：就是你在Github上创建的库。</p> <p>这里如果设置成类似git@github.com:XXX/XXX.git 就必须使用SSH方式。</p> <p>如果设置成 https://XXX@github.com/xxx/xxx.git 就必须使用Http方式,也就是用用户名和密码来push和pull.</p> <p>putty 也就是刚才导出来得私钥。</p> <p>之后就可以找个文件夹来创建版本库..</p> <p>大体的操作跟SVN差不多。</p> <p>需要注意的是每次commit 都必须填写message。。</p></blockquote>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

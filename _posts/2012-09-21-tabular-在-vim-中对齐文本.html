@@ -1,0 +1,8 @@
+---
+layout: post
+title: Tabular: 在 Vim 中对齐文本
+---
+
+<p>刚才在Linuxtoy上发现一个很好用的Vim插件:tabular，下载试用了一下，确实很方便。 对于程序员来说，都希望代码看着整齐一点，tabular 就是实现代码对齐的。比如好几行的变量赋值语句， 变量名长短"参差不齐"，有时候会习惯手动调整，让赋值的"="对齐。其他时候，比如括号的对齐。 随手挑了一段代码试了一下：将光标移动到第7行，输入 :Tab /{ 将会根据 "{" 对齐接下来的几行代码(貌似 tabular 可以自动识别"作用域"，只处理7 &ndash; 15 行之间的代码)，像这样：第8行代码最长，所以会根据其"{" 调节其他代码行~ 还可以根据其他符号对齐，</p><pre>:Tab /[symbol_to_align]</pre><p>当然这种格式调整也要根据情况使用，有的时候也不一定能达到好的效果。</p><p>Vim 排版一般都是用 V 選起來後, 按 = 就會自動排列, 只是要排上述講得 "=", 就需要這個 Plugin 來計算排列, 相關內容可見下述:</p>Aligning text with Tabular.vim- 此篇有影片介紹Vim Tabular Plugin 可見:godlygeek/tabular - GitHubVim Plugin - Tabular 安裝<ol>git clone https://github.com/godlygeek/tabular.gitcd tabular/mv after autoload doc plugin ~/.vim/vim ~/.vimrc # 於此檔案最末端加入下述<blockquote><p>let mapleader=','if exists(":Tabularize")nmap a= :Tabularize /=vmap a= :Tabularize /=nmap a: :Tabularize /:\zsvmap a: :Tabularize /:\zsendif</p><p>inoremap:callalign()a</p><p>function! s:align()let p = '^\s*|\s.*\s|\s*$'if exists(':Tabularize') &amp;amp;&amp;amp; getline('.') =~# '^\s*|' &amp;amp;&amp;amp; (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))Tabularize/|/l1normal! 0call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))endifendfunction</p></blockquote></ol>Tabular Plugin 測試<p>輸入下述內容:</p><blockquote><p>|start|eat|left||12|5|7||20|5|15|</p></blockquote><p>V 選取後, , 之後在下面繼續打, 都會自動排序. (若文字過長, 上面都會自動對齊)</p><p>:Tab/ 後面接要分隔的符號, ex: 上述是用 "|" 分隔, 所以輸入 :Tab/|, 程式若要排 "=", 則輸入 :Tab/=, 更多範例可見下述:</p>:Tab/::Tab/=:Tab/:\zs # 只有排序 ":" 後面的文字
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

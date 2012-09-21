@@ -1,0 +1,8 @@
+---
+layout: post
+title: Node.js in IIS — Hello World
+---
+
+<p>看了http://www.cnblogs.com/ciznx/articles/run-nodejs-within-iis-on-windows.html之后，Andy尝试了Node.js的Hello World.</p><p>其他就不罗嗦了，看步骤：</p><p>一. 安装node.exe，使JS能在服务器端运行。</p><p>　　1.安装node.exe. http://nodejs.org/#download</p><p>　　2.到C:\Program Files (x86)\nodejs，找到node.exe，copy到c:\node。</p><p>　　3.打开cmd。</p><p>　　　　C:\node&gt;node.exe -v 查看版本。</p><p>　　4.写一个sample如下，保存为D:\HelloWorld.js　　　　</p><pre>var http = require('http');  http.createServer(function (req, res) {    res.writeHead(200, {'Content-Type': 'text/html'});    res.end('&lt;h1&gt;Cool Nodejs Web Server&lt;/h1&gt;');  }).listen(1889, "127.0.0.1");  console.log('Server running at http://127.0.0.1:1889/');</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

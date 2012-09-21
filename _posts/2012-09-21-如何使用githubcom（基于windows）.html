@@ -1,0 +1,8 @@
+---
+layout: post
+title: 如何使用Github.com（基于windows）
+---
+
+<p>关于Git和GitHub.com的介绍忽略。本文假设按照要求该安装的都已经安装。</p> <p>A. 首先登录github.com，创建一个新的Repository，假设名叫next.vifii.com</p> <p>B. 如果本地项目没有使用Git的话，首先进入项目的目录，然后执行：</p> <p>git config --global user.name “Weixiao Fan”git config --global user.email “i@vifiii.com”git initgit add . //添加所有文件git commit –m “first commit”git remote add origin git@github.com:fanweixiao/next.vifii.com.git //fanweixiao是我在github.com的用户名，next.vifii.com是我创建的repository的名字</p> <p>C. ssh-keygen –C “i@vifiii.com” –t rsa </p> <p>然后转到相应的目录下打开d_rsa.pub文件，将内容复制。打开github.com上创建的repository，点旁边的edit，在Deploy Keys里点add another deploy key，名字随便起，把刚才复制的内容粘贴在上面。</p> <p>D. 然后输入SSH –v git@github.com可以检查</p> <p>E. 运行git push origin master将本地库的内容同步到github.com上</p> <p> </p> <p>至此，这个过程就ok了。</p> <p>需要注意的是如果运行git config –global xxx提示$Home的问题的时候，可以打开git安装目录下的/etc/profile文件，做如下修改：</p> 
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

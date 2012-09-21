@@ -1,0 +1,8 @@
+---
+layout: post
+title: WebSocket4Net
+---
+
+WebSocket4Net<p>WebSocket4Net is a .NET websocket client implementation.</p><p>It originated from SuperWebSocket WebSocket Client. For better developing of the websocket client, it was separated from SuperWebSocket and was renamed to WebSocket4Net.WebSocket4Net will provide websocket client implementation for many different kinds of runtime:</p>.Net 3.5 .Net 4.0 Mono Silverlight WindowsPhone Mono for Android MonoTouch <p> </p><p>  </p><p> </p><p>It is compatible with many websocket drafts:</p>Hybi-00 Hybi-10 RFC6455 <p> </p><p>NuGet Package: http://www.nuget.org/packages/WebSocket4Net</p><p> </p><p>Demo code:  </p><p> </p><pre>using WebSocket4Net; WebSocket websocket = new WebSocket("ws://localhost:2012/");websocket.Opened += new EventHandler(websocket_Opened);websocket.Error += new EventHandler&lt;ErrorEventArgs&gt;(websocket_Error);websocket.Closed += new EventHandler(websocket_Closed);websocket.MessageReceived += new EventHandler(websocket_MessageReceived);websocket.Open();private void websocket_Opened(object sender, EventArgs e){     websocket.Send("Hello World!");}</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

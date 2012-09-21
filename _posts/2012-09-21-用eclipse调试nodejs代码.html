@@ -1,0 +1,8 @@
+---
+layout: post
+title: 用Eclipse调试Node.js代码
+---
+
+<p>node.js是基于Google V8的，而Google V8有一个Eclipse的调试插件，这个插件同样也支持node.js。</p>1、安装Eclipse debugger for V8<p>这个，用过Eclipse的应该都知道，不过还是简单说下吧：</p><p> </p><p>选择&ldquo;Install New Software&rdquo; </p><p> </p><p>点&ldquo;Add&rdquo; </p><p> </p><p>Location为： http://chromedevtools.googlecode.com/svn/update/dev/Name你喜欢，整一个方便你记忆的就好。 </p><p>点击确定后，在&ldquo;Work with&ldquo;选择你刚才添加的站点：</p><p> </p><p>然后选择&ldquo;Chromium JavaScript Remote Debugger&rdquo;，然后一直下一步，安装完后会提示重启Eclipse，重启Eclipse后就可以开始调试了。 </p>2、怎样调试Nodejs？ <p>从插件名称中的&ldquo;Remote&rdquo;可以预想到这是一个远程调试的工具，大概的流程就是node开一个tcp的调试端口，然后这个调试工具通过这个tcp端口来和node通讯实现调试。 </p><p>要启用node的调试端口，在执行node脚本的时候需要添加 &ndash;-debug 参数： </p><pre>node --debug[=port] NodeApp.jsornode --debug-brk[=port] NodeApp.js
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

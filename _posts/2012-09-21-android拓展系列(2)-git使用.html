@@ -1,0 +1,8 @@
+---
+layout: post
+title: Android拓展系列(2)--Git使用
+---
+
+<p>git是免费的开源的分布式的版本控制系统。</p><p>我说的直白点，要强调的点是每个git clone下来的版本库都是一个完整的版本库，包括所有的历史记录和版本信息，不需要依赖网络，这点在使用的过程中你一定会有感触，git不是盖的。git很快，但是这点我没有大的感觉；git易于使用，相对svn而言，我不觉得git比之简单，但是总体来说git还是比较容易的，尤其是服务器端的部署非常简易。本文仅仅介绍一下git的简单使用。关于一些不常用的东西尽量会过滤掉。</p><p>1.基本命令。</p><pre class="brush:csharp;gutter:true;">/***这里列举几个常见的git命令，让大家过过目**/1）基本操作&gt;git init //初始化版本库&gt;git clone //克隆版本库&gt;git add //添加新文件&gt;git commit //提交到本地版本库&gt;git checkout //检出(分支、标签)2）分支&gt;git branch //列出分支&gt;git branch -r //列出远程分支&gt;git branch -a //列出所有分支&gt;git branch newBranch //基于当前分支创建新分支newBranch&gt;git branch -D branchName //删除分支branchName&gt;git branch -d branchName //仅删除已合并分支branchName&gt;git merge &lt;--&gt; //合并分支&gt;git tag</pre><pre class="brush:csharp;gutter:true;">3）历史&gt;git log //显示全部历史&gt;git log -p //显示版本历史，以及版本间的内容差异&gt;git log -5 //显示最近的5个提交&gt;git log -5 -p //显示最近的5个提交，以及版本间的内容差异&gt;...（很多很多参数...）&gt;git diff 112 115 //显示112和115版本的差别</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

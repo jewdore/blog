@@ -1,0 +1,8 @@
+---
+layout: post
+title: [Node.js] Module.Require机制研究
+---
+
+<p>最近开始用Node.js写Server端的脚本，由于原来一直在做的.Net中开发理念的影响，在设计上和代码实现上尽可能地进行封装。</p><p>Node.js中跟.Net中对象最相近的就是Module（模块）了，但渐渐地发现两者的差距其实很大。</p><p>刚开始我写了一个Module，发现怎么都不对，代码大概是：</p><pre>var fs = require('fs');var data = fs.readFileSync('...');fs.watchFile('...', function(curr, prev) {    if(curr.mtime - prev.mtime) {        reloadFileData();    }});exports.data = data;</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

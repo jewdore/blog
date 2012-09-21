@@ -1,0 +1,8 @@
+---
+layout: post
+title: MongoDB及其C#驱动
+---
+
+<p>1：简单介绍</p><p>MongoDB是一款分布式文档数据库，支持类似关型数据库的主从结构，文档以二进制Json形式存储，无锁，无事务，有索引。</p><p>2：安装步骤</p><p>第一步：下载程序集http://www.mongodb.org/downloads</p><p>第二部：解压并抽取相关的bin目录到C:\Mongo下（这个任意选择） ，并在该目录下建db文件夹。</p><p>第三部：打开CMD窗口，进入到C:\Mongo\bin目录下，运行mongod.exe --dbpath="c:\Mongo\db"</p><p>第四步：再开CMD窗口（保持以前的窗口不关闭）运行mongo.exe。在这个窗口你可以执行简单的命令，以下简单列出几个</p><!--Code highlighting produced by Actipro CodeHighlighter (freeware)http://www.CodeHighlighter.com/-->&gt;j={name:"mongo"};{"name":"mongo"}&gt;t={x:3};{"x":3}&gt;db.things.save(j);&gt;db.things.save(t);&gt;db.things.find();{"_id":ObjectId("4c2209f9f3924d31102bd84a"),"name":"mongo"}{"_id":ObjectId("4c2209fef3924d31102bd84b"),"x":3}&gt;
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

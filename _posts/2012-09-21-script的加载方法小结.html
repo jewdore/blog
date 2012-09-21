@@ -1,0 +1,8 @@
+---
+layout: post
+title: Script的加载方法小结
+---
+
+<p>出处：http://www.jb51.net/article/25981.htm</p><p>1.静态加载 CSS，图片资源文件在页面渲染过程中可以并行下载，不会阻塞。在IE8，FF下，也可以支持JS的并行下载。尽管页面的JS下载加速了，但是JS对页面渲染的阻塞还是依然存在的，只有JS加载完毕了，页面的剩余部分才能继续渲染。放在Head部分的Script是最为恶劣的，因为对页面来说，Head部分是require的，是后部分所必须的，Head部分不加载完毕，Body部分不会开始解析，Body解析之前，页面是空白的。静态Script放到页面的哪部分来说都是阻塞，从浏览器实现的角度来说很好理解，因为JS代码中完全有可能修改页面元素影响Dom结构。因为浏览器对JS行为的不可预知，所以只好等前面的Script加载完毕后再继续渲染。所以最佳实践往往是说将Script放到页面底部&lt;/body&gt;附近。 JS加载对前台性能的影响，雅虎优化原则之一是减少Http请求数，压缩JS，合并JS，减少JS数。 若是业务上有很多独立模块化的JS需要加载，可以考虑在线打包的方案。 </p><p>2。延迟加载 W3C标准HTML4.01给Script标签定义了一个defer属性，指明该JS不会改变Dom的content，浏览器可继续解析和渲染，无需阻塞在该Script。 http://www.w3.org/TR/1999/REC-html401-19991224/interact/scripts.html</p><p> 但部分浏览器并不支持该属性。所以它不是个很好的跨浏览器解决方案。 </p><p>3.动态加载 </p>复制代码 代码如下:
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

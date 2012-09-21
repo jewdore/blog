@@ -1,0 +1,8 @@
+---
+layout: post
+title: 一、node.js的windows环境设置
+---
+
+<p>第一次接触node.js的时候，还不能在window环境下运行，好不容易找到cygwin搭建了个运行环境，发现版本更新频繁不稳定，就没有耐心去看</p><p>最近工作刚忙完，又想起node.js，而且现在版本稳定，越来越多的人使用，索性搭建一个环境，学学，因为一直使用windows，所以就只在windows环境进行设置，别的就不去折腾了:（因为node.js官方和微软合作,已经支持windows下运行了，所以不再需要cygwin，而且网上的版本也比较旧）</p><p>1、到node.js官网http://nodejs.org下载最新版本0.6.11版本，选择Windows Installernode-v0.6.16.msi</p><p>2、下载后直接运行Windows Installernode-v0.6.16.msi，默认安装到C:\Program Files\nodejs；这样最简单的环境就已经完成了,可以再命令行里查看版本&rdquo;开始&ldquo;-&rdquo;运行&ldquo;-node -v</p><p>运行某个文件：node hello.js</p><p>3、可能我们在使用的过程中还需要一些插件，要有管理插件的工具，npm就是node.js的管理工具，下砸地址https://github.com/isaacs/npm/tags；下载后命令行运行node &ldquo;cli.js的完整路径&rdquo; install -gf</p><p>4、为了能在全局使用这些插件，我们需要这是环境变量，具体做法，右击&rdquo;我的电脑&ldquo;-&rdquo;属性&ldquo;-&rdquo;高级&ldquo;-&rdquo;环境变量&ldquo;-变量名：NODE_PATH；变量值：C:\Documents and Settings\Administrator\node_modules（这里根据自己node_modules所在位置填写即可）</p><p>5、使用npm install XXX来安装需要的插件或者模块</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

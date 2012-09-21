@@ -1,0 +1,8 @@
+---
+layout: post
+title: 转VS2010 C++下编译调试MongoDB源码 代震军
+---
+
+<p> 考虑到mongodb使用了boost库源码，参考mongodb官方文档后，下载编译boost版本是1.42(时间为2010-2-2)或更新版本:   boost版本1.42： http://sourceforge.net/projects/boost/files/boost/1.42.0/boost_1_42_0.zip/download    下载boost源码之后，我把boost解压在D盘。 1.在D:\boost_1_42_0\下找到该批处理文件bootstrap.bat，以vs2010命令行方式运行它，并最终生成bjam.exe可执行文件（详细结果及错误信息见生成的bjam.log日志）。    2.将生成的bjam.exe文件拷贝到&ldquo;D:\boost_1_42_0&rdquo;目录下,运行下面命令行：</p>bjamstagevariant=debug--stagedir="d:\boost_1_42_0"--with-filesystem--with-thread--with-date_time--with-program_options--layout=versionedthreading=multitoolset=msvc-10.0
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

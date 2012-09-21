@@ -1,0 +1,8 @@
+---
+layout: post
+title: Git and Subversion
+---
+
+Cloning a Subversion Repository  <pre><code>$ git svn clone &lt;subversion-url&gt; ?optional-directory-name?</code></pre>Synchronizing With Upstream<pre><code>$ git svn rebase</code></pre>Pushing Changes Upstream<pre><code>$ git svn dcommit</code></pre>Rules and Guidelines<p>There are a few rules you should follow when using Git as a Subversion client. Many of these are due to the fact that Git is a much more capable system than Subversion and some of the Git features simply do not work in Subversion.</p>      <p>Do not dcommit Git merge commits to the Subversion repository. Subversion doesn’t handle merges in the same way as Git, and this will cause problems. This means you should keep your Git development history linear (i.e., no merging from other branches, just rebasing).</p>        <p>Do not amend, reorder, or otherwise change commits that have been dcommited to Subversion. This is essentially the same rule as not changing Git commits that have been pushed to public repositories. Subversion cannot handle modifying or reordering commits.</p>  <p>from: http://learn.github.com/p/git-svn.html</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

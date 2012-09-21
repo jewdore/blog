@@ -1,0 +1,8 @@
+---
+layout: post
+title: 突袭HTML5之WebSocket入门5 - 包管理工具npm
+---
+
+<p> npm，全称是"node package manager"，它是node包管理器。这个我们已经用过很多次了，第三方的package全是通过npm去安装的。JavaScript从诞生开始就带有一些天生的缺陷，基本各种版本的JavaScript的实现都只内置简单的原生类型和对象，别的功能基本都是利用浏览器提供的对象和接口。特别的一点就是没有模块，没有包的管理，甚至都没有提供标准库。随着服务端JavaScript的日益盛行，为了大规模使用JavaScript，CommonJS规范出现了，目标是提供JavaScript的标准库规范，CommonJS定义了API来处理通用程序需要的各种功能，比如文件系统访问，进程处理，加密，模块管理，命令行输出等等。CommonJS力图构建JavaScript在包括服务器方面，桌面程序，命令行工具，及浏览器方面的生态系统。而node.js就是这些规范的一种实现。</p><p>一、模块与包的概念</p><p> 在node.js中，模块与包基本上是一样的。我个人认为模块更强调是单个的文件，有向外的接口，提供服务；包则是由一组具有依赖性，内聚的模块组织成的一种混合结构。广义上的模块，应该就是包了。这里就不详细区分它们的区别，不妨认为在node.js中，安装使用的那个是包，引用时使用的那个是模块吧。</p><p><strong style="color: #0000ff">二、node的包管理</p><p> npm是基于CommonJS定义的包规范，实现了依赖管理和模块自动安装等功能。除了node内置的核心模块外，其他包的安装、卸载等管理操作都要通过npm 来进行。当然我们自己也可以写模块，然后发布到npm上来供其他人使用。</p><p><strong style="color: #ff6600">包的结构</p><p> 基本上，一个包就是一个典型一个文件夹结构，这个文件夹包括一个package.json文件，和完成各种功能的模块文件。一个符合CommonJS规范的包应该是如下这种结构：</p>一个package.json文件应该存在于包顶级目录下;二进制文件应该包含在bin目录下;JavaScript代码应该包含在lib目录下;文档应该在doc目录下;单元测试应该在test目录下。
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

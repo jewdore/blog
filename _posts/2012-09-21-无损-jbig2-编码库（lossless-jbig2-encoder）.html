@@ -1,0 +1,8 @@
+---
+layout: post
+title: 无损 JBIG2 编码库（Lossless JBIG2 Encoder）
+---
+
+<p>有网友希望提供 PDFPatcher 的 JBIG2 编码库，因发此博文。</p><p>此处提供的编码库源自agl在Github的开源代码。该代码编译后输出 EXE 文件，编码现存位图文件或 StdIn 提供的数据，未提供被其它应用程序调用的 DLL 库。为了在 PDF 补丁丁中增加 JBIG2 编码功能，我修改了该代码，去除了其有损压缩功能及 Leptonica 图像库的依赖关系，减少了编码器的文件大小。</p>导出函数<p>DLL 库导出的函数有三个（除下列方法之外，还有原代码提供的jbig2_encode_generic方法，该方法的调用方式请参见原代码的说明）：</p><pre class="brush:cpp;gutter:false;">uint8_t *jbig2_encode (int width, int height, int stride, bool zeroIsWhite, uint8_t * const bw, int *const length);void release (uint8_t * const memblock);</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: GAE技巧汇总
+---
+
+1. 免sharding的高并发计数器.核心思想: 采用memcached作临时存储,定期写入datastore.incrementCounter<!--Code highlighting produced by Actipro CodeHighlighter (freeware)http://www.CodeHighlighter.com/-->1defincrementCounter(key,update_interval=10):2"""Incrementsamemcachedcounter.3Args:4key:Thekeyofadatastoreentitythatcontainsthecounter.5update_interval:Minimumintervalbetweenupdates.6"""7lock_key="counter_lock:%s"%(key,)8count_key="counter_value:%s"%(key,)9ifmemcache.add(lock_key,None,time=update_interval):10#TimetoupdatetheDB11count=int(memcache.get(count_key)or0)+112deftx():13entity=db.get(key)14entity.counter+=count15entity.put()16db.run_in_transaction(tx)17memcache.delete(count_key)18else:19#Justupdatememcache20memcache.incr(count_key,initial_value=0)
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: github用法简介
+---
+
+<p>google官方网站被黑，android源码在拉不下来了，转战github。</p><p>https://github.com/</p><p>1，注册账号</p><p>免费的就行，因为我们只是下载别人的东西，而不参与项目开发。</p><p>2，在本地建立一个文件夹，然后做一些全局变量的初始化</p><p>git config --global user.name = "用户名或者用户ID"</p><p>git config --global user.email = "邮箱"</p><p>这两个选项会在以后的 使用过程中自动添加到代码中</p><p>3，创建验证用的公钥</p><p>因为 git 是通过 ssh 的方式访问资源库的，所以需要在本地创建验证用的文件</p><p>ssh-keygen -C 'you email address@gmail.com' -t rsa</p><p>会在用户目录 ~/.ssh/ 下建立相应的密钥文件</p><p>4，上传公钥</p><p>在 github.com 的界面中 选择右上角的 Account Settings，然后选择 SSH Public Keys ，选择新加。</p><p>Title 可以随便命名，Key 的内容拷贝自 ~/.ssh/id_rsa.pub 中的内容</p><p>5，验证公钥</p><p>可以再使用 ssh -v git@github.com 进行测试。</p><p>6，fork别人的项目</p><p>github上面每个项目都有一个fork按钮，点击这个按钮，可以复制一份项目到你的仓库列表当中。</p><p>7，<code class="bash plain">从源地址获（拉）取源代码</code></p><p><code class="bash functions">mkdir</code> <code class="bash plain">mydir</code></p><p>cd <code class="bash plain">mydir</code></p><p><code class="bash plain">git init</code></p><p><code class="bash plain">git remote add origin git@github.com:albertsu/android_external_alsa-lib.git</code><code></code></p><p>git pull</p><p>git branch -a 看一下节点进行切换</p><p>git checkout -b froyo remotes/origin/froyo</p><p>-----------------------------------------------------------------</p><p>如果添加源地址出错，要删除原来的错误源地址</p><p><code class="bash plain">git remote rm</code> <code>origin</code></p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

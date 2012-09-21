@@ -1,0 +1,8 @@
+---
+layout: post
+title: jquery-pager的使用
+---
+
+<p>访问https://github.com/jonpauldavies/jquery-pager-plugin下载ZIP</p><p>按下面提示使用</p><pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;    &lt;title&gt;jQuery.pager.js Test&lt;/title&gt;    &lt;link href="Pager.css" rel="stylesheet" type="text/css" /&gt;    &lt;script src="jquery-1.4.2.min.js" type="text/javascript"&gt;&lt;/script&gt;    &lt;script src="jquery.pager.js" type="text/javascript"&gt;&lt;/script&gt;    &lt;script type="text/javascript" language="javascript"&gt;         //pagenumber 为当前页码         //pagecount 为显示页数         //PageClick 为回调函数         //pageclickednumber 为点击页码        $(document).ready(function() {            $("#pager").pager({ pagenumber: 1, pagecount: 10, buttonClickCallback: PageClick });        });        PageClick = function(pageclickednumber) {            $("#pager").pager({ pagenumber: pageclickednumber, pagecount: 10, buttonClickCallback: PageClick });            $("#result").html("Clicked Page " + pageclickednumber);        }           &lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id="result"&gt;Click the pager below.&lt;/h1&gt;&lt;div id="pager" &gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

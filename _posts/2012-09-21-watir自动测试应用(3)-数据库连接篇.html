@@ -1,0 +1,8 @@
+---
+layout: post
+title: Watir自动测试应用(3)：数据库连接篇
+---
+
+<p>我们的项目没有考虑使用Watir直接访问数据库，但是另外一个项目使用到了，我就在网上找了一个解决方案，如果使用Sqlite就挺简单的如果使用SqlServer就用点麻烦了：</p><ol>首先要下载DevKit安装DBI 使用gem install dbi安装 dbd-odbcgem install dbd-odbc安装 dbigem install dbi安装 ruby-odbcgem install ruby-odbc 如果遇到以下情况：下载DevKithttps://github.com/oneclick/rubyinstaller/wiki/development-kit</ol><p>Fetching: ruby-odbc-0.99994.gem (100%)ERROR: Error installing ruby-odbc:The 'ruby-odbc' native gem requires installed build tools.Please update your PATH to include build tools or download the DevKitfrom 'http://rubyinstaller.org/downloads' and follow the instructionsat 'http://github.com/oneclick/rubyinstaller/wiki/Development-Kit'</p><p>OK，可以使用ODBC连接你的SqlServer数据库了，在这里要注意的就是自己电脑要装相对应的ODBC类库哦。</p><p>因为这里说的自动测试没有相关数据库方面的，所以在这里不介绍相关数据库方面的测试，本系列文章只关于页面级测试内容。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

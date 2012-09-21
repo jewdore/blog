@@ -1,0 +1,8 @@
+---
+layout: post
+title: [PyJs系列介绍]一、从commonjs和seajs说起
+---
+
+<p>PyJs JavsScript Framework 项目地址： https://github.com/demix/PyJs</p><p>文档地址: http://demix.github.com/pyjs/</p><p>这里的PyJs，不是已有的Pyjamas，暂不具体说PyJs是个神马东东，只说一句：PyJs是依赖于python的一个符合commonjs规范的浏览器端JavaScript Framework。所以，不喜欢写js有环境依赖的，可以点浏览器的x了，不好意思占用各位时间。</p><p>继续看的童鞋门，我们先来说一下commonjs。</p>Commonjs模块<p>wiki地址http://wiki.commonjs.org/</p><p>module 1.1.1规范http://wiki.commonjs.org/wiki/Modules/1.1.1</p><p>commonjs 的目标是定义一套普通应用程序使用的API，从而填补原生JavaScript标准库过少的缺点。终极目标是实现一个像python,java中含有的标准库。现在非常火爆的nodejs实际上就是commonjs的一个实现。</p><p>commonjs的module 1.1.1基本设计思路如下：</p><p>Module上下文中，有一个require的函数。require接受一个module标志量，返回一个目标模块的api接口；</p><p>Module上下文中，有一个exports变量。module使用exports倒出自己对外开发的api接口。</p><p>Module上下文中，有一个module变量。有id &amp; uri 属性。</p><p>定义一个普通的模块，可以只是如下的代码。</p><p>math.js</p>exports.add=function(){varsum=0,i=0,args=arguments,l=args.length;while(i&lt;l){sum+=args[i++];}returnsum;
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

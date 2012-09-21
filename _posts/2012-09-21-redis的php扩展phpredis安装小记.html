@@ -1,0 +1,8 @@
+---
+layout: post
+title: Redis的php扩展phpredis安装小记
+---
+
+<p>最近这段时间一直在捣鼓Redis，捣鼓了蛮长一段时间了，略有所感就记录下来了。</p><p>老的文章在这里：http://www.cnblogs.com/scotoma/archive/2010/12/05/1897067.html</p><p>这里主要是写Redis在PHP下的扩展，原来打算在生产环境下使用PHP 5.3.4 可是感觉PHP官方都不是很推荐使用PHP 5.3.*的功能，新的Zend Framework2.0 更是没有咋继续更新了，所以就退回到了 5.2.16了.</p><p>为什么用Redis就不用说了，退回了5.2.16版本后就不打算继续使用Predis了就上Redis的官网看了下，感觉改版很大，换了独立的域名了，由VMware支持后果然不一样，新域名如下：http://redis.io/</p><p>看了新的Tutorials发现非常不错，推荐去看看：http://try.redis-db.com/</p><p>现在这里主要讲下phpredis扩展的安装，这个扩展是C写的，性能上看应该比Predis要好多了，安装后用起来感觉不错</p><p>安装步骤如下：</p><pre>1.download code :git clone https://github.com/owlient/phpredis.git</pre><pre>2.phpize</pre><pre>(if you use centos,u should use the full path</pre><pre>/usr/local/php/bin/phpize</pre><pre>)./configure</pre><pre>(if get error ,should change it to</pre><pre> ./configure --with-php-config=/usr/local/php/bin/php-config</pre><pre>)make &amp;&amp; make install</pre><pre>3.edit php.ini and add extension</pre><pre>extension=redis.so</pre><pre>4.restart u server</pre><pre>结果以上几步安装完成后就可以出现这个了，查看phpinfo</pre><p>安装完成后开始使用了</p><p>使用说明文档在这里：</p><p>https://github.com/owlient/phpredis</p><p>测试代码在这里：</p><p>dump:</p><p>string(11) &ldquo;Hello world&rdquo; string(9) &ldquo;xinqiyang&rdquo;</p><p>update:20110721</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

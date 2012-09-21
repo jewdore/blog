@@ -1,0 +1,8 @@
+---
+layout: post
+title: GNU Emacs的终极扩展管理工具 — el-get
+---
+
+<blockquote><p>Let&rsquo;s el-get together</p></blockquote><p>通常我们在配置GNU Emacs的时候，都会安装一些第三方的lisp扩展来让GNU Emacs用起来更顺手，但是这些第三方lisp扩展的安装、升级和配置的方法各异，通常我们需要使用多种完全不同管理方式的lisp扩展（http直接下载，发行版包管理器下载，版本控制器下载等）。这样我们升级或者迁移的时候就可能会遇到各种麻烦。</p><p>GNU Emacs一直以来都缺少一个统一的第三方lisp扩展管理器，GNU XEmacs与GNU Emacs的一个区别就是它有一个统一的第三方包管理工具。这其中的原因主要是因为GNU Emacs是GNU Project的一个重要代表，它要求随它发行的所有lisp都要作者签名用GPL授权给FSF，但是并不是所有的作者都支持GPL，而且这个过程给第三方贡献增加了不少阻碍。所以当时就有一批开发者开发了GNU XEmacs。所以GNU Emacs一直到现在也没有引入官方的扩展管理工具（指的是当前的稳定版本，ELPA已经被合并到当前的开发分支了）。</p>当前第三方包管理方法emacswiki有auto-install.el之类的管理工具linux发行版的包管理（如debian的lisp包）tromey写的package.el手工使用git之类的版本控制工具来管理lisp扩展直接下载当前这些方法的不足之处elpa可以管理当前大多数第三方扩展，但是仍然有很多不在里面手工管理，升级太麻烦，迁移也不方便linux发行版的包管理，通常你用不了最新的扩展，而且迁移也挺麻烦开发分支的ELPA，不要认为GNU Emacs会放弃原来的授权方式，要进入官方ELPA估计和现在没有什么区别，仍然有很多作者不会把自己的代码交给FSF。不过也会有第三方ELPA。el-get华丽登场el-get简介el-get能够透明的管理各种来源的第三方扩展（不管你是通过linux发行版获取，还是直接下载还是通过git等版本控制器获取的）el-get能够安装，升级和移除它管理的第三方扩展el-get支持安装后的初始化操作，支持hook操作el-get支持扩展包man和info的安装，安装好后，你可以直接<em>C-h i</em>查看infoel-get的源描述文件（recipe）超级简单，可以轻松添加自己的扩展源el-get支持异步和同步安装和初始化el-get支持ELPA中的所有package安装，ELPA是它的一种安装方法。。。安装el-get<p>el-get的作者参考和ELPA的package.el的做法，使得el-get的安装非常简单:</p>?View CodeLISP
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

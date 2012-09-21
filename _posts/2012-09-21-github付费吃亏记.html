@@ -1,0 +1,8 @@
+---
+layout: post
+title: github付费吃亏记
+---
+
+<p>做开源项目用github当然是首选，我习惯了github实在很不愿意回到老旧的svn上面，因此打算在非开源项目中也使用github的收费服务private repository来做SCM。github有各种付费服务项目，http://github.com/plans，从$7 per month ~ $20,000 per year的企业级服务一应俱全，看起来相当酷。</p><p>于是今天我购买了$7 per month的micro plan, 很开心地建立了一个私有仓库，然后呼朋唤友来fork这个仓库。结果杯具地发现：没有地方可以设置权限来允许大家fork。所以其他人看到的提示是：xxx doesn't have any public repositories yet.</p><p>翻了下support.github.com, 才知道我的需求在$7 ~ $22 per month的服务项目中是无法达成的。对于每个private repository，必须把开发者加到Private Collaborators里面，他才可以访问这个私有的代码仓库，进行fork, push, pull等操作。而这个事情的杯具点在于，$7/mo micro plan只允许增加一位private collaborators, $12/mo允许增加5位，$22/mo允许增加10位。如果你的团队超过10个开发者需要同时在这个私有仓库里做开发，那么你就嗝屁了，必须购买$25/mo以上的Business Plans来建立Orgnazation了。</p><p>$7/mo的吸引力在于，一台SCM服务器的年折旧＋电费＋维护就大大超过了每年550元RMB的开支。而如果提高到$25/mo，那么不论是买一台主机做内部服务器，或者可以买一个不错的美国虚拟主机来搭SVN都比这个价格合算了。俺的$7算是白交学费了。</p><p>试图购买github入门级私有仓库(private repository)，然后让一大堆同事fork完一起做pull request的，吸取我的教训，就不要掉进这个坑里面了</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

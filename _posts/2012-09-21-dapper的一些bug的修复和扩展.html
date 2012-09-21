@@ -1,0 +1,8 @@
+---
+layout: post
+title: Dapper的一些BUG的修复和扩展
+---
+
+<p>Dapper目前的Bug以已经很少了。可以被正式的项目中使用。所以算是一个值得使用的ORM了。</p><p>github上的代码有段时间没有更新了，也懒得等官方去修正，所以自己动手丰衣足食吧。个人修改后的代码在点这里下载。懒得读下文的直接下载更新包吧。修改的地方不多，并不影响官方的更新。</p><p>大体的BUG有这些:</p><p>Bug1:Mysql和Mssql中的Bit类型的问题</p><p>直接修改代码，代码的第795行，增加以下代码。</p><pre class="brush:csharp;collapse:true;;gutter:true;">[Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]        [Obsolete("This method is for internal usage only", false)]        public static bool ReadBool(object value)        {            if (value.GetType() != typeof(bool))            {                return Convert.ToBoolean(value);            }            else                return (bool)value;        }</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

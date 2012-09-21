@@ -1,0 +1,8 @@
+---
+layout: post
+title: pidgin的fetion插件——用到了开源项目gradetwo
+---
+
+<p>参考 http://aur.archlinux.org/packages.php?ID=25157&amp;detail=1</p><p>第一步. git clone git://github.com/gradetwo/fetion.git 得到gradetwo/fetion的源码</p><p>第二步. 从pidgin官网上得到pidgin的最新源码，当前是2.5.8</p><p>第三步. 解压pidgin源码，将git得到的fetion文件夹复制到pidgin2.5.8/libpurple/protocols下面</p><p>第四步. 修改pidgin2.5.8/configure.ac 在AC_OUTPUT中加入一条libpurple/protocols/fetion/Makefile</p><p> STATIC_PRPLS 的最后加上fetion</p><p> DYNAMIC_PRPLS的最后加上fetion</p><p> zephyr) dynamic_zephyr=yes ;;之后加上fetion) dynamic_fetion=yes ;;</p><p> 修改pidgin2.5.8/libpurple/protocols/Makefile 在DIST_SUBDIRS最后加上fetion</p><p>第五步. 执行configure，这里能disable的就disable,因为我们的目的不是编译pidgin，而是生成pidgin2.5.8/libpurple/protocols/fetion/Makefile</p><p>第六步. configure执行顺利，进入pidgin2.5.8/libpurple/protocols/fetion/下执行make</p><p>第七步. make 完成会在pidgin2.5.8/libpurple/protocols/fetion/.libs生成libfetion.so</p><p>第八步. 复制libfetion.so到/usr/lib/purple-2/</p><p>第九步. 重启pidgin，新建一个帐户，就可以看到有fetion协议了，大功告成</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

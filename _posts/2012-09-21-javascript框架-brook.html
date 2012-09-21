@@ -1,0 +1,8 @@
+---
+layout: post
+title: javascript框架--brook
+---
+
+brook<p>brook是一个针对大规模web开发的Javascript框架，而不是一个工具集。</p><p>brook引用了UNIX下的pipe概念，轻松把所有的处理都串联起来以共同完成任务。前一个处理的输出作为后一个处理的输入来完成参数的传递。通过brook你可以以MVC的方式来写你的javascript程序。</p><p>http://hirokidaichi.github.com/brook/</p><p>brook框架使用namespace库用于模块的组织。</p><p>这里再次用例子说明一下namespace的使用方法：</p><pre> 1 // 定义一个sample命名空间 2 Namespace('sample') 3 // 使用brook 4 .use('brook *') 5 .use('brook.util *') 6 .define( function (ns) { 7     var foo = function() {  8         alert('this is sample.foo'); 9     };10 11      // 定义对外公开的函数12     // 外部模块只要use了sample之后，就可以通过ns.sample.foo()来调用13     ns.provide({14         foo : foo15     });16 })；17 18 // 使用的例子19 Namespace.use('sample').apply(function(ns) {20     ns.sample.foo();21 });</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

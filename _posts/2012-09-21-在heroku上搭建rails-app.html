@@ -1,0 +1,8 @@
+---
+layout: post
+title: 在Heroku上搭建Rails App
+---
+
+<p>　　heroku是天放介绍的，对于Rails的部署非常方便。于是照着quickstart做了一遍。总的来说，都还是比较方便的。就是在一个部署更换Rails Web Server的时候出了点问题。</p><p>　　按Getting Started with Rails 3.0 on Heroku/Cedar的提示，要把Webrick换成Thin。而Thin需要Procfile，由于对Thin一无所知，所以我根本没看明白Procfile要放在哪里，在Google了大量文章之后，发现别人说要放到Rails.root。我还以为是Rails lib的路径。结果发现只是你的WebSite的root。比如你的Website叫blog，那应该把procfile放在blog下面就好了。接下来都顺风顺水了。</p><p>　　下面有两个东西需要再去研究下。</p><blockquote><ol>怎么把我的app改成myapp.heroku.com这种url搞懂heroku跟github的关系。就是怎么能git pull heroku master</ol></blockquote>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

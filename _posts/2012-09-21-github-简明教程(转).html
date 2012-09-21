@@ -1,0 +1,8 @@
+---
+layout: post
+title: GitHub 简明教程(转)
+---
+
+<p>GitHub 简明教程---------------------------------------------------------------------------Auther: Roy ZhuDate: 2008-04-29Doc: 实践果然出真知！今天下午花了五个小时，终于弄懂了GitHub的用法。开心！---------------------------------------------------------------------------以一个测试用的项目为例(git://github.com/royzhu/test.git)转到你的工作目录roy@ubuntu:~/$ cd workspace创建、下载项目文件夹（不知道是不是该叫它&ldquo;包&rdquo;）roy@ubuntu:~/workspace$ git clone git://github.com/royzhu/test.git等待一段时间后，项目就下好了roy@ubuntu:~/workspace$ ls -ladrwxr-xr-x 3 roy roy 4096 2008-04-29 17:10 testroy@ubuntu:~/workspace$ cd test查看主枝和分支。登录GitHub.com，加入项目后，在项目里的Network有图形化的分支图roy@ubuntu:~/workspace/test$ git show-branch[master] a new branchmaster是默认的住分支名建立项目远程地址roy@ubuntu:~/workspace/test$ git remote add origin git@github.com:royzhu/test.git建立自己的分支roy@ubuntu:~/workspace/test$ git branch your_branch_name再看看有哪些分支roy@ubuntu:~/workspace/test$ git show-branch! [your_branch_name] a new branch--*+ [master] a new branch查看现在使用的分支roy@ubuntu:~/workspace/test$ git branch* masteryour_branch_name加*号表示当前使用的分支进入自己的分支roy@ubuntu:~/workspace/test$ git checkout your_branch_name再看看roy@ubuntu:~/workspace/test$ git branchmaster* your_branch_name添加、修改些东西吧roy@ubuntu:~/workspace/test$ vim something把文件加入跟踪（每次提交前必须写这步）roy@ubuntu:~/workspace/test$ git add something提交修改（提交到本地，没有传到服务器）roy@ubuntu:~/workspace/test$ git commit -m '说明'提交分支到服务器roy@ubuntu:~/workspace/test$ git push origin your_branch_name&ldquo;origin&rdquo;是固定的获得最新的项目文件（从服务器下载）roy@ubuntu:~/workspace/test$ git pull git://github.com/royzhu/test.git</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

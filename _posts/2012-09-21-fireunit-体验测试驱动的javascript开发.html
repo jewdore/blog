@@ -1,0 +1,8 @@
+---
+layout: post
+title: FireUnit - 体验测试驱动的JavaScript开发
+---
+
+<p>FireUnit是一个Firefox扩展，同时也是一个Firebug扩展，这个 扩展提供了一堆API可以帮助你实现JavaScript代码的单元测试，还在Firebug的一堆Tab中再增加一个用于显示测试结果。现在提供的还是 很基本的测试，但是我们要相信这个扩展的潜力，因为它的作者是John Resig和Jan Odvarko，什么？没听过他们？小声问句，你听过JavaScript没有？</p>【原文标题】http://ejohn.org/blog/fireunit/【原文作者】John Resig以下内容是对原文的翻译：在和Firebug团队一起工作的几个月里，我和Jan Odvarko尝试建立一种对JavaScript进行单元测试的方法，这段工作的最后成果是一个叫做FireUnit的Firefox/Firebug扩展。 <blockquote><p>FireUnit提供了一组JavaScript API，可以进行简单的单元测试，同时把结果显示在Firebug中新增的Tab栏下。</p></blockquote><p>下面就是几个利用FireUnit API进行单元测试的例子（现在我们只提供一些基本的方法，以后就会扩展出更多的方法）。</p>// 最简单的true-like/false-like测试fireunit.ok( true, "I'm going to pass!" );fireunit.ok( false, "I'm going to fail!" );<p>// 比较两个字符串 - 并将差异显示出来fireunit.compare("The lazy fox jumped over the log.","The lazy brown fox jumped the log.","Are these two strings the same?");</p><p>// 用正则表达式比较字符串fireunit.reCompare(/The .* fox jumped the log./,"The lazy brown fox jumped the log.","Compare a string using a RegExp.");</p><p>// 显示全部结果fireunit.testDone();</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

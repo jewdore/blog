@@ -1,0 +1,8 @@
+---
+layout: post
+title: 12.短信和联系人的操作
+---
+
+<p>要对短信和联系人进行操作，首先要使用Git工具下载Android，进行分析</p><p class="4"> Git</p><p>http://code.google.com/p/msysgit/</p><p class="4"> 源码</p><p>https://github.com/android</p><p>短信源码platform_packages_providers_telephonyprovider</p><p>联系人源码platform_packages_providers_contactsprovider</p><p>短信数据库存在 data/data/com.adnroid.provider.telephony/databases/mmssms.db</p><p>在清单文件中，找到相应的Provider和对应的源码SmsProvider.java</p><pre>&lt;provider 　　android:name="SmsProvider" 　　android:multiprocess="true" 　　android:authorities="sms" 　　android:writePermission="android.permission.WRITE_SMS"　　android:readPermission="android.permission.READ_SMS"/&gt;</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: Windows XP下用git同步Vim配置文件和插件
+---
+
+<p>1.创建git仓库，用于存放vim的配置文件_vimrc和插件以及插件管理插件pathogen.vim（以fugitive.vim插件的安装为例）。</p><p>cd C:\Program Files\Vim</p><p>copy _vimrc vimfiles</p><p>git init</p><p>git add .</p><p>git commit -m "initial vimrc"</p><p>2.创建_vimrc文件的硬链接</p><p>fsutil hardlink create "C:\Program Files\Vim\_vimrc" "C:\Program Files\Vim\vimfiles\_vimrc"</p><p>3.添加插件管理插件pathogen.vim</p><p>从http://www.vim.org/scripts/script.php?script_id=2332下载后</p><p>cd C:\Program Files\Vim\vimfiles</p><p>md autoload</p><p>copy pathogen.vim autoload</p><p>并在_vimrc文件中添加下面几行文字</p>call pathogen#runtime_append_all_bundles()
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

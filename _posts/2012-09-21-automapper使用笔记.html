@@ -1,0 +1,8 @@
+---
+layout: post
+title: AutoMapper使用笔记
+---
+
+<p>AutoMapper是一个.NET的对象映射工具。</p><p>项目地址：https://github.com/AutoMapper/AutoMapper。</p><p>帮助文档：https://github.com/AutoMapper/AutoMapper/wiki</p><p>主要用途</p><p>领域对象与DTO之间的转换、数据库查询结果映射至实体对象。</p><p>使用笔记</p><p>场景1：源类型BlogEntry，目标类型BlogPostDto，指定属性进行映射（BlogEntry.ID对应于BlogPostDto.PostId）。</p><p>代码：</p><pre>AutoMapper.Mapper.CreateMap&lt;BlogEntry, BlogPostDto&gt;()                .ForMember(dto =&gt; dto.PostId, opt =&gt; opt.MapFrom(entity =&gt; entity.ID));</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

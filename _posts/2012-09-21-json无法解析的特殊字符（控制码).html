@@ -1,0 +1,8 @@
+---
+layout: post
+title: json无法解析的特殊字符（控制码)
+---
+
+<p>环境：</p><p>　　iOS客户端，VS2010下编写的服务端，数据库SQL2005</p><p>json库：http://stig.github.com/json-framework</p><p>　　json解析时，遇到一些控制码将会出错，造成数据解析失败。之前测试过了客户端提交的数据和服务端获得的数据（存入数据库前）一致，因此编码转换并没有出错，因此编码不一致的问题排除。</p><p>网上查到过滤的仅是\b, \t, \n, \f, \r, \\, \'', /, 普遍的做法为：</p>View Code <pre> 1 static StringBuffer string2Json(String s) {        2     StringBuffer sb = new StringBuffer ();        3     for (int i=0; i&lt;s.length(); i++) {        4       5         char c = s.charAt(i);        6         switch (c) {        7         case '\"':        8             sb.append("\\\"");        9             break;       10         case '\\':       11             sb.append("\\\\");       12             break;       13         case '/':       14             sb.append("\\/");       15             break;       16         case '\b':       17             sb.append("\\b");       18             break;       19         case '\f':       20             sb.append("\\f");       21             break;       22         case '\n':       23             sb.append("\\n");       24             break;       25         case '\r':       26             sb.append("\\r");       27             break;       28         case '\t':       29             sb.append("\\t");       30             break;       31         default:       32             sb.append(c);       33     ｝  34     return sb.toString();       35  }    </pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

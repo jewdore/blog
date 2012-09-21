@@ -1,0 +1,8 @@
+---
+layout: post
+title: [原创]祝贺《JavaScript 秘密花园》中文翻译被官方正式采纳
+---
+
+<p>祝贺《JavaScript 秘密花园》中文翻译被官方正式采纳，大家以后可以随时通过官方网站浏览：http://bonsaiden.github.com/JavaScript-Garden/zh/</p><p>由于这是一个不断更新的文档，如果有新的更新或者纠错我会及时更新中文翻译。</p><p>这篇文章的起因是有网友提的 Issue：https://github.com/BonsaiDen/JavaScript-Garden/issues/#issue/68</p><p>大致意思说是原文对 setInterval 的描述不大准确，而Stackoverflow.com上的描述才算正确。本着学习的态度，我又仔细看了两个描述：</p><p>JavaScript 秘密花园:</p><p style="padding-left: 30px;">当回调函数的执行被阻塞时，<code>setInterval</code>仍然会发布更多的毁掉指令。在很小的定时间隔情况下，这会导致回调函数被堆积起来。</p><p>Stackoverflow.com:</p><p>　　intervals try to &lsquo;catch up&rsquo; to get back on schedule. But, they don't queue one on top of each other: there can only ever be one execution pending per interval.</p><p>　　x represents an interval firing that couldn't execute or be made pending, so instead was discarded.</p><p>争论的焦点是：如果回调函数需要花很长的时间执行（比定时时间长的多），那些这些回调函数会不会被堆积起来？</p><p>目前 《JavaScript 秘密花园》的意思是会堆积起来，而 Stackoverflow 的那篇文章的意思是一些来不及执行的回调会被丢弃，特别的那个图形描述很生动：</p><pre class="default prettyprint"><code>.  *  &bull;  &bull;  x  &bull;  &bull;  x  [------][------][------][------]</code></pre><p>为了验证谁对谁错，我写了一段 JavaScript 代码：http://jsfiddle.net/sanshi/3XLHc/</p><pre class="brush:javascript;gutter:false;">var count = 0,    start = new Date(),    interval;function loop() {    var i, time;    if (count &lt;= 5) {        for (i = 0; i &lt; 1000000000; i++) {}    }    time = new Date() - start;    $('#result').append("&lt;li&gt;time:" + time + " - count:" + count + '&lt;/li&gt;');    count++;    if (count &gt;= 15) {        clearInterval(interval);    }}interval = setInterval(loop, 1000);</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

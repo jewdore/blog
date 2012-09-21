@@ -1,0 +1,8 @@
+---
+layout: post
+title: json 字符串与对象之间的转换
+---
+
+<p>http://www.css88.com/archives/3919</p><p>将json字符串转化为对象</p><p>var jsonList=eval("("+str+")");</p><p>json删除内部数据</p><p>json.splice(1,1);//删除json数组的第二条数据</p><p>读取json的键值对</p><p>for(var key in json)</p><p>{</p><p>　　alert(key);</p><p>}</p><p>查看字段是否在字符串中：</p><p>var val="字段";</p><p>var patt = new RegExp(val); var name="这是字段的字符串"; if(!patt.test(name)){　　alert("不再字符串中"); }</p><p>else{</p><p>　　alert("在字符串中");</p><p>}</p><p>比如我有两个变量，我要将a转换成字符串，将b转换成JSON对象：</p><pre class="brush: javascript; ">var a={"name":"tom","sex":"男","age":"24"};var b='{"name":"Mike","sex":"女","age":"29"}';</pre><p>在Firefox，chrome，opera，safari，ie9，ie8等高级浏览器直接可以用JSON对象的stringify()和parse()方法。</p><p>JSON.stringify(obj)将JSON转为字符串。JSON.parse(string)将字符串转为JSON格式；</p><p>上面的转换可以这么写：</p><pre class="brush: javascript; ">var a={"name":"tom","sex":"男","age":"24"};var b='{"name":"Mike","sex":"女","age":"29"}';var aToStr=JSON.stringify(a);var bToObj=JSON.parse(b);alert(typeof(aToStr)); //stringalert(typeof(bToObj));//object</pre><p>JSON.stringify()</p><p>ie8(兼容模式),ie7和ie6没有JSON对象，不过http://www.json.org/提供了一个json.js,这样ie8(兼容模式),ie7和ie6就可以支持JSON对象以及其stringify()和parse()方法；你可以在https://github.com/douglascrockford/JSON-js上获取到这个js，一般现在用json2.js。</p><p>ie8(兼容模式),ie7和ie6可以使用eval()将字符串转为JSON对象，</p><pre class="brush: javascript; ">var c='{"name":"Mike","sex":"女","age":"29"}';var cToObj=eval("("+c+")");alert(typeof(cToObj));</pre><p>jQuery中也有将字符串转为JSON格式的方法jQuery.parseJSON( json )，接受一个标准格式的 JSON 字符串，并返回解析后的 JavaScript （JSON）对象。当然如果有兴趣可以自己封装一个jQuery扩展，jQuery.stringifyJSON(obj)将JSON转为字符串。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

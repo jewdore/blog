@@ -1,0 +1,8 @@
+---
+layout: post
+title: web调用weibopy的oauth认证
+---
+
+<p>在GAE下，用webapp框架，希望通过weibopy这个weibo的python SDK进行oauth认证。</p><p>贴上代码</p><pre>#coding=utf-8import osfrom google.appengine.ext import webappfrom google.appengine.ext.webapp.util import run_wsgi_appfrom google.appengine.ext.webapp import templatefrom weibopy.auth import OAuthHandlerfrom weibopy.api import APIfrom gaesessions import get_current_sessionCONSUMER_KEY = "key"CONSUMER_SECRET = "secret"class MainPage(webapp.RequestHandler):  def get(self):    session = get_current_session()    if not self.request.get('oauth_token'):      auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET, callback="http://localhost:8080")       auth_url = auth.get_authorization_url()      # 需要保存request_token的信息，留做取access_token用      session["oauth_token"] = auth.request_token.key      session["oauth_token_secret"] = auth.request_token.secret      self.redirect(auth_url)    else:      oauth_verifier = self.request.get("oauth_verifier")      auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)      # 从session中取出request_token的信息      auth.set_request_token(session["oauth_token"], session["oauth_token_secret"])      auth.get_access_token(oauth_verifier)      api = API(auth)      path = os.path.join(os.path.dirname(__file__), "templates/index.html")      self.response.out.write(template.render(path,            {"name": api.verify_credentials.screen_name}))application = webapp.WSGIApplication([    ('/', MainPage),], debug=True)def main():  run_wsgi_app(application)if __name__ == "__main__":  main()</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

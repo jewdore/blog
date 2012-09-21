@@ -1,0 +1,8 @@
+---
+layout: post
+title: Redis VS Oracle Advance Queue性能对比 (一)
+---
+
+起源<p>公司的项目中大量的用到了Oracle Advance Queue来作为集成队列。直觉告诉我，Oracle作为关系型数据库的老大，但作为队列这种不需要ACID的场景不一定适合。再者最近NOSQL的解决方案非常火热，Redis是其中的新贵。所以拿他们两个来作个性能对比（Benchmark）。相信很多兄弟在是否选择NoSQL的方案时会考虑性能，希望这样的对比，能提供一点点基本的第一手资料。</p><p>这个性能对比准备以两个文章的形式来发布，第一部分只包括了简单的单线程的比较，第二篇文章将包括多线程部分。</p>源代码<p>http://files.cnblogs.com/ivenxu/RedisBenchmark_src.zip</p>各种模式及其优缺点存储的AQ （Persistence AQ），这个是Oracle所擅长的，好处是由于每一个入队（Enqueue）出队（Dequeue）都是一次行插入和删除，都是磁盘操作，就算数据库掉电，这些message还是存在的。缺点就是性能还会产生大量的数据库负载，在大型应用中数据库负载基本上是永恒的瓶颈，如果有可能的换我们应该减少数据库的负载。缓存的AQ（Buffered AQ），性能大大优于存储但是容错移转能力不行。另一个缺点是，默认最大队列容量5000。超过此值发生&ldquo;ORA-25307: Enqueue rate toohigh&rdquo;错误。Redis 快照模式(Snapshot)，性能强劲，可以通过Slave这样的机制来增强容错移转能力。Redis日志模式，本文涉及该模式。准备工作　　测试计划<ol>单线程单队列入队出队独立，在同一时间只有一个客户端连接到一个队列，把所有消息全部入队，再开始出队。多线程单队列并发出入队，多个线程（多客户端）同事出队入队同一个队列。多线程多队列并发出入队，多个线程（多客户端）同事出对入队多个队列。</ol>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

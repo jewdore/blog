@@ -1,0 +1,8 @@
+---
+layout: post
+title: C#连接MongoDB数据库应用实战
+---
+
+<p>1、下载驱动</p><p>　　C#驱动的下载地址为:</p><p>　　远程下载：http://cloud.github.com/downloads/mongodb/mongo-csharp-driver/CSharpDriver-1.1.0.4184.zip</p><p>本地下载 CSharpDriver-1.1.0.4184.zip</p><p>　　将其解压到D:\mongodb\drivers\目录下，其中有2个重要的dll文件</p><p>　　　　MongoDB.Bson.dll --序列化、Json相关　　　　MongoDB.Driver.dll --驱动</p><p>　　2、添加引用</p><p>　　新建一个C#的项目，添加引用，将上面两个dll文件引入到项目里面：</p><p style="text-align: center;"></p><p>　　3、代码解析</p><p>　　下面以一个插入的操作为例，来一步一步解释代码：</p>using System;using System.Collections.Generic;using System.Linq;using System.Text;//添加命名空间using MongoDB.Bson;using MongoDB.Driver;namespace ConsoleApplication3{class Program{static void Main(string[] args){//MongoDB服务器连接串string connectionString = "mongodb://192.168.1.103";MongoServer server = MongoServer.Create(connectionString);//连接到 mongodb_c_demo 数据库MongoDatabase db = server.GetDatabase("mongodb_c_demo");//获取集合 fruitMongoCollection collection = db.GetCollection("fruit");//创建对象 fruit_1BsonDocument fruit_1 = new BsonDocument{{ "webste", "http://www.my400800.cn" },{ "name", "400电话" }};//创建对象 fruit_2BsonDocument fruit_2 = new BsonDocument{{ "webste", "http://www.hrxc.net" },{ "name", "华仁信诚" }};//将对象 fruit_1 放到集合 fruit 中collection.Insert(fruit_1);//将对象 fruit_2 放到集合 fruit 中collection.Insert(fruit_2);//以上代码完成的就是向fruit表中插入2条数据，用mysql的语法解释即//insert into mongodb_c_demo.fruit (name, color) //values ('webste', 'name'), ('http://www.hrxc.net', '华仁信诚');}}}
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

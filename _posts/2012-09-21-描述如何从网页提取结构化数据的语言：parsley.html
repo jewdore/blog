@@ -1,0 +1,8 @@
+---
+layout: post
+title: 描述如何从网页提取结构化数据的语言：Parsley
+---
+
+<p>郑昀@玩聚SR20091127 </p> <p>Scrapy里面用到了Parsley。Parsley是一个挺有意思的小东西，它综合运用了CSS、XPath、正则表达式和JSON，是描述如何从网页里提取结构化数据的简单语言。估计做爬虫(Crawler/Spider)的人都会定义一套类似的模板。只不过Parsley还帮你把具体实现做了，用各种开发语言。  </p> 基本事实 <p>Parselets就是用Parsley语言写成的片段(snippets)。  </p><p>你可以近似认为一个Parselet定义了一套动作，描述如何从html代码中精确抽取数据，比如标题在哪儿，标题的链接怎么拿，评论数在哪儿如何提取。  </p><p>Parsley有各种语言实现包，Ruby、Python、C/C++等。pyparsley是对应的Python库。  </p><p> </p>Code和Result示例 <p>具体例子参见：http://parselets.com/parselets/yc/15  ， </p> <p>左侧的Code就是我们通常说的模板，右边的Result就是提取的结构化数据。</p> <p>那么它是如何变为现实的呢？</p>  实现 <p>安装Parsley，再安装http://github.com/fizx/pyparsley，然后运行如下Python代码，就可以从给定网页链接，通过Parselet的描述，获得json格式的结构化数据。</p>   <p>zhengyun 20091127  beijing</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: JsonSerializerHelper
+---
+
+<ol class="dp-xml"><ol class="dp-xml"><li class="alt">publicstaticclassJsonSerializerHelper { <li class="alt">///&lt;summary&gt;///向String对象添加一个扩展方法 <li class="alt">///&lt;/summary&gt;///&lt;typeparamname="T"&gt;期望的类型&lt;/typeparam&gt;<li class="alt">///&lt;paramname="json"&gt;Json字符数据&lt;/param&gt;///&lt;returns&gt;预期的对象图&lt;/returns&gt;<li class="alt">publicstaticTJsonDeserialize&lt;T&gt;(thisstringjson) { <li class="alt">//基于字节数组初始化MemroyStream using(MemoryStreammstream= <li class="alt">newMemoryStream(Encoding.Unicode.GetBytes(json))) { <li class="alt">//实例化DataContracctJsonSerializer对象 DataContractJsonSerializerserializer= <li class="alt">newDataContractJsonSerializer(typeof(T)); //从流中读取对象类型，强制转换为指定的对象 <li class="alt">return(T)serializer.ReadObject(mstream); } <li class="alt">} ///&lt;summary&gt;<li class="alt">///序列化对象到Json字符串 ///&lt;/summary&gt;<li class="alt">///&lt;paramname="obj"&gt;要序列化的对象&lt;/param&gt;///&lt;returns&gt;返回序列化后的字符串&lt;/returns&gt;<li class="alt">publicstaticstringJsonSerialize(thisobjectobj) { <li class="alt">//实例化MemoryStream以预备序列化 using(MemoryStreammstream=newMemoryStream()) <li class="alt">{ DataContractJsonSerializerserializer= <li class="alt">newDataContractJsonSerializer(obj.GetType());//实例化序列化类 serializer.WriteObject(mstream,obj);//将对象写入到流中 <li class="alt">mstream.Position=0;//重新定位 //使用StreamReader，从流中读取字符串 <li class="alt">using(StreamReaderreader=newStreamReader(mstream)) { <li class="alt">returnreader.ReadToEnd();//返回序列化字符串 } <li class="alt">} } <li class="alt">} <li class="alt"><li class="alt">https://github.com/JamesNK/Newtonsoft.Json</ol></ol>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

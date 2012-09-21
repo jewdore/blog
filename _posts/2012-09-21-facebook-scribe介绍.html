@@ -1,0 +1,8 @@
+---
+layout: post
+title: Facebook Scribe介绍
+---
+
+1. 介绍<p>     Scribe是Facebook一个开源的实时分布式日志收集系统。它提高了大规模日志收集的可靠性和可扩展性。你可以在不同的节点上安装Scribe服务，然后这些服务会把收集到的信息发布到中心的服务集群上去。当中心服务不可得到时，本地的Scribe服务会暂时把收集到的信息存储到本地，等中心服务恢复以后再进行信息的上传。中心服务集群可以把收集到的信息写入本地磁盘或者分布式文件系统上，如hdfs，或者分发到另一层的Scribe服务集群上去。</p><p>Scribe提供了一种无阻塞的thrift服务，底层依赖libevent库和thrift库的支持。</p>2. 安装<p>   安装的方法在https://github.com/facebook/scribe可以找到，这里提几点注意的，第一是要注意一些依赖库的安装，特别是thrift的fb303，它提供了对thrift服务的监控与动态配置等操作。在thrfit源代码的contrib中可以找到，安装方法与安装thrift一样。第二个就是如果你安装好了Scribe，在运行其中的例子的时候会出来python的模块找不到，注意要配置一下PYTHONPATH这个环境变量。</p>3. 例子<p>在Scribe的源代码包中有examples这个目录，其中有三个例子。</p><p>第一个是简单的如何启动Scribe服务与发送消息给Scribe服务。</p>[c-sharp]view plaincopy<object id="ZeroClipboardMovie_1" width="17" height="17" align="middle" bgcolor="#ffffff" data="http://static.blog.csdn.net/scripts/ZeroClipboard/ZeroClipboard.swf" type="application/x-shockwave-flash"><param name="src" value="http://static.blog.csdn.net/scripts/ZeroClipboard/ZeroClipboard.swf" /><param name="loop" value="loop" /><param name="menu" value="false" /><param name="quality" value="best" /><param name="allowscriptaccess" value="always" /><param name="allowfullscreen" value="false" /><param name="pluginspage" value="http://www.macromedia.com/go/getflashplayer" /><param name="flashvars" value="id=1&amp;width=17&amp;height=17" /><param name="wmode" value="transparent" /></object>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: 实战Dojo与RequireJS集成 之一
+---
+
+<p>在前几篇关于Dojo 1.6中新加入AMD支持的介绍文章中我们提到， 虽然dojo1.6 没有自带一个AMD加载器，但是dojo可以作为一个AMD模块被任意标准AMD 加载器（AMD loader) 加载（例如requireJS)后面有读者问具体如何实现。 本文就次做一些探讨。 在开始动手之前我们要下载一些素材首先我们要感谢Ben Hockey 他已经为dojo 和requireJS的集成做了一个模板项目， 在GitHub上供人下载参考。 地址是： https://github.com/neonstalwart/dojo-requirejs-template点击download， 下载zip包解压后如下：本文会以他提供的模板来演示 dojo和requireJs的集成并解释其中的一些具体步骤.其次我们要下载一个dojo1.6 的源文件版本http://download.dojotoolkit.org/release-1.6.0/dojo-release-1.6.0-src.zip并解压到本地硬盘任意目录中。 </p><p>下载require.js 和需要用到的两个plugin　text 和i18n， 下载地址：http://requirejs.org/docs/release/0.24.0/comments/require.jshttp://requirejs.org/docs/release/0.24.0/comments/text.jshttp://requirejs.org/docs/release/0.24.0/comments/i18n.js</p><p>开发工具，这次我们会使用aptana studio 来作为开发工具。 Firefox加Firebug来作为测试浏览器和调试器在Aptana Studio中创建一个</p><p>新的web 项目，例如TestDojoAndRequireJS</p><p>把刚才下载的模板项目的文件复制到该项目中。 把require.js 复制到项目中的requirejs文件夹中，把两个plugin js文件复制到项目根目录。 如下图：</p><p>最后我们还需要在项目里创建一个名为dojo的文件夹链接， 让它指向我们刚才解压出的dojo1.6源文件夹。 （这样我们就不需要把全部dojo源文件复制到项目中来了，一套dojo源文件可以被多个项目同时引用)到此为止，所有的工作都已经准备就绪了。接下来我们可以右键选择index.html 在菜单中选择&quot;Run As-&gt;JavaScript Web Application&quot;</p><p>如果你看到下面的弹出框和页面内容（使用英语和法语两种语言显示的一年12个月的月份名称），证明你已经成功的使用reqiureJS装入了dojo core和dijit 的所有模块.下一篇中我们会具体分析这个项目模板的源代码，来告诉你这是如何实现的. </p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

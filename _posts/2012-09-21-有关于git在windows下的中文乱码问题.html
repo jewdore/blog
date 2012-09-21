@@ -1,0 +1,8 @@
+---
+layout: post
+title: 有关于GIT在Windows下的中文乱码问题
+---
+
+<p>tinyfish的博客：http://www.cnblogs.com/tinyfish/archive/2011/01/17/1909463.html</p><p>《让Windows下Git和TortoiseGit支持中文文件名/UTF-8》</p><p>Git是使用最广泛的分布式版本管理系统，功能强大，速度奇快。</p><p>Git原本不支Windows，现在被广泛使用的版本是MSysGit，一个移植的新项目。MSysGit对Git的功能支持已经比较完善了，唯一的问题是对中文文件名支持不佳。类似的问题也在Mercurial和TortoiseHg上存在，参见《让Mercurial和TortoiseHg支持中文文件名/UTF-8》。简而言之，Windows下使用Git有以下问题：</p>Windows下生成的库与Linux下不同，文件名编码不兼容，会导致文件名乱码。Windows与Linux的库不能互相引用。不同语言版本的Windows生成的库也不兼容，也不能互相引用。<p>这真是个严重的问题，特别是对于需要国际化或者跨平台的产品。</p><p>我对Git和TortoiseGit代码进行了修改，让它们都直接使用UTF-8编码来存储文件名，以保持与Linux版本一致。修改的版本可以在http://code.google.com/p/utf8-git-on-windows/downloads下载。</p><hr /><p>摘选其中的评论：</p><p>原版的不会崩溃。（当然，原版的会中文乱码）另外，有个日本人写的这个git版本也解决了文件路径问题，它也能正常运行git svn，不会崩溃。Git-1.7.0.2-utf8-20100725.exe fromhttp://tmurakam.org/git/,它的开源项目在：https://github.com/tmurakam/4msysgit-utf8-filepath</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

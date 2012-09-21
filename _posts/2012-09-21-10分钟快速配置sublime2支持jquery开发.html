@@ -1,0 +1,8 @@
+---
+layout: post
+title: 10分钟快速配置sublime2支持jQuery开发
+---
+
+<p>昨天介绍了javascript的开发工具sublime 2 edit，今天我们将介绍如何10分钟快速配置sublime2支持jQuery开发。希望大家能喜欢着款jQuery开发工具。</p><p>相关介绍：使用sublime text 2开发Javacript和jQuery</p>安装Sublime 2<p>Sublime2下载地址：http://www.sublimetext.com/download </p>安装jQuery插件<p>jQuery插件下载地址：https://github.com/mrmartineau/jQuery </p>安装配置jQuery插件包<p>以上俩个都是zip包。先解压sublime2的压缩包，因为我使用WIN7，所以，下载了64位的zip包。解压后，如下：</p><p>Sublime Text 2 Build 2139 x64</p><p>解压后，先找到sublime_text.exe，然后点击运行。会看到目录下生成一个新的data文件夹，将你下载的jQuery文件，解压后，直接拷贝到如下目录：</p><p>&lt;dirrectory to unzip&gt;\Sublime Text 2 Build 2139 x64\Data\Packages</p><p>然后，重启sublime 2编辑器。</p><p>Sublime 2 界面如下：</p><p>看到编辑器界面后，请按快捷键：Ctrl + Shift + P，然后输入jQuery， 这样缺省编辑器使用jQuery的语法和自动方法补齐。</p><p>输入如下：</p><p>$.ready</p><p>按Tab键，可以看到编辑器让你选择代码片段类型，分别对应如下三段代码片段：</p><pre>$.jQuery(document).ready(function($) { // Stuff to do as soon as the DOM is ready. Use $() w/o colliding with other libs;});</pre><pre>$.jQuery(document).ready(function() { // Stuff to do as soon as the DOM is ready;});</pre><pre>$.$(document).ready(function() { // Stuff to do as soon as the DOM is ready;});</pre><p>以上是ready的代码，你可以选择3种代码片段中的一种。</p><p>如果你输入$.ajax 后按下Tab键，生成如下代码片段：</p><pre>$.ajax({ url: '/path/to/file', type: 'POST', dataType: 'xml/html/script/json/jsonp', data: {param1: 'value1'}, complete: function(xhr, textStatus) { //called when complete }, success: function(data, textStatus, xhr) { //called when successful }, error: function(xhr, textStatus, errorThrown) { //called when there is an error }});</pre><p>怎么样，很不错吧，虽然稳定性还有待提高，但是编辑jQuery相当的方便。希望大家能喜欢这个编辑器 ！</p><p>原文来自： 10分钟快速配置sublime2支持jQuery开发</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

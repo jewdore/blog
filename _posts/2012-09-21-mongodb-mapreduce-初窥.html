@@ -1,0 +1,8 @@
+---
+layout: post
+title: Mongodb Mapreduce 初窥
+---
+
+<p> 声明：本文是学习Mongodb过程中的副产品，因为接触时间并不长，难免有理解上的偏差，希望借此文与感兴趣的朋友讨论切磋，呵呵。</p><p> 去年年底，开始接触并学习Mapreduce模型。因为工作上的关系，最近开始研究Mongodb，其中对其新特性(2010年四月)reduce模型实现产生的兴趣，因为特别留意了一下。当然网上关于该方面的内容并不是很多，且多为EN文，所以我想有必要将学习使用过程中的一些问题作一下记录并加以整理，因为就有了此文。</p><p> 废话不多说了，开始正文吧！</p><p> 目前支持Mongodb的C#客户端应该就是Samuel Corder 开源的这个项目了，链接：http://github.com/samus/mongodb-csharp。</p><p> 其中在它的源码包中的MongoDB.Net-Tests目录下有对TestMapReduce和TestMapReduceBuilder相应测试用例，因为我本地没安装NUnit，所以接下来的内容我是在一个新建的web项目中直接Copy其中的部分代码做的测试（注：有关Mapreduce模型的内容请查阅相关资料）。</p><p> </p><p> 首先我们要先加载测试数据，这里我们以DNT中的在线用户列表的（结构）作为依据，批量倒入10条记录，代码如下：</p><p> <!--Code highlighting produced by Actipro CodeHighlighter (freeware)http://www.CodeHighlighter.com/-->Mongodb=newMongo("Servers=10.0.4.66:27017;ConnectTimeout=300000;ConnectionLifetime=300000;MinimumPoolSize=25;MaximumPoolSize=25;Pooled=true");db.Connect();Databasetest=db.GetDatabase("test");IMongoCollectionthings=test["things"];for(inti=1;i&lt;=10;i++){Documentrecord=newDocument();record["_id"]=i;record["userid"]=i;record["ip"]="10.0.7."+i;record["username"]="用户"+i;record["nickname"]="用户"+i;record["password"]="";record["groupid"]=i;//下面将就该字段使用MAPREDUCE方式进行分组统计record["olimg"]="";record["adminid"]=0;record["invisible"]=0;record["action"]=0;record["lastactivity"]=1;record["lastposttime"]=DateTime.Now.ToString();record["lastpostpmtime"]=DateTime.Now.ToString();record["lastsearchtime"]=DateTime.Now.ToString();record["lastupdatetime"]="1212313221231231213321";record["forumid"]=0;record["forumname"]="";record["titleid"]=0;record["title"]="";record["verifycode"]="";record["newpms"]=0;record["newnotices"]=0;things.Insert(record);}db.Disconnect();
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

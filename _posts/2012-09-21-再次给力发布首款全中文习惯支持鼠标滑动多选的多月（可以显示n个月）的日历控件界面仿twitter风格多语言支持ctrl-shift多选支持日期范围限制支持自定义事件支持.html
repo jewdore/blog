@@ -1,0 +1,8 @@
+---
+layout: post
+title: 再次给力发布，首款全中文习惯，支持鼠标滑动多选的多月（可以显示N个月）的日历控件，界面仿Twitter风格，多语言支持，Ctrl/Shift多选支持，日期范围限制支持，自定义事件支持
+---
+
+号外：kitjs官方讨论QQ群建立了，QQ群号88093625，欢迎大家加入，讨论前端相关话题<p>地址：http://xueduany.github.com/KitJs/KitJs/index.html#datepicker_nmonth</p><p>界面如图</p>   <p>继承自之前发布的</p> <p>http://www.cnblogs.com/xueduanyang/archive/2012/04/12/2444788.html</p>      <p>初始化方法为</p> <blockquote> <p>//默认日历 window.picker = new $kit.ui.DatePicker.NMonths(); picker.init(); $kit.el('#J_datePicker').appendChild(picker.picker); picker.show(); picker.ev({ ev : 'change', fn : function(e) { alert(picker.getValue()); } }) //输入框下拉 $kit.ev({ el : '#J_input', ev : 'focus', fn : function(e) { var d, ipt = e.target; d = e.target[$kit.ui.DatePicker.defaultConfig.kitWidgetName]; if(d) { d.show(); } else { d = new $kit.ui.DatePicker.NMonths(); d.init(); d.adhere($kit.el('#J_input')); d.show(); } } }); $kit.ev({ el : document, ev : 'click', fn : function(e) { var input = $kit.el('#J_input'); d = input[$kit.ui.DatePicker.defaultConfig.kitWidgetName]; if(d &amp;&amp; !$kit.contains(d.picker, e.target) &amp;&amp; input != e.target) { d.hide(); } } });</p></blockquote>  <p>与之前默认配置参数唯一的区别在于，多了一个配置显示多少个月的参数 nMonths，默认显示3个月，可以改成2个月</p>  <p>周末了，如果遇到啥问题，可以留言，下周继续更新，欢迎继续关注kitjshttp://xueduany.github.com/KitJs</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

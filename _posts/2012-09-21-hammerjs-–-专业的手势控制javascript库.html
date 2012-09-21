@@ -1,0 +1,8 @@
+---
+layout: post
+title: Hammer.js – 专业的手势控制JavaScript库
+---
+
+<p>Hammer.js是一个专门用于控制、定制手势的JavaScript库。它可以识别出常见的触摸、拖动、长按、缩放等等，对于希望在网页上对手势有所处理的朋友们，应该很有帮助。</p>如何使用<p>Hammer.js和其它JS库并没有很大不同，其主要提供的是数个手势的事件，这样开发者只需在特定的手势中绑定自己的处理函数即可。</p><p>首先，包含Hammer.js本身：</p><pre class="wp-code-highlight prettyprint"><code>&lt;scriptsrc="http://eightmedia.github.com/hammer.js/hammer.js"&gt;&lt;/script&gt;</code></pre><p>之后，需要将接受手势事件处理的区域，绑定在Hammer.js对象上：</p><pre class="wp-code-highlight prettyprint"><code>var hammer =newHammer(document.getElementById("container"));</code></pre><p>现在就可以绑定各种手势事件了：</p><pre class="wp-code-highlight prettyprint"><code>hammer.ondragstart =function(ev){};hammer.ondrag =function(ev){};hammer.ondragend =function(ev){};hammer.ontap =function(ev){};hammer.ondoubletap =function(ev){};hammer.onhold =function(ev){};hammer.ontransformstart =function(ev){};hammer.ontransform =function(ev){};hammer.ontransformend =function(ev){};</code></pre><p>除此之外，hammer.js也提供了自己的jQuery插件，允许开发者使用已经习惯的jQuery开发语法，不过需要搭载不同的JS文件才可以。</p>许可证<p>该库使用MIT协议发行。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

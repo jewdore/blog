@@ -1,0 +1,8 @@
+---
+layout: post
+title: leex文法分析的效率
+---
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />R13B新添加的leex相当于c的lex， 在做文法分析非常方便，但是效率如何呢？ leex的example里面带了个erlang_scan和erlang标准的发布版的erl_scan兼容，所以我们来对比测试下效率。注意用R13B03，因为R13B02的erlc漏掉了编译xrl格式。以下是实验：root@nd-desktop:~# git clone git://github.com/rvirding/leex.gitroot@nd-desktop:~# cd leex/examples/root@nd-desktop:~/leex/examples# cat test_scan.erl-module(test_scan).-export([start/1]).start([A])-&gt; {ok, F} = file:open(atom_to_list(?MODULE)++".erl", [read]), {ok, S} = file:read(F, 9999999), file:close(F), N = list_to_integer(A), test(N, fun erlang_scan:string/1, S, "erlang_scan"), test(N, fun erl_scan:string/1, S, "erl_scan"), ok.test(N, F, S, Ts)-&gt; Start = erlang:now(), dotimes(N, fun (_) -&gt; F(S) end), io:format("~s run ~w ms~n", [Ts,round(timer:now_diff(now(), Start) /1000)]).dotimes(0, _) -&gt; done;dotimes(N, F) -&gt; F(N), dotimes(N - 1, F).root@nd-desktop:~/leex/examples# erlc erlang_scan.xrlroot@nd-desktop:~/leex/examples# ls *.erlerlang_scan.erl test_scan.erlroot@nd-desktop:~/leex/examples# erlc *.erlroot@nd-desktop:~/leex/examples# erl -noshell -run test_scan start 10000 -s erlang halterlang_scan run 2208 mserl_scan run 1181 ms%% 这个版本稍微慢点root@nd-desktop:~/leex/examples# erlc +native *.erlroot@nd-desktop:~/leex/examples# erl -noshell -run test_scan start 10000 -s erlang halterlang_scan run 1292 mserl_scan run 1238 ms结论是： leex产生的代码和手写的效率几乎差不多。
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

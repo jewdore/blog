@@ -1,0 +1,8 @@
+---
+layout: post
+title: 分享下拉框智能提示算法改进，上万条数据智能提示，所有浏览器包括IE不卡
+---
+
+<p>最近做项目时候，被select的下拉提示搞烦了，破服务器响应速度贼慢，而下拉的数据又狂多，9k多行用dynamicAjax分析，发现性能慢就慢在不断的select.options的for遍历循环上索性不使用数组循环的方法跑suggest，改用字典算法https://github.com/xueduany/KitJs/blob/master/KitJs/src/js/TreeDict.js算法的testcase见http://xueduany.github.com/KitJs/KitJs/demo/TreeDict/demo.html </p><p>改进后，options的存储方式变为 </p><p>{ </p><p>"0" : { </p><p>"1" : { </p><p>"1" : "a" </p><p>}, </p><p>"2" : { </p><p>"5" : "b" </p><p>}, </p><p>"3" : { </p><p>"2" : "c" </p><p>}, </p><p>} </p><p>"1" : { </p><p>"1" : "9" : "d" </p><p>} </p><p>... </p><p>} </p><p>遍历算法又O(n)，缩小到f(n)，理论上性能可以提高n次幂倍 </p><p>经过测试，改过之后，suggest性能大幅提升，数据量上10w，chrome都不卡，ie只是略微有点卡，不过也在可以接受的方法 </p><p>Demo图片 </p><p> </p><p>demo地址 </p><p>http://xueduany.github.com/KitJs </p><p>注释说明略显粗糙，需要的兄弟可以线下联系我  </p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

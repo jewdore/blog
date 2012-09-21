@@ -1,0 +1,8 @@
+---
+layout: post
+title: OAUTH 与 REST 个人见解
+---
+
+<p>先名词解释一下：</p><p>OAuth（开放授权）是一个开放标准，允许用户让第三方应用访问该用户在某一网站上存储的私密的资源（如照片，视频，联系人列表），而无需将用户名和密码提供给第三方应用。</p><p>REST，即REST(Representational State Transfer表述性状态转移)是一种针对网络应用的设计和开发方式，可以降低开发的复杂性，提高系统的可伸缩性。</p><p>OAUTH场景说明： M是一个电子商务网站，类型于京东，提供商品在线购物服务。</p><p> W是一个SNS网站，也类型于Weibo。</p><p>U是一个普通的购物者，C有在W网注册用户。 U想去M网站看上了几样东西，打算购买，发现只能注册用户才能购买，但是U不想注册太多帐号;但是U发现M网站上面支持W的帐号直接登录。点击了带有W网站标示的链接，跳到了W网站，输入了帐号信息，返回到M网站上面，然后M网站自动给U登录(注册)了。在此过程中M一直不知道U的帐号信息，除M网站认为可以公开的信息，然后U完成了余下的购物流程。</p><p>REST场景说明：</p><p>M是一个电子商务网站，类型于京东，提供商品在线购物服务。</p><p>B是一个移动设备或者其他的电子商务网站（渠道）。</p><p> B想为M拓展市场，M也同意，于是M为B向其开放数据API，有些是公开API，有些则需要安全登录信息。最终合作成功，B开发了各种移动APP，网站及其他应用。</p><p>OAUTH和REST的区别：</p><p>OAUTH过程中需要U同意后才能M获得W提示信息。REST场景过程中的角色没有U，只需要M同意开放权限即可。</p><p>附上两个php的开源项目</p><p> OAUTH: http://code.google.com/p/oauth-php/</p><p>REST:https://github.com/philsturgeon/codeigniter-restserver</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

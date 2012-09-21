@@ -1,0 +1,8 @@
+---
+layout: post
+title: MongoDB on Asp.Net MVC3
+---
+
+MongoDB on Asp.Net MVC3<p>晚上闲来无事，研究了一下最近很火的MongoDB。感受只有一个：&ldquo;自由&rdquo;。</p><p>闲话略过，先让MongoDB在Win7 64下跑起来：</p><p>1. MongoDB主页</p><p>http://www.mongodb.org/</p><p>2. 下载</p><p>http://downloads.mongodb.org/win32/mongodb-win32-x86_64-1.8.1.zip</p><p>3. 解压</p><p>e.g. H:\mongodb-win32-x86_64-1.8.1</p><p>4. 准备目录</p><p>e.g. H:\mongo\data --保存数据库文件 H:\mongo\logs --保存log，在此目录下手动创建一个log.txt</p><p>5. 安装</p><p>Win键，输入cmd，右键-Run as Administrator</p><p>cd H:\mongodb-win32-x86_64-1.8.1\bin</p><p>H:</p><p>mongod --bind_ip 127.0.0.1 --logpath H:\mongo\logs\log.txt --logappend --dbpath H:\mongo\data --directoryperdb &ndash;install</p><p>net start &ldquo;MongoDB&rdquo;</p><p>成功。</p><p>6. 测试安装</p><p>在之前的CMD窗口中输入：mongo</p><p>应该能无异常进入query界面</p><p>输入一个3+3，应该能得到6</p><p>关掉cmd，这玩意儿没用了。</p><p>7. 下载.Net Connector</p><p>https://github.com/mongodb/mongo-csharp-driver/archives/master</p><p>解压</p><p>打开CSharpDriverSetup-2010.sln</p><p>Build</p><p>失败</p><p>删除DriverSetup中对CHM的引用</p><p>重新编译，成功</p><p>右键DriverSetup &ndash; Install</p><p>下一步下一步下一步。。。</p><p>8. 创建Asp.Net MVC3 Empty project</p><p>若无，请自行安装MVC3的TOOL</p><p>9. Add ConnectionString in web.config</p>&lt;connectionStrings&gt;&lt;addname="MongoDB"connectionString="mongodb://localhost/test"/&gt;
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

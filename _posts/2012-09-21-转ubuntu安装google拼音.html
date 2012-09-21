@@ -1,0 +1,8 @@
+---
+layout: post
+title: 转Ubuntu安装google拼音
+---
+
+<p>在Ubuntu 10.04下安装Google拼音输入法，如下：</p> <p>A. 获取代码：（没有git的先安装git：sudo apt-get install git-core）</p> <p>$ git clone git://github.com/tchaikov/scim-googlepinyin.git</p> <p>$ cd scim-googlepinyin</p> <p>B. 编译前提：</p> <p>上面给的链接里面有介绍怎么编译的，但少提了几个必需组件，这里列一下：</p> <p>* autotools-dev</p> <p>* libgtk2.0-dev</p> <p>* libscim-dev</p> <p>* libtool</p> <p>* automake</p> <p>用下面命令看看是不是安装了，如果没有，会自动帮你安装上：</p> <p>$ aptitude install autotools-dev libgtk2.0-dev libscim-dev libtool automake</p> <p>C. 编译：</p> <p>记住系统必须先存在SCIM（没有的话 sudo apt-get install scim 一下）</p> <p>$ ./autogen.sh</p> <p>$ make</p> <p>$ sudo make install</p> <p>现在重启scim:</p> <p>关闭scim:pkill scim</p> <p>然后启动： scim -d</p> <p>去首选项里的&#8220;语言支持&#8221;的&#8220;输入法&#8221;选择scim作为默认输入法,然后注销就OK了。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: 把 Mac 上的 bash 换成 zsh
+---
+
+<p>本人补充：mac版git下载地址：http://code.google.com/p/git-osx-installer/downloads/list?can=3&amp;q=&amp;sort=-uploaded&amp;colspec=Filename+Summary+Uploaded+Size+DownloadCount</p><p>其他参考地址：</p><p>http://leeiio.me/bash-to-zsh-for-mac/</p><p>原文地址http://sofish.de/1685</p><p>昨天在 twitter 上问为什么 terminal 里显示的名称那么长。推友说是电脑名太长，把电脑名改短就 OK 了。才想起当时设置 iMac 的时候似乎也是把电脑名改了。当时 @roamlog 同学推荐了 zsh，可以去掉那个名字，并且多色高亮似乎很不错。就决定了从 bash 转到 zsh。</p><p>如何转可以参考一下 Stack Overflow 上的一篇文章，如果已经装了 Git，也就几个命令行的事：</p><ol><p>下载一个 .oh-my-zsh 配置（推荐有）</p><pre class="code_bg">git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</pre><p>创建新配置</p><p><em>NOTE</em>: 如果你已经有一个 .zshrc 文件，那么备份一下吧</p><pre class="code_bg">cp ~/.zshrc ~/.zshrc.orig</pre><pre class="code_bg">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</pre><p>把 zsh 设置成默认的 shell:</p><pre class="code_bg">chsh -s /bin/zsh</pre><p>重启 zsh (打开一个新的 terminal 窗口)</p></ol><p>话说，推荐一下。对于常使用 terminal 的人来说，还是很不错的。相应的 alias 在里面的定义也跟原来在 ~/.bash_profile 里面写的一样。copy 过来就可以了。更新还是用 source ~/.zshrc 这样的方法（多谢 @imagelife）。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

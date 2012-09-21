@@ -1,0 +1,8 @@
+---
+layout: post
+title: Firefox上的窗口分割扩展(以及Vimperator/Keysnail插件脚本)
+---
+
+<p>如果你用过Vim，就知道我们可以用:split 或者 :vsplit 把窗口分割成两个，每个窗口编辑/查看不同的文件，继续使用:split / :vsplit 可以继续分割。有时候需要对照着看一些内容的时候，这样的风格很方便（考虑到现在很多程序都抛弃了以前的MDI风格，而是采用了多标签页的风格，要参照一下另外一个标签页当中的内容，来回切换的话相当麻烦）。Emacs 也有这样的功能，分别是用C-x 2和C-x 3来分割。</p><p>其实Firefox上也有一个扩展可以实现这样的功能：Split Browser (后来改名叫做Fox Splitter了，不过改名后好像没发过新版本），虽然最新的版本是20091105，但在新版本的Firefox上面仍然可以安装（该扩展标明是适用于3.0 - 3.7a1。可惜Firefox 4上面测试没通过，但有另外一个叫做Tile Tabs的类似扩展声明是支持fx4的）。如果你在用Keysnail，那么可以这部分代码拷贝到你的~/.keysnail.js里面去，然后你就可以象Emacs 那样来操作分割窗口了:（注意，按Emacs/Vim的术语，这里每个分割出来的部分都叫做window，跟Firefox 原本的Window不要混淆了&mdash;&mdash;那个东西在Emacs里面叫做frame, 在Vim中好像没有对应的术语。而Emacs中又没有标签页的概念）:</p>C-x 0 关闭当前窗口(delete-window)C-x 1 关闭其它窗口(delete-other-window)，即取消当前标签页内所有分割C-x 2 纵向分割(split-window-vertically)C-x 3 横向分割(split-window-horizontally)C-x o 激活下一个窗口(other-window)C-x k 关闭当前窗口或者标签页如果你在用Vimperator，那么插件在这里[splitBrowser.js] ，下载后放到~/vimperator/plugin/目录。除了支持:split/:vsplit，它也支持, 等快捷键。(Pentadactyl上没测试过，考虑到现在它跟Vimperator越来越不兼容，可能需要对脚本修改一下，这既然是爱折腾的vim粉丝，应该难不倒诸位:-）<p><c-w><c-w><c-w><c-v>另: FoxSpliter的源代码在这里: https://github.com/piroor/foxsplitter 有兴趣的可以下载一下最新的代码Technorati 标签: firefox, emacs, vim, geek</c-v></c-w></c-w></c-w></p><p style="margin: 0pt; padding: 0pt; display: block;">Pentadactyl</p><p style="margin: 0pt; padding: 0pt; color: #ffff99; display: none;"></p><p style="margin: 0pt; padding: 0pt; display: none; color: #ffffff;">Searching...</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

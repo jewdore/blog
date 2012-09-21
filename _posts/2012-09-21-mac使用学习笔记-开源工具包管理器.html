@@ -1,0 +1,8 @@
+---
+layout: post
+title: Mac使用学习笔记: 开源工具包管理器
+---
+
+<p>作为vim用户，xcode真是让我抓耳挠腮，难受的要死，～～咬牙切齿还是把MacVim给装上，可是光有个vim不顶用啊。我一直使用exvim这个套装（神器，没用过的赶紧上），要一堆unix上的开源玩意，一个一个弄，我还不给它搞死。liunx上apt-get那玩意没道理mac上没有替代品，一阵google，果然有，还不知一个。作为软件试用深度上瘾症患者，赶紧的一个一个试。</p><p>Brew（homebrew主页）：</p><p>好，就一个字评价，如果要安装wget，只要这样：</p><pre><code> brew install wget</code></pre><p>brew会自动安装需要的依赖，然后symlinked into <code>/usr/local。</code></p><p><code>卸载也简单：</code></p><p><code> brew uninstall wget</code></p><p><code>ok, 赶紧的装brew吧，用下面这个命令，一键安装</code></p><p><code> </code>curl-LsSfhttp://github.com/mxcl/homebrew/tarball/master|sudotarxvz-C/usr/local--strip1</p><p>缺点也是比较明显，能安装的软件比较少，像我要安装的sed，id-utilts都没有，哎～～～，希望以后会多起来吧。</p><p>fink:</p><p>是基于apt的，软件比起brew多一些，但也不是很全，它的目标是把全套的unix工具挪到mac上，希望在远方了.. 还有个问题就是软件版本比较老，哎，应该是活跃度比较低，玩的人比较少的缘故。</p><p>安装fink：</p><p>就没有brew那么容易了，10.6还没有二进制安装包，只能从source上编译，前提是你装了xcode (非程序员别整了）。</p><p>安装指南在这里：</p><p>http://www.finkproject.org/download/srcdist.php 一步一步来就是了，</p><p>装好后：</p><p>fink install sed -》 搞定， 果然软件比起brew是多点</p><p>tip:</p><p>万一那个软件没有，你就执行下fink update-all 碰碰运气 :-)</p><p>MacPorts</p><p>最老牌的东西，活跃度最高，软件最多。自身的安装友好，提供全界面的安装。缺点么，也是不太清楚，网上不少同学对它相当感冒。</p><p>管他了，装了再说，是好是歹，溜久了就知道了。</p><p>命令也是一样的:</p><p>port install sed</p><p>port update sed</p><p>port uninstall sed</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

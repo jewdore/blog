@@ -1,0 +1,8 @@
+---
+layout: post
+title: 使用浏览器原生函数优化动画
+---
+
+<p>Web中的JS动画原理并不复杂，JK前些时写过系列文章《动画组件（wagang版）》，讲解帧动画的原理以及QWrap版的实现，偷懒直接贴过来： </p><blockquote> <p>我们把动画抽象一下，它由以下几个组成部分： 时长（dur），即动画播放的时间总长。 进度（per），播放的进度，在区间[0,1]之内。 帧间隔时间（frameTime），即多长时间播放一帧。 动画函数（animFun），它是每一帧的渲染函数。定时器每隔frameTime来调用一下animFun(per)。也就是说按进度播放一帧动画。这四个基本参数将动画抽象成为一个js类，系统的理解就是：&#8220;在dur时间内，每隔frameTime时间，播放一次animFun(per)。&#8221; </p></blockquote> <p>随着页面上动画的使用越来越频繁，为了避免过多的定时器带来额外系统开销，一般的动画组件都会采用&#8220;统一帧管理&#8221;：只使用一个定时器，在每一动画帧依次调用所有注册的动画事件。  </p><p>后来，一些浏览器推出各自私有Api提供动画管理，W3C也出了一份WindowAnimationTiming interface规范，定义了以下接口： </p><blockquote> <p>[Supplemental, NoInterfaceObject]interface WindowAnimationTiming { long requestAnimationFrame(in FrameRequestCallback callback); void cancelRequestAnimationFrame(in long handle);};Window implements WindowAnimationTiming;[Callback, NoInterfaceObject]interface FrameRequestCallback { void sample(in DOMTimeStamp time);}; </p></blockquote> <p>注册动画使用requestAnimactionFrame函数，接受动画函数callback作为参数，并返回动画ID；移除动画使用cancelRequestAnimationFrame函数，参数是动画ID；动画函数执行时，会传入当前系统时间戳。 </p><p>对 比文首JK总结的动画四要素，规范里少了一个帧间隔时间frameTime。这正是动画组件可以被优化的地方，原生实现里的frameTime被设计为可 根据CPU使用率、window是否被最小化、元素是否被隐藏等因素进行动态调整。浏览器可根据实际情况降低fps甚至停止动画。来看下新Api怎么用。  </p><p>高版本webkit内核提供的webkitRequestAnimationFrame，跟规范非常接近，看一个示例： </p>expand source
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

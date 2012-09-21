@@ -1,0 +1,8 @@
+---
+layout: post
+title: 开源的PHP图片缩略图类库：PHPThumb
+---
+
+<blockquote> <p>刚上网搜索了一下，跟这个同名的还有另一个，似乎也挺不错的，这个类库是github.com上的一个开源项目：PHPThumb</p></blockquote> 1、这是一个缩略图类库 <p>它是一个开源的图片缩略图类库，可以完成多种复杂的图片缩略图生成和现实，使用起来非常的方便。</p> 2、使用方法 <p>这里有一篇关于其简单实用的说明，英文比较简单，就不翻译了：</p> <p>Basic-Usage</p> 3、API <p>这里有一个API列表：</p> <p>PHPThumb API</p> <p>不过非常可惜，API中并没有任何说明，只能对照其英文名称猜测其效果，当然即使猜对了，也要测试下看看是否是正确的。</p> 4、样例 <p>这里我也写了个简单调用它的方法，不过我是把该图片保存成为文件了，basic-usage中的例子全是直接在页面中输出的：</p><pre class="brush: csharp; auto-links: true; collapse: false; first-line: 1; gutter: true; html-script: false; light: false; ruler: false; smart-tabs: true; tab-size: 4; toolbar: true;"><p>require_once 'phpthumb/ThumbLib.inc.php';</p><p>try {    $thumb = PhpThumbFactory::create($realpath);} catch (Exception $e) {    // handle error here however you'd like}$thumb-&gt;adaptiveResize($width, $height);$thumb-&gt;save($realpath . '.' . $width . 'x' . $height . '.png');</p></pre>5、我用到的几个API<p>使用过程中，对几个API的理解逐渐加深，这里记录下：</p><blockquote><p>resize ($maxWidth, $maxHeight)</p></blockquote><p>resize方法是最常用的缩略图方法，它直接等比例将最大的边缩小到符合要求的高度/宽度，当图片宽高比与要求不一致时，将会有边显示空白。</p><blockquote><p>adaptiveResize ($width, $height)</p></blockquote><p>adaptiveResize方法是在一些特定情况下，不要求图片的完整，而要求显示特定宽高的最多内容。具体计算方式是：</p>当图片宽度大于所要求宽度，而高度一致时，取该高度下，从图片左右的中间去所要求的宽度； 当图片的高度大了并且宽度一致时，去该宽度下，图片上下居中位置取得所要求的高度； 当宽高都不正确时，先将图片缩放到所要求大小，再按前两条执行。<blockquote><p>save ($fileName, $format = ‘GIF|JPG|PNG’)</p></blockquote><p>当对图片做好处理后，可以用save方法，将图片保存为format中所指示的编码之一，如果未指定编码，将以原编码方式保存。$fileName是要保存的路径。</p><p>本文链接地址: 开源的PHP图片缩略图类库：PHPThumb</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

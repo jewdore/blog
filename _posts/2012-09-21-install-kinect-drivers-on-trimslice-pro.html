@@ -1,0 +1,8 @@
+---
+layout: post
+title: Install Kinect drivers on TrimSlice Pro
+---
+
+<p>TrimSlice Pro was delivered finally, it is preinstalled ubuntu 11.04. I hurried to get the Kinect working on the Arm Linux this weekend. I installed the official drivers, although it is regretful that NITE cannot be run without SSE support.</p><p>(1) mkdir ~/kinect, download the latest OpenNI (Version 1.3.2.3 unstable version for now) into that folder, and untar it.</p><p>https://github.com/OpenNI/OpenNI/tree/unstable</p><p>(2) According to the README file, install the requirements. Please note that sun-java6-jdk has been removed from the official repository. I found a external PPA, but it doesn't work for me. So I install the Openjdk-6-jdk instead. The remaining requirements should be installed easily.</p><p>(3) Don't build OpenNI at the moment. Firstly revise the Platform.Arm file in ~/kinect/OpenNI_DIR/Platform/Linux-x86/Build/Common. Otherwise, on one hand, you will fail to compile due to the first line, where I trapped for a whole day to configure the angtrom. On the other hand, the cpu by default may be not matched with your own with error as below, when you finished running sudo ./install.sh and launched an application for test.</p><pre>"One or more of the following nodes could not be enumerated:Device: PrimeSense/SensorV2/5.0.0.24: The device is not connected!" </pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

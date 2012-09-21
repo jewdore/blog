@@ -1,0 +1,8 @@
+---
+layout: post
+title: 虚拟机下的CentOS环境中安装Node.js
+---
+
+<p>本来这个并没有什么好写的，为什么，网上到处都是。不过在安装的时候确实遇到了很多问题，很有必要记录一下。</p>  <p>先安装gcc-c++编译环境和openssl，</p> <p>&gt;yum install gcc-c++ openssl-devel</p> <p>第二点，不要使用最新版本的node.js(官网目前最新的为0.5.5)，使用最新的在安装express模块会提示错误，为了避免这个问题还是装个0.5以上0.4以上的版本最好，我使用的是ver 0.4.8</p> <p>&gt;wget http://nodejs.org/dist/node-v0.4.8.tar.gz</p>   <p>&gt;tar –xvf node-v0.4.8.tar.gz</p> <p>&gt;cd node-v0.4.8</p> <p>&gt;./configure;make;make install</p> <p>如果在使用./configure时报错：Node.js could not configure a cxx comiler!，解决办法：</p> <p>&gt;yum groupinstall "Development Tools”</p>  <p>写个例子，测试一下node.js是否能正常运行</p> <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet">var http = require('http');http.createServer(function (req, res) {    res.writeHead(200, {'Content-Type': 'text/plain'});    res.end('Hello Node.js\n');}).listen(8124, "127.0.0.1");console.log('Server running at http://127.0.0.1:8124/');</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: 分布式日志系统Scribe安装
+---
+
+<p>分布式日志系统Scribe</p><p>scribe 是facebook 开源的分布式日志系统。其使用了thrift传输log，由于使用thrift，所以不论是什么语言的项目都可以实现日志收集，可达到远程或者是本地同步远程的分布式日志收集效果，在其示例配置中，并发量可达到max_msg_per_second=2000000，对普通的应用来说，每秒上百万的访问量可能性很小，因此基本上即使最简单的配置，远程收集所有项目的log也是可靠的，如果压力大的话，可以采取主从的配置，将日志打到本地后由scribe的主从配置来自动同步。下面讲述如何安装和使用scribe。</p><p>1 下载boost、thrift、scribe</p><p>software: boost_1_45_0.tar.gzdownload: http://www.boost.org/users/history/description: Boost库是为C++语言标准库提供扩展的一些C++程序库。</p><p>software: thrift-0.7.0.tar.gzdownload: http://archive.apache.org/dist/thrift/descriotion: thrift是一个软件框架，用来进行可扩展且跨语言的服务的开发。</p><p>software: facebook-scribe-2ee14d3.tar.gzdownload: https://github.com/pcting/scribe/descriotion: scribe 是facebook 开源的分布式日志系统。</p><p>2 安装需要的依赖</p><p>使用apt-get</p><pre>sudo apt-get install libghc6-http-devsudo apt-get install libghc6-binary-devsudo apt-get install libboost-iostreams-devsudo apt-get install libboost-filesystem-devsudo apt-get install libboost-dev automakesudo apt-get install libtool flex bison pkg-configsudo apt-get install g++ ant ivy libslf4j-javasudo apt-get install libcommons-lang-javasudo apt-get install liblog4j1.2-java automake1.10</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

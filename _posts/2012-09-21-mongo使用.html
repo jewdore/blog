@@ -1,0 +1,8 @@
+---
+layout: post
+title: Mongo使用
+---
+
+<p>1.下載 MongoDBDriver-Release-0.90.0-Beta-1，地址</p><p>http://www.mongodb.org/downloads</p><p>2.解壓縮</p><p>建立目錄，D:\MongoDB\</p><p>把解壓縮后中的文件bin目錄拷貝到這個建立的文件下面</p><p>並且建立一個房數據的文件夾db</p><p>3.啟動數據庫</p><p>3.1 運行cmd，啟動命令窗口</p><p>卻換到bin在目錄</p><p>輸入命令：mongod --dbpath=d:\MongoDB\db</p><p>默認情況下：port是27017，生成的數據庫是test。</p><p>4.測試數據庫，可以直接運行頁面</p><p>http://localhost:27017/</p><p>5.也可以打開另一個命令窗口進行測試。輸入mongo</p><p>默認打開test庫，db.studet.insert（{&ldquo;name&rdquo;，&ldquo;gsw&rdquo;，&ldquo;age&rdquo;：12}）</p><p>這個是插入student的數據。</p><p>db.student.find()查找出所有student下的所有數據。</p><p>在數據是josn格式。</p><p>6.在c#中定義，需要下載</p><p>https://github.com/samus/mongodb-csharp/downloads</p><p>2個類，加入自己的項目中。MongoDB MongoDB.GridFS</p><p>6.1 新增</p><pre>         using (Mongo mongo = new Mongo("Server=127.0.0.1:27017"))            {                mongo.Connect();                var db = mongo.GetDatabase("test2");                var collections = db.GetCollection&lt;person&gt;("person");                             var square = new person { name = "gswzzy" };                collections.Save(square);                   }</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: nodejs C/C++ Addons 中的指针操作
+---
+
+<p>   刚看到这个标题的时候，大家会觉得比较奇怪，nodejs是一门脚本语言，它又没有&ldquo;指针&rdquo;这个数据结构，怎么能操作指针呢 ？这个问题关键就是nodejs中的Buffers这个数据结构。</p><p>   背景</p><p>   自己做的一个项目需要是从网站上下载一个图片，然后用libjpeg这个C类库对图像进行操作。程序架构是用nodejs写一个主运行程序，用C++扩展来调用libjpeg类库并实现底层的算法。libjpeg的8d版本中已经有两个接口解析图片信息，分别是从文件中读取和从内存中读取。</p><pre>EXTERN(void) jpeg_stdio_src JPP((j_decompress_ptr cinfo, FILE * infile));EXTERN(void) jpeg_mem_src JPP((j_decompress_ptr cinfo,                  unsigned char * inbuffer,                  unsigned long insize));</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

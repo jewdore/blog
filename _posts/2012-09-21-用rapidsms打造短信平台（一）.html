@@ -1,0 +1,8 @@
+---
+layout: post
+title: 用rapidsms打造短信平台（一）
+---
+
+<p>一直想自己写个python的短信平台，利用短信modem做接口，实现与手机双向信息互通和远程控制，近期google发现了rapidsms这个框架，正是我所想和需要的框架。</p><p>rapidsms框架主要集成了django作为web界面的实现和后台数据库的管理， 底层使用了一个叫pygsm的库与modem交互， 这个库单独也可以用，收发短信十分方便，同时也支持短信网关的模式。</p><p>rapidsms安装：</p><p> 如果pygsm没安装，先安装pygsm，https://github.com/rapidsms/pygsm</p><p> 简单的easy_install rapidsms 就ok了 ，会自动处理依赖关系，安装依赖的库和包。</p><p>安装短信modem：</p><p> 这个可以参照短信开发分类里面的文章，网上也有很多资料，就不再赘述了</p><p>rapidsms使用入门：</p><p>rapidsms很多地方直接模仿了django，比如命令行.</p><p>1. 建立新项目 rapidsms-admin.py startproject myproject</p><p>2. 可以看到目录结构和生成文件和django的差不多一样，编辑settings.py:</p><p>配置短信modem， "PORT"填入短信modem的连接端口：</p><pre>INSTALLED_BACKENDS = {    "att": {        "ENGINE": "rapidsms.backends.gsm",        "PORT": "com1"    },    #"verizon": {    #    "ENGINE": "rapidsms.backends.gsm,    #    "PORT": "/dev/ttyUSB1"    #},    "message_tester": {        "ENGINE": "rapidsms.backends.bucket",    }}</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

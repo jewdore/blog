@@ -1,0 +1,8 @@
+---
+layout: post
+title: Clojure SQL 基础
+---
+
+<p class="p1">Clojure的contrib包中实现了对现有JDBC的封装，在wiki上有连接，该页面上包含了对不同的数据库的连接方法和基本的操作，但是这个页面上没有提供足够的信息，足够一个初学者能够使用Clojure来完成一个SQL操作。本文中我们将利用Clojure和Lein工具，简介一下做开发的基础。当然网上也有非常多对Clojure的SQL操作进行封装的库，我们这里没有使用。</p><p class="p1">首先，如何配置你的MySQL数据库。这个各有各的配法，我们就不再多说了。</p><p class="p1">其次，在和MySQL的操作中，我们需要两个库，一个是clojure.contrib，另外一个是mysql-connector-java。为了管理和配置这两个库，我们需要配置一下project.clj文件，在depedencies中加上两条：org.clojure/clojure-contrib &ldquo;1.2.0&rdquo; 和 mysql/mysql-connector-java &ldquo;5.1.6&rdquo;。这样运行 lein deps，就会自动下载并且安装到lib目录下。</p><p class="p1">之后，在需要使用sql库的地方要导入这些库。在ns宏中加载如下内容：(:use [clojure.contrib.sql :as sql :only ())，这样在本文件中就可以直接使用sql作为前缀。需要主意的是，虽然我们并没有直接使用到mysql-connector-java，但是如果在lib目录下没有该文件，就会报错没有mysql的driver。</p><p class="p1">配置上两条之后，就可以进行sql连接了。</p><p class="p1">首先要定义一个database specification，这是一个map，几个必须配置的key包括了：classname, subprotocol, subname, user, password。</p><pre class="brush:python;gutter:false;">(def db {:classname "com.mysql.jdbc.Driver"             :subprotocol "mysql"             :subname "//127.0.0.1:3306/test"             :user "root"             :password "pass"})</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

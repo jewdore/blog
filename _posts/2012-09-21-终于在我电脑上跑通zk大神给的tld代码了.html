@@ -1,0 +1,8 @@
+---
+layout: post
+title: 终于在我电脑上跑通ZK大神给的TLD代码了
+---
+
+<p>　　在环境WIN7+VS2010+MATLAB2010b+OpenCV2.3.1，我一直没能跑起来，极度郁闷&hellip;&hellip;</p><p>　　今天在搜索matrix.hpp的时候，突然发现GitHub上面，居然有人碰到的问题跟我一样，之前遇到的error如下：</p><pre> 1 ??? Unexpected Standard exception from MEX file. 2 What() is:/Users/liam/projects/OpenCV-2.3.1/modules/core/src/matrix.cpp:1305: 3 error: (-27) create() called for the missing output array in function create 4  5 Error in ==&gt; tldTracking at 30 6 xFJ = lk(2,tld.img{I}.input,tld.img{J}.input,xFI,xFI); % track all points by 7 Lucas-Kanade tracker from frame I to frame J, estimate Forward-Backward error, 8 and NCC for each point 9 10 Error in ==&gt; tldProcessFrame at 2511 [tBB tConf tValid tld] = tldTracking(tld,tld.bb(:,I-1),I-1,I); % frame-to-frame12 tracking (MedianFlow)13 14 Error in ==&gt; tldExample at 4115 tld = tldProcessFrame(tld,i); % process frame i16 17 Error in ==&gt; run_TLD at 4318 [bb,conf] = tldExample(opt);</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

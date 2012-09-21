@@ -1,0 +1,8 @@
+---
+layout: post
+title: Rails 3.1.0.rc4报错execjs Could not find a JavaSc...
+---
+
+<p>ruby 1.9.2 下运行rails 3.1.0.rc4，报错Could not find a JavaScript runtime</p><p>其实解决办法在报错位置就可以看到，https://github.com/sstephenson/execjs</p><p>rails server 就遇到了 `autodetect&rsquo;: Could not find a JavaScript runtime.  rvm gem install execjs 安装顺利，但是错误，找不到js运行库，建议我安装execjs，google一下后发现所谓缺少的js运行库是os级别的，ruby装在gem里面的不算数，于是： sudo apt-get install nodejs ok，终于把WEBrick跑起来了。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

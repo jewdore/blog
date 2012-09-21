@@ -1,0 +1,8 @@
+---
+layout: post
+title: Windows下安装node.js
+---
+
+<p>我是参考这位博友的安装方式http://www.cnblogs.com/seanlv/archive/2011/11/22/2258716.html</p><p>第一步，下载Node.js的windows安装程序和Npm</p><p>地址如下：</p><p>node.jshttp://nodejs.org/#download</p><p>npm　　https://github.com/isaacs/npm/tags</p><p>第二步，安装node.js，把安装目录下的node.exe拷贝到自己新建的D:/nodejs/目录下，</p><p>然后添加Path环境变量D:/nodejs/，然后新建一个D:/npmjs/目录将npm压缩包加压到里面，</p><p>添加环境变量NODE_PATH值为D:\nodejs\node_modules</p><p>第三步,执行以下命令</p><p>D:\&gt;cd npmjs</p><p>D:\npmjs&gt;node cli.js install -gf</p><p>进行安装</p><p>然后安装express</p><p>D:\npmjs&gt;npm install express -g</p><p>这个是从Internet下载</p><p>到这里面就算环境安装完毕</p><p>第四步，测试</p><p>用node -v，npm -v，express -v 来检测其安装是否成功</p><p>创建测试项目</p><p>D:\&gt;express hello</p><p>D:\&gt;cd hello</p><p>D:\hello&gt;npm install （加入依赖项）</p><p>D:\hello&gt;node app.js(启动，会提示启动端口）</p><p>在浏览器中输入http://localhost:port即完成node.js的安装</p><p>说明：</p><p>系统为XP SP3，</p><p>express为2.5.8</p><p>npm为1.1.16</p><p>node为v0.6.14</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

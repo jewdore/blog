@@ -1,0 +1,8 @@
+---
+layout: post
+title: 用psake来简化自动化脚本的构建
+---
+
+<p>psake是一个集成了PowerShell的用来创建自动化脚本的工具，其2.01版本集成了PowerShell2.0。Ayende Rahien正使用它来创建Rhino工具。psake项目的拥有者James Kovacs向我们解释了该工具最新版本的改进之处：</p><blockquote>psake最新版本通过使用构建脚本中的PowerShell语法，避免了与可执行的XML文件相关的尖括号标识(&lt;&gt;)。psake借鉴了rake(即Ruby中的make)和bake(即Boo中的make)的语法结构，但它更容易用来编写脚本，因为它还利用了使用者已知的命令行编程知识。 </blockquote><p>除了兼容PS2.0之外，psake2.01还被改写成了一个PS模块，这样做的主要好处是：</p><ol><ol>所创建编译的脚本不需要知道psake安装在哪里，它们只需要调用Invoke-psake方法就可以执行了；封装性：不再需要全局变量，因为除了显示地导出之外，对于某个模块来说它们可以被视为私有的；如果需要的话，可以卸载模块来除去内存中所有的代码和变量。 </ol></ol><p>2.01版本的其他改进之处还有：</p><ol><ol>采用了与之前不同的编码风格；使用Try/Catch代替"Trap"语句；除去了"exec"函数；现在使用者可以为一项任务定义前置和后置动作；现在使用者可以定义任务名称的格式；现在使用者可以定义一个"TaskSetup"方法，此方法将在每个任务开始之前被执行（从NUnit中借鉴而来）；现在使用者可以定义一个"TaskTearDown"方法，此方法将在每个任务结束之后被执行（也是从NUnit中借鉴而来）；创建了名为"psake_buildSucceeded"的全局变量，当编译成功后此变量将被设置为true。脚本可以通过检查此变量，来判断是否编译成功；在Run-Psake时还加入了一个"$noexit"开关变量，当此开关打开时任何函数执行结束前都不会调用exit()方法，这样使用者就可以在PS 窗口不被关闭的条件下，通过命令行来测试你所创建的脚本了。（此处默认的操作是，当一个脚本运行失败时，它将会调用exit(1)方法，这样在调用的代码中就可以判定此脚本是成功或失败了）psake-buildTester.ps1脚本必须做一些小改动才能调用Invoke-psake方法.在.\examples目录中加入了更多的示例来演示后置条件（POST conditions），前置和后置动作（PRE and POST Actions）以及其他（新特性）的用法。 </ol></ol><p>Ayende Rahien写了关于使用psake来创建他的Rhino工具psake to build his Rhino Tools的相关文章。这个项目起初使用了一种十分复杂的基于NAnt的编写工具，仅仅是最初的尝试，开发者就写出了海量的代码，这使得他们感到惊恐万分。经过对使用 Rake或Bake来开发的可行性评估后，Rahien转向使用psake并仅用了50行代码就解决了工作。</p><p>psake可以在GitHub网站的MIT License页面下载.</p><p>查看英文原文：Simple Build Automation with psake</p><p>查看中文原文：用psake来简化自动化脚本的构建</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

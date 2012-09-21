@@ -1,0 +1,8 @@
+---
+layout: post
+title: 用纯CSS3实现Path华丽动画
+---
+
+<p>    11月30日熟人社交移动应用Path 2.0发布后，因为其精美的界面和漂亮的动画效果受到许多人的赞誉，在Pinterest之后，又涌起一股新的模仿浪潮。</p><p>    Path 2.0的一个亮点是左下角的菜单展开动画效果：</p><p style="text-align: center;"></p><p>    一个名为Victor的法国人使用纯CSS3在HTML上实现了同样的动画效果，没有使用任何图片和Javascript，具体采用Sass+Compass计算坐标，最后为每一项生成了Keyframe动画，十分的有想象力，动画效果如下所示，也可以在http://dribbble.com/shots/339001-Path-menu-recreated-in-css3查看。</p><p style="text-align: center;"></p><p>    代码里使用了非常多CSS3的特性，例如transform、translate3d、rotateZ、animation、linear-gradient、border-radius、transition、box-shadow等，可以作为很好的CSS3教程和示例，一些相关代码如下所示：</p><textarea readonly name="code" class="html">#menu:checked ~ .items li:nth-child(3) {  -webkit-animation-name: &quot;appear-'3'&quot;;  -webkit-animation-duration: 240ms;  -webkit-animation-iteration-count: 1;  -webkit-animation-fill-mode: forwards;  -webkit-animation-delay: 60ms;}@-webkit-keyframes &quot;appear-'3'&quot; {  /* line 48, ../sass/app.scss */  0% {    -webkit-transform: translate3d(0, 0, 0px) rotateZ(270deg);    -webkit-animation-timing-function: cubic-bezier(1, 0.6, 0.57, 0.75);  }  /* line 52, ../sass/app.scss */  80% {    -webkit-animation-timing-function: cubic-bezier(0.45, 0.97, 0.51, 0.78);    -webkit-transform: translate3d(183px, -140px, 0px) rotateZ(0deg);  }  /* line 56, ../sass/app.scss */  100% {    -webkit-transform: translate3d(159px, -122px, 0px);  }}</textarea><p>HTML页面见http://namepk.sinaapp.com/blog/path/index.html（请用Chrome观看）。相关代码存放在Github上。</p><p>    转载请说明：来自蒋宇捷的博客（http://blog.csdn.net/hfahe）。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

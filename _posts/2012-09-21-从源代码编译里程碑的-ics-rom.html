@@ -1,0 +1,8 @@
+---
+layout: post
+title: 从源代码编译里程碑的 ICS ROM
+---
+
+<ol>   操作系统选择 Ubuntu 10.04， 可以用虚拟机；     安装 Android SDK ， 并更新；     打开命令行窗口， 输入下面的命令， 准备编译环境：      sudo apt-get install git-core gnupg flex bison gperf libsdl1.2-dev libesd0-dev libwxgtk2.6-dev squashfs-tools build-essential zip curl libncurses5-dev zlib1g-dev sun-java6-jdk pngcrush schedtool       如果提示说找不到 sun-java-jdk ， 可以安装 open-jdk6&#160; 代替；     安装 Repo 命令      curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &gt; ~/bin/repo       chmod a+x ~/bin/repo     按照 nadlabak 的说明， 输入下列命令：       mkdir cm4mm       cd cm4mm       repo init -u git://github.com/nadlabak/android.git -b ics       repo sync       vendor/cm/get-prebuilts       . build/envsetup.sh &amp;&amp; lunch cm_umts_sholes-eng &amp;&amp; mka bacon     如果不出错误的话， 就可以在 out/target/product/umts_sholes 目录看到编译好的 update-cm-9.0.0-RC0-umts_sholes-UNOFFICIAL-signed.zip 文件， 这个文件可以通过 OpenRecovery 进行安装。  </ol>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

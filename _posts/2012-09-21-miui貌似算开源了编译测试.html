@@ -1,0 +1,8 @@
+---
+layout: post
+title: MIUI貌似算开源了，编译测试。
+---
+
+<p>　　前两天在miui网站上看到了micode网站，是一个开源的组织，去看了一下，有3个应用程序，还有2.3和4.0的源代码，随即下载了2.3的下来，打算尝试移植的，代码是托管在github上的，如和下载等就不说了，园子里很多文章有介绍。</p><p>　　以下操作都基于ubuntu11.10.</p><p>　　patchrom下载下来解压，得到的是这样一个目录，</p><p>　　关于目录结构，micode上有说明，这里就不再叙述了。</p><p>　　下面来编译i9100的源代码。</p><p>　　现在patchrom目录下执行</p><p>　　. build/envsetup.sh</p><p>　　然后切换到i9100目录下，执行</p><p>　　make apktool-if</p><p>　　make zipfile</p><p>　　执行完毕后就会在.build目录下生成MIUI_i9100.zip，这就是刷机包。</p><p>　　</p><p>　　特别注意，make apktool-if不能省略，否则会出现</p><p>　　Exception in thread "main" brut.androlib.err.CantFindFrameworkResException  at brut.androlib.res.AndrolibResources.getFrameworkApk(AndrolibResources.java:366)  at brut.androlib.Androlib.parseUsesFramework(Androlib.java:400)  at brut.androlib.Androlib.buildResourcesFull(Androlib.java:301)  at brut.androlib.Androlib.buildResources(Androlib.java:248)  at brut.androlib.Androlib.build(Androlib.java:171)  at brut.androlib.Androlib.build(Androlib.java:154)  at brut.apktool.Main.cmdBuild(Main.java:182)  at brut.apktool.Main.main(Main.java:67)　　make: *** [.build/Phone.apk] Error 1</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

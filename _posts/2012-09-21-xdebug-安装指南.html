@@ -1,0 +1,8 @@
+---
+layout: post
+title: xdebug 安装指南
+---
+
+<p>1. 方法一：使用apt-get命令安装</p><p>sudo apt-get install php5-xdebug</p><p>安装完成后写个php的配置查看页面 phpinfo.php</p><p>&lt;?php</p><p>phpinfo();</p><p>?&gt;</p><p>重启apache ，查看phpinfo.php 有 xdebug 选项</p><p>2. 编译安装</p><p>上面安装的不是最新版，但是很简单，如果需要最新版可以到官方下载。</p><pre>1.git clone git://github.com/derickr/xdebug.git进入下载的目录2.cd xdebug-2.xxx3.phpize   <code>若没有这个命令要安装下面的 　　　　　　sudo apt-get install php5-dev</code>4. ./configure --enable-xdebug5.make6.sudo make install安装完成的时候会提示类似的Installing shared extensions:     /usr/lib/php5/20090626+lfs/xdebug.so在php中使用xdebug1. 在php.ini中添加 　　搜索 extension 有个地方是专门写 extension配置的地方　　在此添加下面的代码　　zend_extension="/wherever/you/put/it/xdebug.so"  //路径就是上面的输出路径2. 重启apache3.用phpinfo查看下是否安装成功。</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

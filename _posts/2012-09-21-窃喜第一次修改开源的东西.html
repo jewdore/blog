@@ -1,0 +1,8 @@
+---
+layout: post
+title: 窃喜，第一次修改开源的东西
+---
+
+简单的目标  <p>&#160;&#160;&#160;&#160;&#160; 以前如果为了实现类似弹出一个对话框，居中，肯定会毫不犹豫的选择一些开源插件。郁闷的是公司的项目是个旧的项目，引入各种东西都会影响界面的样式和布局，于是找了一些插件也看了一下，都比较难懂，jquery SimpleDialog-2.0.js 算是 一个比较简单的插件，因为我看懂了，</p>  <p>&#160;</p>    <p>&#160;</p>  查看源码&#160;   <p>&#160;&#160;&#160; 令人费解的是，SimpleDialog-2.0.js却支持根据一段html创建多个对话框，这样，对话框的内容就变成只读的了，这个必须的改一下</p>  <p>SimpleDialog-2.0.js 下载地址&#160; https://github.com/ajayhada/SimpleDialog</p>  <p>看了下源码，因为使用了this.html(),所以就变的不可操作了，一个html对象创建多个对话框是因为定义连变量count，没创建一个对话框count++;</p>     <pre class="alt">    var popupcss='border:'+settings.popupStyle.border+'px solid '+settings.popupStyle.bordercolor+'; border-radius:'+settings.popupStyle.borderradius+'px; background:'+settings.popupStyle.background+';z-index:4000;' + settings.popupStyle.extraCSS;</pre>  <pre>    </pre>  <pre class="alt">    var popup = $('&lt;DIV id=&quot;simple_popup'+count+'&quot; style=&quot;'+popupcss+'&quot;&gt;&lt;/DIV&gt;');</pre>  <pre>    </pre>  <pre class="alt">    popup.html(innerHtml + this.html());</pre>  <pre>    </pre>  <pre class="alt">    popup.appendTo(document.body);</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: SDWebImage一个可管理远程图片加载的类库
+---
+
+<p>SDWebImage托管在github上。https://github.com/rs/SDWebImage</p><p>这个类库提供一个UIImageView类别以支持加载来自网络的远程图片。具有缓存管理、异步下载、同一个URL下载次数控制和优化等特征。使用示范的代码：</p><p style="font-size: 14px;">UITableView使用UIImageView+WebCache类（基本应用，UIImageView的一个category）</p><p>前提#import导入UIImageView+WebCache.h文件，然后在tableview的cellForRowAtIndexPath：方法下：</p><pre> 1 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath { 2     static NSString *MyIdentifier = @"MyIdentifier"; 3     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier]; 4    if (cell == nil) { 5         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease]; 6     } 7 // Here we use the new provided setImageWithURL: method to load the web image 8    [cell.imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder.png"]]; 9    cell.textLabel.text = @"My Text";10    return cell;11 }</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

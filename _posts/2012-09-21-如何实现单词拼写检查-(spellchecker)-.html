@@ -1,0 +1,8 @@
+---
+layout: post
+title: 如何实现单词拼写检查 (spellChecker) ？
+---
+
+<p>前两天，有位同事提到她做过的一个功能，在线实现单词检查，若单词有误，给出建议清单，她使用的方法是下载单词库，转为xml，在VB.NET中使用查找与loop，并且要支持多语种。我当时听到，觉得应该有更快的方法，就查了查，果然让我查到已有人开发出使用jQuery调用Google Dictionary API的现成方法， Demo: http://spellchecker.jquery.badsyntax.co.uk/ 问题就是：</p>Google服务是否是她客户认同的 demo中的web service禁止外站使用，那就得自己在自己的项目中植入web service 示例中的checkspeller.php是用PHP实现的，而我们需要使用C#/VB.NET写Web service，这样的话性能是否能保证<p>她后来确实找到一个将此PHP转换成C# Web Service，可速度明显变慢，为何？ </p><blockquote>关于jQuery SpellChecker的相关文章： http://code.google.com/p/jquery-spellchecker/ http://github.com/brandonaaron/jquery-spellcheck Further Reading: 老外写的C# SpellChecker控件， NHunspell Component for Visual Studio， Using NHunSpell in ASP.Net with JSON web service and jQuery  其它Google API与jQuery的应用 http://en.wikipedia.org/wiki/Spell_checker</blockquote>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

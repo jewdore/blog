@@ -1,0 +1,8 @@
+---
+layout: post
+title: iphone-common-codes-ccteam源代码 CCUITableView.m
+---
+
+<pre>//  //  CCUITableView.m  //  CCFC  //  //  Created by xichen on 11-12-28.  //  Copyright 2011 ccteam. All rights reserved.  //    #import "CCUITableView.h"  #import "CCUIView.h"      @implementation UITableView(cc)      - (void)scrollToBottom:(BOOL)animated  {          NSUInteger lastSection = [self numberOfSections] - 1;          NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self numberOfRowsInSection:lastSection]                                                                                                   inSection:lastSection];          [self scrollToRowAtIndexPath:indexPath                                  atScrollPosition:UITableViewScrollPositionBottom                                                  animated:animated];  }      // get the vertical scroll indicator  - (UIView *)getVerticalScrollIndicator  {          id verticalIndicatorImgView = nil;           object_getInstanceVariable(self, "_verticalScrollIndicator", (void **)&amp;verticalIndicatorImgView);                    return (UIView *)verticalIndicatorImgView;  }      // hide the vertical scroll indicator  - (BOOL)hideVerticalScrollIndicator  {          UIView *indicatorView = [self getVerticalScrollIndicator];          indicatorView.hidden = YES;          return indicatorView != nil;  }      @end</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

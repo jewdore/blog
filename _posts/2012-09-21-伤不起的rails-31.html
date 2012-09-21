@@ -1,0 +1,8 @@
+---
+layout: post
+title: 伤不起的rails 3.1
+---
+
+<p>maybe很多ror新人如我会跟着那个rails guide小试牛刀搭一个自己的blog。一步步下来小有体会到rails的强劲，也没出啥问题，到的comment那一块，X，对了半天源代码甚至复制粘贴到Sublime Text,奈何还是坑爹的冒出错误：</p><pre><code>undefined method `error_messages' for #&lt;ActionView::Helpers::FormBuilder:0x3bff910&gt;</code></pre><p>嗯，好吧，简体和繁体的guide都是基于rails 3.0的。于是去官方看了下rails 3.1的那个guide。很明显的，源代码少了</p><pre>&ldquo;&lt;%= f.error_messages %&gt;&rdquo;</pre><p><code>这一行。删去后妥妥的....</code></p><p><code>查了下error_messages这玩意的用处，没查到，有木有高端指教一下啊~~</code></p><p>好吧，顺便借机叹息一下，中文的ror资料更新的好慢啊，想看中文版的AWDWR第四版却迟迟不出。难不成真的要去看英文版的？？最近在看Ruby on Rails Tutorial,还有github上的英文已经各种够吃力了！！~~~~(&gt;_&lt;)~~~~</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

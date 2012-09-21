@@ -1,0 +1,8 @@
+---
+layout: post
+title: Redis Java客户端Jedis入门
+---
+
+<p>Linux下redis的安装及运行可以参考随笔(redis入门与安装)</p><p>一、jedis下载</p><p>在https://github.com/xetorthio/jedis/downloads上下载jedis-2.0.0.jar</p><p>二、将jedis-2.0.0.jar放入eclipse\plugins的目录中</p><p>打开Window-&gt;Preferences-&gt;Java-&gt;Install JREs</p><p>在jre6-&gt;Edit-&gt;Add External JARs把eclipse\plugins\jedis-2.0.0.jar添加进来。</p><p>三、进入Maven生成Helloworld编辑pom.xml</p><pre>&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;  &lt;groupId&gt;org.marshal&lt;/groupId&gt;  &lt;artifactId&gt;helloworld&lt;/artifactId&gt;  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;  &lt;packaging&gt;jar&lt;/packaging&gt;  &lt;name&gt;helloworld&lt;/name&gt;  &lt;url&gt;http://maven.apache.org&lt;/url&gt;  &lt;properties&gt;    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;  &lt;/properties&gt;  &lt;dependencies&gt;    &lt;dependency&gt;      &lt;groupId&gt;junit&lt;/groupId&gt;      &lt;artifactId&gt;junit&lt;/artifactId&gt;      &lt;version&gt;3.8.1&lt;/version&gt;      &lt;scope&gt;test&lt;/scope&gt;    &lt;/dependency&gt;    &lt;dependency&gt;      &lt;groupId&gt;redis.clients&lt;/groupId&gt;      &lt;artifactId&gt;jedis&lt;/artifactId&gt;      &lt;version&gt;2.0.0&lt;/version&gt;      &lt;scope&gt;compile&lt;/scope&gt;    &lt;/dependency&gt;  &lt;/dependencies&gt;&lt;/project&gt;</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: android中ocr解决方案（tesseract）
+---
+
+<p>　　android应用中ocr的解决方案大致有两种，而采用最多的还是tesseract.小弟就在这里将我最近两天解决思路写下来，如有缺陷，欢迎拍砖：</p><p>　　有两种解决方案，一种是采用tesseract cloud-service,这钟是把图片信息发送到云端，然后获得图片分析数据；第二种就是不用联网，本地化分析图片上信息。我就说说第二种,第一种我会在最后给大家一个链接（文章很不错）。</p><p>　　搜先就是下载Tesseract native android library.这里有两个链接，你选哪个链接都可以：</p><p>　　a.svn checkout http://tesseract-android-tools.googlecode.com/svn/trunk/ tesseract-android-tools。(如果不能checkout到，废话别说就到官方上下:http://code.google.com/p/tesseract-android-tools/)</p><p>　　b.可能上面一个下载后编译有些人会遇到一些问题，比如找不到jgep库，编译不成功。所以有了这个项目：git clone git://github.com/rmtheis/tess-two.git （这个包里面内容太多，不过也省得下那么多库了）</p><p>　　这里先说采用第一个源下载：下载成功后，打开README文件，做下修改（如下）：</p><pre>git clone git://android.git.kernel.org/platform/external/jpeg.git libjpeg</pre><pre>修改为：</pre><pre>git clone https://android.googlesource.com/platform/external/jpeg libjpeg</pre><pre>ndk-build //这个编译要到jni文件夹里面编译</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

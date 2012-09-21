@@ -1,0 +1,8 @@
+---
+layout: post
+title: Backbone Boilerplate  学习笔记
+---
+
+<p>Backbone Boilerplate </p><p>这是Backbone 的托管在github上的新项目。</p><p>boilerplate 是一个充满研究和失败感的项目。 已开发的boilerplate 可以自由改动Backbone内核，缺少一个内建的进程，非常的规范，boilerplate 改变了这些</p><p>基于一个逻辑组织你的程序，在modules 里开发你的Models Collections Views Routers  ,你优秀的代码也不会是用户的瓶颈。</p><p>提供</p><p>HTML5Boilerplate  基础</p><p>优美的文件结构</p><p> App code assets tests 和发布</p><p>让任务更容易实现</p><p>html5 history api/hash，加载模板和程序事件。</p><p>非常灵活和可插拔，在Windows下工作完美。</p><p>合并并压缩你的libs ,app code ,template 和css</p><p>编译underscore模板（在html之外的）</p><p>那它不就是一个前端静态资源开发和发布系统？</p><p>安装</p><p>它需要下载nodejs</p><p>教程</p><p>如果你下载并解压缩了boilerplate  运行以下命令</p><pre>node build/server  </pre><pre>启动你的browser  http://localhost:8000/   将会打开教程</pre><pre></pre>HTML5 Boilerplate<p>boilerplate 基于一个HTML5 Boilerplate ,已经从评论和文件中剥离出来。 你可以访问H5BP  </p><p>文件结构</p><p>结构很基本，提供了很多优点，例如库文件和程序代码完全分开。</p><p>应用程序代码和模板放在app目录。 index.js 是应用程序的单点入口， 定义命名空间，并初始化路由。 确定你已经改了命名空间的名字。</p><p>Modules</p><p>Modules 放在app/modules 目录。有一个例子模块叫做example.js</p><p>真正的模型定义在app/index.js中。你可以创建并引用模型，通过一个函数调用</p><p><code>namespace.module("&lt;module_name&gt;")</code>.</p><p>一般，一个module 包含一个Model/Collection/Router 和几个Views</p><p>因此，返回的module对象是一个希望得到一个Views的空模型</p><p>MyModule.Views.Detailed = Backbone.View.extend({}) ;</p><p>MyModule.Views.Main = Backbone.View.extend({});</p><p>别的也一样</p><p>MyModule.Model = Backbone.Model.extend({});</p><p>MyModule.Router= Backbone.Router.extend({});</p><p>Events</p><p>应用程序的各种事件提供了一个方便的方法让各个模块间想到通信。 namespace.app 提供了一个Backbone.Events 对象</p><p>提供了.on .off 和.trigger事件  </p><p>例如增加一个all事件的callback</p><p>namespace.app.on("all",function(){},this);</p><p>HTML 5 模坂</p><pre></pre><pre></pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

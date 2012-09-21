@@ -1,0 +1,8 @@
+---
+layout: post
+title: KendyNet性能测试
+---
+
+<p>这几天编写了一个测试程序，测试我的网络库(KendyNet for Windows）的性能，主要用于模拟大量玩家在同一区域内，</p><p>互相可见情况下网络的压力情况.</p><p>测试环境:</p><p>客户机和服务器 E5520 4GB windows 2008 server</p><p>千兆网.</p><p>客户机启动一个进程，建立360个连接到服务器，模拟360个客户端，每个客户端每秒发送16个28字节的封包，服务器</p><p>收到每个封包都将其转发给所有的360个客户端.</p><p>处理能力是每秒接收6000+,转发220W+，CPU占满单个核心,内存占用8M左右，封包一个来回的平均延时在46ms左右.</p><p>这已经达到了最大处理能力，再加连接就开始导致性能下降，内存消耗暴增.</p><p>https://github.com/sniperHW/KendyNet/tree/master/IOCP</p><p>可以取得测试代码，需要注意的是，请将winsock2.h中的FD_SETSIZE从64改成1024，另外因为使用了</p><p>SetFileCompletionNotificationModes所以在xp,和windows 2003上是无法运行测试程序的 。</p><p>后面将会着手编写KendyNet for linux的测试程序.</p><p>(2012-5-19,做了点优化，将wpacket_t和rpacket_t的产生从malloc换成对象池,目前可以稳定支持420个客户端，每秒转发290W个包,</p><p>当玩家超过450时，转发量达到340W并维持了一段时间(大概一两分钟),cpu 13%，已经占满单个核心,服务器逐渐处理不过来，延时变大，很快对象池空间耗尽。)</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

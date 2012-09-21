@@ -1,0 +1,8 @@
+---
+layout: post
+title: node.js 0.4   发生Error: socket hang up
+---
+
+<p>百度一下 发现是 系统bug ，修改lib下http.js . 参考下面：</p><p>https://github.com/joyent/node/commit/66570c196429f01786c79f177c643b07f678c32c</p>I kinda solve the Socket Hang up problem. At least ,now I don't seeany error message.<p>Here is what I've done:</p><p>1) for http.request options, set Connection:keep-alive2) set Agent.maxSockets = 1024  (so more connection to play aroundwith )3) very critical: DO a timeout for the http.request.</p><p>e.g.var responseHdr = function (clientResponse) { if (clientResposne) {</p><p> } else {  clientRequest.abort();}</p>};
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

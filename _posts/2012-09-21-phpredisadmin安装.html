@@ -1,0 +1,8 @@
+---
+layout: post
+title: phpRedisAdmin安装
+---
+
+<p>phpRedisAdmin是一个用php管理redis的工具, 和phpmyadmin类似.</p><p>1. 下载phpRedisAdmin</p><p>cd /usr/local/httpd-2.4.1/htdocs</p><p>wgethttps://nodeload.github.com/ErikDubbelboer/phpRedisAdmin/zipball/master</p><p>mv masterphpRedisAdmin.zip</p><p>unzipphpRedisAdmin.zip</p><p>2. 配置和测试.</p><p>cdphpRedisAdmin/</p><p>vi config.inc.php</p><p># 修改redis服务器配置, 可以配置多个redis服务器</p><p># 也可以配置登录认证</p><p>3. 数据量过大bug处理.</p><p>对于数据量较大的redis(50w数量级)来说, 页面加载的时候会非常慢, 而且显示50w的数据也是没有意义的.</p><p>数据量过多, 就需要用到搜索了.</p><p>可以设置一个key值显示阈值, 如果超过该阈值, 不再显示.</p><p>修改config.inc.php: // 配置文件中增加显示阈值</p><p>vi config.inc.php</p><pre>&lt;?php// 最多显示50个$config['maxkeydisno'] = 50;?&gt;</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

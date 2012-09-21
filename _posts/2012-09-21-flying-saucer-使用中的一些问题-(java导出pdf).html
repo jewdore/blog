@@ -1,0 +1,8 @@
+---
+layout: post
+title: flying saucer 使用中的一些问题 (java导出pdf)
+---
+
+<p>flying saucer（源代码托管在githubhttps://github.com/flyingsaucerproject/flyingsaucer）是java导出pdf的一种解决方案，最早是从downpour老大的文章里看到它：http://www.iteye.com/topic/509417，感觉比之前的iText好用许多，它可以解析css，即我将页面先设置好，然后传递给它，它既可以给我生成一个pdf出来，跟页面一样，当时感觉很酷，于是就研究了一下，现在项目中也用到了，效果还不错。 优点很明显，之前也提到了，可以解析css，这样很方便，大大的减少了工作量。pdf加水印也变得很简单&mdash;&mdash;只需为body设置一个background-image即可。 说说使用中需要注意的一些问题吧：[list=1]</p><li style="color: #000000; font-family: Helvetica,Tahoma,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: #ffffff;"><strong style="font-weight: bold;">中文换行问题<p> 老外做的东西，没有考虑到中文问题。默认提供的包里，中文不会换行，有人修改了源代码，解决了这个问题，重新编译好的包在附件里，可以下载。需要注意的是，在官网提供的jar包里，有两个包，一个是core-renderer.jar，另一个是core-renderer-minimal.jar。引用时，只需引用前者就行。有人曾经说用这个重新编译后的包替换了原来的包之后，不起作用，原因就在此。 另外，想要中文换行，如果是table，那么table 的style必须加上这句话</p>Html代码
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

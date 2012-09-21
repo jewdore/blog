@@ -1,0 +1,8 @@
+---
+layout: post
+title: 发布首款支持Shift/Ctrl多选的国产日历控件，界面仿Twitter风格，支持中文日期类型，支持SImpleDateFormat格式，支持change等自定义事件，全中文注释和API，欢迎支持
+---
+
+号外：kitjs官方讨论QQ群建立了，QQ群号88093625，欢迎大家加入，讨论前端相关话题<p>新增双月日历，多月日历</p>地址：http://xueduany.github.com/KitJs/KitJs/index.html#datepicker_nmonth<p>4月13日更新（感谢大家热心反馈）</p><p>1.加入鼠标划动多选</p><p>2.加入再次单击选中日期，会取消选择</p> <p>demo地址：http://xueduany.github.com/KitJs/KitJs/index.html#datepicker</p>  <p>本日历，支持多语言本地化，且中文支持非常好</p> <p> </p>  <p>独家支持日历日期多选操作，按住shift键，多选，和按住ctrl键多选，</p> <p> shift选择效果  ctrl选择效果</p>  <p>支持开始日期和结束日期限制</p> <p> </p>  <p>支持自定义事件change，可以方便2次编程</p> <blockquote> <p>//默认日历var picker = new $kit.ui.DatePicker();picker.init();$kit.el('#J_datePicker').appendChild(picker.picker);picker.show();picker.ev({ ev : 'change', fn : function(e) { alert(picker.getValue()); }})</p></blockquote>       <p>使用方法</p> <blockquote><pre>var picker = new $kit.ui.DatePicker({dateFormat : 'yyyy年mm月dd日', //接受和输出的日期格式language : 'cn',//本地化语言show : false, //默认是否显示canMultipleChoose : true, //能否多选dateStringSeparator : ',', //多选时候输出分隔符shiftSelectOutType : 'full', //多选时候输出类型，full为将选中的日期全部输出，short为输出选中日期的开头和结尾shiftSelectOutTypeShortSeparator : '~'//当输出类型为short时，比如选中了3月1日到3月10日，则输出"3月1日~3月10日",简短输出，只有开头+分隔符+结尾});picker.init();//执行初始化更多参数请参考源码https://github.com/xueduany/KitJs/blob/master/KitJs/src/js/widget/DatePicker/datepicker.js</pre></blockquote><pre></pre><p>API</p>方法说明show显示hide隐藏getValue返回选中的日期init初始化日历ev注册事件自定义事件说明change在选中日期时触发
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

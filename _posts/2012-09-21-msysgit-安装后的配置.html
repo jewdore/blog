@@ -1,0 +1,8 @@
+---
+layout: post
+title: msysGit 安装后的配置
+---
+
+msysGit<p>  msysGit 作为 Window 平台下的原生程序，Windows 平台下是 Git 客户端的不二之选。msysGit 的安装过程很简单，几步赘述了。这里仅技术一下安装后的配置工作。</p><p> 作为 Git 客户端工具，如果连接不同的 Git 服务，配置过程可能会有所不同。由于通常会使用 Github 提供的 Git 服务，这里就以访问 Github 所需要的配置为例。</p> msysGit --&gt; Github<pre> 1 ■ 切换到存放密钥的目录 2 $ ls 3 id_dsa  id_dsa.pub  id_rsa  id_rsa.pub  known_hosts 4  5 ■ 查看公钥内容，并将其复制到 github 中的 SSH Keys 数据库中 6 Administrator@99638E047C1E4A0 ~/.ssh 7 $ vim id_rsa.pub 8  9 ■ 测试与 Github 服务器的联通情况10 Administrator@99638E047C1E4A0 ~/.ssh11 $ ssh -T git@github.com12 Hi kysnail! You've successfully authenticated, but GitHub does not provide shell13  access.14 15 ■ 配置全局用户姓名16 Administrator@99638E047C1E4A0 ~/.ssh17 $ git config --global user.name "kysnail"18 19 ■ 配置邮件名20 Administrator@99638E047C1E4A0 ~/.ssh21 $ git config --global user.email "TracingLife@gmail.com"22 23 ■ 配置全局用户名24 Administrator@99638E047C1E4A0 ~/.ssh25 $ git config --global github.user kysnail26 27 ■ 配置 API Token28 Administrator@99638E047C1E4A0 ~/.ssh29 $ git config --global github.token e97cc93e4dcd9a0012d11300d9e2ec39</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

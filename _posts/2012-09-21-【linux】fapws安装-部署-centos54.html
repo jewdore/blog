@@ -1,0 +1,8 @@
+---
+layout: post
+title: 【Linux】fapws安装、部署--CentOS5.4
+---
+
+<p>一、安装libev-3.9</p><p>1、#wget http://dist.schmorp.de/libev/Attic/libev-3.9.tar.gz</p><p>2、tar xzf libev-3.9.tar.gz </p><p>3、cd libev-3.9</p><p>4、./configure --prefix=/usr //指定安装路径，若不指定，会默认安装到/usr/local</p><p>5、make</p><p>6、make install</p><p>二、安装fapws</p><p>1、wget --no-check-certificate http://github.com/william-os4y/fapws3/tarball/master -O fapws3.tgz</p><p>2、tra xzf fapws3.tgz</p><p>3、cd william-os4y-fapws3*</p><p>4、python setup.py build</p><p>5、python setup.py install</p><p>PS:官网说可以用esay_install fapw3，但是不知道为什么，我直接安装后，就是部署失败。重新一步步安装才可以的。原因有待后续研究。</p><p>三、部署hello world</p><p>1、cd william-os4y-fapws3*</p><p>2、python ./sample/hello/hello_world.py //自带的sample</p><p>3、在浏览器中输入：http://0.0.0.0:8080/hello</p><p>Question1：输入第2行的指令提示：ImportError：libev.so.3:cannot open shared boject file:no such file or directory</p><p>Solution1：ln -s /usr/local/lib/libev.so.3 /usr/lib</p><p>原因：因为安装时没有指定路径，所以安装到了usr/local下面。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

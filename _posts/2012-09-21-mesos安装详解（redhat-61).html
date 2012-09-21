@@ -1,0 +1,8 @@
+---
+layout: post
+title: Mesos安装详解（RedHat 6.1)
+---
+
+<p>Apache Mesos是一个集群管理器，提供了有效的、跨分布式应用或框架的资源隔离和共享，可以运行Hadoop、MPI、Hypertable、Spark。</p><p>系统准备：</p>g++ 4.1 or higer安装命令：sudo yum install gcc-c++Python 2.6 (for the Mesos web UI).系统一般自带。Python 2.6 developer packages安装命令：yum install python-develcppunit (for building zookeeper)安装命令： sudo yum install cppunit-develJava JDK 1.6 or higher.系统一般自带libtool(这个系统可能自带，也可能没有，github wiki没有说明需要安装，但是实践证明需要)安装命令:sudo yum install libtoolunset JAVA_HOME 这个系统变量，否则安装时会找不到JAVA_HOMEshell 命令：unset JAVA_HOME将aclocal 其他版本里面的文件拷到aclocal,否则安装是会找不到宏定义shell 命令：cp -r /usr/share/aclocal-1.11/ /usr/share/aclocal安装svn客户端或者git安装命令：yum install subversion (svn客户端) yum install git(git)<p>下载代码：</p><p><code>svn co https://svn.apache.org/repos/asf/incubator/mesos/trunk mesos-trunk</code> （for svn)</p><p><code>git clone git://git.apache.org/mesos.git</code> (for git)</p><p>安装：</p>进入mesos主目录运行./bootstrap<code>运行./configure --with-webui --with-included-zookeeper（32位机请加上CXXFLAGS="-march=i486"）</code>运行make<p>编译demo：</p>在刚才make的目录下，运行make check　<p>运行demo：</p>运行 <code>bin/mesos-master.sh</code> 启动master记住master的url 比如：<code>mesos://master@192.168.0.1:5050</code>用浏览器打开master的url的8080端口，比如：<code>http://192.168.0.1:8080</code> 这时候你可以看到master的主页，上面会显示master的信息运行<code>bin/mesos-slave.sh --master=mesos://master@192.168.0.1:5050</code> 启动slave 刷新刚才的网页，可以看到slave的信息运行<code>src/test-framework mesos://master@192.168.0.1:5050</code>，启动测试框架，刷新网页，可以看到框架信息。<p>参考网页：https://github.com/mesos/mesos/wiki/</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

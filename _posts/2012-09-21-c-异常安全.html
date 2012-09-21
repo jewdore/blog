@@ -1,0 +1,8 @@
+---
+layout: post
+title: C++ 异常安全
+---
+
+<p>异常安全</p><p>　　basic guarantee: 无资源泄露.　　strong guarantee: 事务级别.　　(参考　　1. Exception-safe class design:http://www.gotw.ca/gotw/059.htm　　　　　　2.http://en.wikibooks.org/wiki/More_C++_Idioms/Copy-and-swap)</p><hr /><p>RAII</p><p>　　Resource Acquisition is Initialization.　　http://stackoverflow.com/questions/395123/raii-and-smart-pointers-in-c　　核心是把资源和对象的生命周期绑定，对象创建获取资源，对象销毁释放资源. (http://ericwang.github.com/c_cpp/2010/02/21/cpp_raii.html)</p><hr /><p>Nothrow guarantee</p><p>　　保证某些函数是不会抛异常的. 这是实现 strong guarantee 的保障.</p><hr /><p>exception-safe assignment</p><p>　　使用 copy-and-swap idom, 先创建临时对象, 再调用 nothrow 的 swap 函数.　　　　Type temp(s);　　　　swap(this, temp);</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

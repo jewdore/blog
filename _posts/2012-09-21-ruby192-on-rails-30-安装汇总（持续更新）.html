@@ -1,0 +1,8 @@
+---
+layout: post
+title: ruby1.9.2 on rails 3.0 安装汇总（持续更新）
+---
+
+ <p>我只有windows和MacOS,所以只能写这两个版本的安装情况，以下所有步骤均保证在实机上测试通过。</p>  <p>windows 版本:</p> <p>1. ruby 安装,版本1.9.2-p0</p> <p>下载地址：</p> <p>http://rubyforge.org/frs/download.php/72170/rubyinstaller-1.9.2-p0.exe</p> <p>引用页:</p> <p>http://rubyinstaller.org/downloads/</p>  <p>2. rails 安装</p> <p>gem install rails –no-rdoc ---no-ri</p> <p>我的机器安装完后为rails3.0.3，以后肯定会变</p>  <p>3. ruby-debug安装，最为麻烦：</p> <p>a. 装好devkit,这个只要用7z绿色3.4.5r3的版本即可以，不需要最新的4.5.1的exe版，我下了两天没下载得下来。</p> <p>下载地址：</p> <p>http://rubyforge.org/frs/download.php/66888/devkit-3.4.5r3-20091110.7z</p> <p>引用页:</p> <p>http://rubyforge.org/frs/?group_id=167</p> <p>解压到ruby安装目录即可.</p>  <p>b. 下载ruby192源码</p> <p>ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p0.tar.gz</p> <p>解压到c:/Ruby192/src下即可,如vm_core.h的目录为c:\Ruby192\src\vm_core.h</p>  <p>c.命令行安装ruby-debug</p> <p>注意命令，别搞错了.</p> <p>set PATH=c:/Ruby192/bin</p> <p>gem install ruby-debug19 -- --with-ruby-include=c:/Ruby192/src</p> <p>以上步骤我测试过了，花了一个上午的时间，主要是下4.5.1版的devkit下载不动,vpn,代理，电信，铁通的网络哥试遍了，都下载不来。</p> <p>参考网址： https://github.com/mark-moseley/ruby-debug/wiki/Installation%3A-command-line-version</p>  <p>mac版本:</p> <p>1. rvm 安装</p>   <p>问题汇总：</p> <p>1. 中国网络环境下gem install慢的问题</p> <p>gem install heroku --no-ri --no-rdoc -p http://localhost:8000 –r –backtrace</p> <p>用gproxy或其他代理方式，安装很快，直接安装有时慢得想死</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

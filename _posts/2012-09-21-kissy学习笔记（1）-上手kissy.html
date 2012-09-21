@@ -1,0 +1,8 @@
+---
+layout: post
+title: kissy学习笔记（1）--上手kissy
+---
+
+（一）了解kissy <p>kissy是taobao UED小组推的一款js框架。官网地址：http://github.com/kissyteam/kissy</p>  <p>下载源代码后，可以看到整个代码压缩后的kissy-min.js文件大小为42kb（jQuery-min为71kb，dojo core为88kb）</p> <p>查看官网文档，发现kissy项目分为9个部分</p> <p> </p>  <p>而kissy.js核心的结构可以分为</p>  <p>基类为kissy，提供以下方法</p> <p> </p> <p>（这里给开发者提一个小小的建议，初看这个文档，我一直以为要访问add方法，需要kissy.kissy.add这样的申明方式，可能是看ext/dojo的文档看多了，看到kissy这种组织方式的文档，让我无法一眼，知道具体方法的使用方式，希望能改进下吧。。。）</p> （二）了解核心api <p>与所有的js框架一样，kissy提供了kissy.Config对象实现kissy框架初始加载的配置信息，</p> <p> </p> <p>和一个DocumentReady事件，kissy.ready(fn)方法，</p> <p> </p> <p>（这里开发者没写，ready注册的多个事件的执行顺序，通过查看源代码，可以知道，ready注册的事件是放在一个list里面的，执行时候，按照先进先出的原则执行）</p> <p> </p> <p> </p>  <p>还有一个监测元素可用时执行的方法available</p> <p> </p> <p>不过总觉得这里的立刻执行有歧义，其原理通用是一个timer，延时扫描，不能算立刻</p> <p>封装了简单了debug输出，实现了一个log，error方法，利用浏览器的console</p> <p>为了组件化管理，实现了命名空间（namespace），对象继承（extend）和对象成员拷贝（mix/merge），原型拷贝（argument），对象申明（app）等方法，</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

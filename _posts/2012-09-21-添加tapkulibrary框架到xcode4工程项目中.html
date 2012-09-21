@@ -1,0 +1,8 @@
+---
+layout: post
+title: 添加TapkuLibrary框架到Xcode4工程项目中
+---
+
+<p>iOS开源框架Tapku下载地址：https://github.com/devinross/tapkulibrary.git</p><p>1.创建你的工程项目。</p><p>2.将Tapku框架中src目录下的&ldquo;TapkuLibrary.xcodeproj&rdquo;文件拖动到工程文件列表中的Frameworks目录下。&ldquo;TapkuLibrary.bundle&rdquo;文件（里面包含所需要的图片等资源）拖动到工程文件列表的SupportingFiles下。（最好是用&lsquo;File&rsquo; 菜单中&ldquo;Add files to project&rdquo;命令来操作）在出现的添加文件窗口中，选择不copy，并且选择&ldquo;Create Folder References&hellip;&rdquo;，然后finish。</p><p>3.添加必要的框架QuartzCore.framework和MapKit.frameworks。（在&ldquo;Build Phases&rdquo;标签栏下Link Binary With Libraries组项中添加必要的框架）</p><p>4.将TapkuLibrary添加到Build Phases&rdquo;选项卡下Target Dependencies组项中。</p><p>5.在&ldquo;Build Phases&rdquo;选项卡下Link Binary With Libraries组项中再添加libTapkuLibrary.a文件。图示：</p><p>6. 配置搜索路径（告诉工程，如何找到TapkuLibrary的Headers）。在Build Settings选项卡中的Search Path下的Header Search Paths上双击，添加路径，格式如下：&lsquo;$(SRCROOT)/工程名/Xxxx/src&rsquo;(精确到tapku的src目录,xxx是你的中间目录,如果src直接放在工程根目录下,则无)。（不要点击Recursive选框）</p><p>7. 添加Other Linker Flags。增加这两条：&ldquo;-ObjC&rdquo;和&ldquo;-all_load&rdquo;。</p><p>8. 添加TouchJSON libraries（因为Tapku会用到）。还是拖曳Tapku的src目录下Framework下的TouchJSON到工程的Frameworks目录列表下，选择copy。</p><p>9. 至此，就可以通过#import导入正常使用。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

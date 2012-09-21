@@ -1,0 +1,8 @@
+---
+layout: post
+title: autorestart 让nodejs代码即时生效
+---
+
+<p>   写nodejs代码时，要使代码生效，就必须重启服务，虽然也不麻烦，但时间长了也会觉得烦，因此有一个工具能帮助我时代码即时生效是件很不错的事情，这里介绍一款工具：autorestart</p><p>   github地址：https://github.com/shimondoodkin/nodejs-autorestart</p><p>   比较可惜现在作者shimondoodkin 现在已经没怎么维护这个工程了，有部分内容在高版本的nodejs中已不能使用，但程序的大致架构还是在的，稍作修改即可使用。</p><p>  使用方法：</p><p>  下载代码之后，将nodejs.sh 和 autoexit.js 放到你项目工程代码的跟目录</p><p>  以最简单的代码为例，工程目录autoRestart，自己的代码文件是server.js，代码如下：</p><pre>var http = require('http');var app = http.createServer(function(req,res){  var str = 'hello world';  console.log(str);  res.writeHead(200,{});  res.end(str);})app.listen(9191,function(){  console.log('server is listening on 9191');  });</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

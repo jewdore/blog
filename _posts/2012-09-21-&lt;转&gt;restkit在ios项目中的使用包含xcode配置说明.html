@@ -1,0 +1,8 @@
+---
+layout: post
+title: &lt;转&gt;RestKit在iOS项目中的使用，包含xcode配置说明
+---
+
+<p>最近在iPhone工程中添加RestKit并编译，但是由于之前找了很多不靠谱的说明文档，导致编译了一天也没有通过编译，总报出莫名其妙的错误。终于在最后的关头找了一篇英文的较为权威的文档才发现自己的问题出在一个很细节的地方。结论就是：不靠谱的文档害死人。</p><p>下面就总结一下怎么在xcode项目中使用Restkit。</p><p>1. 下载RestKit源码，到官网去下，下载后解压源码，不做过多解释；</p><p>2. 在xcode中建立一个iOS项目，并在项目的文件夹中复制一份RestKit源码</p><p>3. 将RestKit中的RestKit.xcodeproj文件拖动到xcode的资源管理器中</p><p>4. 选择最顶层的工程，然后选择中间栏PROJECT中的那个项目，进行设置</p><p>(1)找到Build Setting中的Header Search Path，然后设置其值为"$(SOURCE_ROOT)/RestKit/Build"</p><p>(2)找到Build Setting中的Library Search Path，然后设置其值为"$(SOURCE_ROOT)/RestKit/Build/$(BUILD_STYLE)-$(PLATFORM_NAME)"</p><p>5. 选择中间栏TARGET中的一项，然后点击Build Phase选项卡，在Target Dependence中添加RestKit</p><p>6. 在Link Binary with Libraries中添加如下包名称：</p><p>libRestKitCoreData.a</p><p>libRestKitJSONParserYAJL.a</p><p>libRestKitNetwork.a</p><p>libRestKitObjectMapping.a</p><p>libRestKitSupport.a</p><p>CFNetwork.framework</p><p>CoreData.framework</p><p>MobileCoreServices.framework</p><p>SystemConfiguration.framework</p><p>7. 头文件中引入</p><p>#import &lt;RestKit/RestKit.h&gt;</p><p>#import &lt;RestKit/CoreData/CoreData.h&gt;</p><p>点击编译，如果没问题的话就编译成功了。</p><p>现在我们进行一个简单的测试：</p><p>在applicationDidFinishLaunching函数中添加如下代码：</p><pre>- (void)applicationDidFinishLaunching:(UIApplication*)application withOptions:(NSDictionary*)options{  </pre><pre>    RKClient* client = [RKClient clientWithBaseURL:@"http://restkit.org"];  } </pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

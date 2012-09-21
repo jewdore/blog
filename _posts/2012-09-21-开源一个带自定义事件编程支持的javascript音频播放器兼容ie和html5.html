@@ -1,0 +1,8 @@
+---
+layout: post
+title: 开源一个带自定义事件编程支持的javascript音频播放器，兼容IE和HTML5
+---
+
+<p>开源一个带自定义事件编程支持的javascript音频播放器，兼容IE和HTML5</p><p>无需依赖任何类库</p> <p>demo地址：http://xueduany.github.com/KitJs/KitJs/demo/Audio/demo.html</p> <p>先放上效果图</p> <p> </p>   <p>外观基于css定制，可以从新定制</p> <p>源代码开源在https://github.com/xueduany/KitJs/tree/master/KitJs/src/js/widget/Audio</p>  <p>使用方法</p><pre>var audioPlayer = new $kit.ui.Audio({  el : $kit.el('#J_media_play'),  swfLocation : 'http://xxxxxxxxxx/audiojs.swf'});</pre><pre>先new一个实例audioPlayer.ready(function() {</pre><pre>  // code here</pre><pre>}</pre><pre>然后在ready方法之后注册自定义事件</pre><pre>例如：绑定一个timeupdate事件</pre><pre>audioPlayer.ready(function() {</pre><pre>  // code here</pre><pre>  audioPlayer.ev({</pre><pre>    ev: &#8216;timeupdate&#8217;,</pre><pre>    fn: function(){</pre><pre>      //this.xxxxx</pre><pre>    }</pre><pre>  })</pre><pre>}</pre><pre></pre><pre>有兴趣的同学，具体使用方法可以和我交流，xueduanyang1985@163.com，随便宣传下KitJs，http://xueduany.github.com/KitJs，一个开源的HTML5的widget库，在里面你可以找到很多有趣的小东西</pre><pre></pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

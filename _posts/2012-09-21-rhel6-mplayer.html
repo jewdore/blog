@@ -1,0 +1,8 @@
+---
+layout: post
+title: RHEL6 mplayer
+---
+
+<pre> 1 yum -y install gcc gcc-c++ autoconf make libjpeg libjpeg-devel libpng libpng-devel libXpm libXpm-devel freetype freetype-devel 2  3 git clone git://github.com/yasm/yasm.git 4  5 cd yasm 6  7 ./autogen.sh 8  9 ./configure10 11 make12 13 make install14 15 cd ..16 17 svn checkout svn://svn.mplayerhq.hu/mplayer/trunk mplayer18 19 cd mplayer20 21 ./configure --enable-gui --language=en_US  --enable-freetype --charset=utf8 22 23 make24 25 make install26 27 cd ..28 29 wget http://www.mplayerhq.hu/MPlayer/skins/Dushku-1.2.tar.bz230 31 tar xvf Dushku-1.2.tar.bz232 33 mv Dushku /usr/local/share/mplayer/skins34 35 ln -s /usr/local/share/mplayer/skins/Dushku /usr/local/share/mplayer/skins/default</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

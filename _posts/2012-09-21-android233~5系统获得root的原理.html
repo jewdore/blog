@@ -1,0 +1,8 @@
+---
+layout: post
+title: android2.3.3~5系统获得root的原理
+---
+
+<p>@files\adb wait-for-device@files\adb shell "cd /data/local/tmp/; rm *"@files\adb push files\zergRush /data/local/tmp/.@files\adb shell "chmod 777 /data/local/tmp/zergRush"@files\adb shell "./data/local/tmp/zergRush" </p><p>利用系统漏洞提升权限</p><p>http://blog.csdn.net/tomken_zhang/article/details/6866260</p><p>https://github.com/revolutionary/zergRush/blob/master/zergRush.c(代码)@files\adb wait-for-device@files\adb push files\busybox /data/local/tmp/.@files\adb shell "chmod 755 /data/local/tmp/busybox"@files\adb shell "/data/local/tmp/busybox mount -o remount,rw /system"@files\adb shell "dd if=/data/local/tmp/busybox of=/system/xbin/busybox"@files\adb shell "chown root.shell /system/xbin/busybox"@files\adb shell "chmod 04755 /system/xbin/busybox"@files\adb shell "/system/xbin/busybox --install -s /system/xbin"@files\adb shell "rm -r /data/local/tmp/busybox"@files\adb push files\su /system/bin/su@files\adb shell "chown root.shell /system/bin/su"@files\adb shell "chmod 06755 /system/bin/su"@files\adb shell "rm /system/xbin/su"@files\adb shell "ln -s /system/bin/su /system/xbin/su"@files\adb push files\Superuser.apk /system/app/.@files\adb shell "cd /data/local/tmp/; rm *"@files\adb reboot</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

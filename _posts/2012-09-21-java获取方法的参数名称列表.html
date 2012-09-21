@@ -1,0 +1,8 @@
+---
+layout: post
+title: java获取方法的参数名称列表
+---
+
+<p>以下所说的问题前提是编译java code的时候保留</p><p>1.方法一</p><p>分析class byte code结构，了解方法相关信息都存在什么位置，推荐使用工具jclasslib。</p><p>但是如果你只是想得到方法的形参参数名，那也不用去学习、研究了。因为有威武神兽（wendal）已经实现了。具体代码在</p><p>https://gist.github.com/2011728</p><p>我在使用的过程，发现用eclipse编译的class文件可以被正确解析出来，但是使用javac编译的class文件并不能正确解析，这是为什么呢？其实我一直还不知道它们两个编译的结果是不一样。糗大了。。经wendal指点，javac生成的class文件用这个工具得到的变量顺序有问题，是按照变量的使用顺序排序的。那如何到得一个变量定义的顺序呢。我用jclasslib观察了一下，有了新的发现，在<code class="literal">LocalVariableTable中有个index属性，通过它排序后正好是正确的顺序。我修改后的代码在</code></p><p>https://gist.github.com/2011836</p><p>2.方法二</p><p>使用开源工具，例如asm等强大的字节码操作工具。</p><p>代码实现在</p><p>https://gist.github.com/2419358</p><p style="text-align: center;">本文为作者原创，转载请注明出处，与你分享我的快乐http://www.cnblogs.com/weirhp</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

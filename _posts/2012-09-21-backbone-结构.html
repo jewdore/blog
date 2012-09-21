@@ -1,0 +1,8 @@
+---
+layout: post
+title: Backbone 结构
+---
+
+<p>Backbone structure</p><p>Backbone.Events 触发事件的接口，继之后，类有绑定和触发事件的能力。</p><p>Backbone.Model  继续于Backbone.Events, 代表一个数据对象</p><p>Backbone.Collection 对应多个同类的Model</p><p>Backbone.View    一个View 对应HTML页面的element</p><p>Backbone.Router  Backbone.Events  根据URL中的锚点，跳转页面，router:page事件，</p><p>Backbone.sync  向服务器交流时要调用的函数 Model save, destroy  Collection fetch会调用 它</p><p>Backbone.Events使得类拥有事件处理能力，   Router处理url跳转，model 多个组成collection</p><p>例子学习：</p><p>Todos    http://documentcloud.github.com/backbone/examples/todos/index.html 实例</p><p>代码 http://documentcloud.github.com/backbone/docs/todos.html</p><p>模块  AppView  ItemView Todos  Todo</p><p>关键流程</p><p>AppView 绑定控件的触发事件。   </p><p>addOne 方法  添加一个model时的方法 添加一个itemView</p><p>Reset  AppView.addAll, 重置所有model时触发addAll方法</p><p>All-&gt;AppView.render 任何一个事件都会触发render方法</p><p>执行Todos 的fetch方法，从持久层获取所有的Todo</p><p>TodoView  点击radio 标记Todo为已完成，保存到持久层，双击item,修改后，保存到持久层。、</p><p>TodoItem  remove方法</p><p>模块化开发更好，</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

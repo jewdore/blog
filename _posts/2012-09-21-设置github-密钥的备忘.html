@@ -1,0 +1,8 @@
+---
+layout: post
+title: 设置GitHub 密钥的备忘
+---
+
+<p> 最近开发由Svn转向使用Git作为代码管理工具,由于在本地Windows上架设Git比较麻烦，所以采取免费的GitHub作为服务器。当然使用GitHub免费版本代码必须开源，使用闭源代码必须要付费的。</p><p> 要使用GitHub必须先在Git Bash命令行工具中使用命令生成公钥和私钥，然后把公钥上传到GitHub上，在本地才能上传代码。这样需要利用命令行的方式来完成所有操作，但如果对记忆命令比较头疼的话可以使用Tortoisegit来简化操作。使用Tortoisegit时需要指定本地私钥的路径，但由于Tortoisegit使用的私钥的格式和使用Git Bash命令生成的格式不同，这样Tortoisegit就不能直接使用。</p><p>我用的办法是这样：</p><p>1.Git Bash命令行工具生成一套公钥和私钥。</p><p>2.用Tortoisegit的PuttyGen工具生成一套公钥和私钥。</p><p>3.提取Git Bash生成的公钥的格式，配合PuttyGen生成的公钥密文，将其上传到GitHub上。</p><p>4.设置Tortoisegit使用PuttyGen生成的私钥文件(.ppk)。</p><p>特此作个记录，以免遗忘。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

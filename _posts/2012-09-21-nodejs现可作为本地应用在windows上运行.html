@@ -1,0 +1,8 @@
+---
+layout: post
+title: Node.js现可作为本地应用在Windows上运行
+---
+
+<p>http://www.infoq.com/cn/news/2011/11/Nodejs-Windows</p><p>Node.js已可在不借助Cygwin的情况下，直接在Windows上运行，同时，在Windows和UX系统上的性能也有显著的提升。</p><p>Ryan Dahl，Node.js创始人，宣布了Node.js 0.6的发布，这是一个新的服务端JavaScript环境的稳定版本，其中一个重要的新特性是，通过使用Socket的I/O完成端口提供在Windows本地运行的支持。上一个版本的Node.js必须借助Cygwin才可在Windows上运行，但现在，已不再提供对Cygwin的支持。除Windows外，Node.js还支持Linux、Mac OS X、webOS及一些UX型系统：Solaris、FreeBSD和OpenBSD。</p><p>Dahl提到，向Windows平台的移植致使主要架构进行了调整，但大部分的API仍保持不变，而且在Unix系统上的性能也没有受到影响（这一直是大家所担心的）。他列举了具体的数据作为例证：</p><th width="170"></th><th width="130">Linux v 0.4.12</th><th width="128">Linux v 0.6.0</th>http_simple.js /bytes/10245461 r/s6263 r/sio.js 读19.75 MB/s26.63 MB/sio.js 写21.60 MB/s17.40 MB/sstartup.js74.7 ms49.6 ms<p>唯一的一个问题就是Node.js 0.6版本在Linux上写数据的性能稍逊一筹。但是，脱离了Cygwin，Node.js在Windows上的性能有了明显的改善，以下数据可作为参考：</p><th width="171"></th><th width="129">Windows v 0.4.12</th><th width="128">Windows v 0.6.0</th>http_simple.js /bytes/10243858 r/s5823 r/sio.js 读12.41 MB/s26.51 MB/sio.js 写12.61 MB/s33.58 MB/sstartup.js152.81 ms52.04 ms<p>Node.js 0.6在其他方面的改进主要体现在：在多进程之上集成了负载均衡、内置了用于压缩的zlib库。在Node实例之间更好地支持IPC（进程间通 信，Inter-process communication），改进了命令行调试器，此外，V8的版本也从3.1升级到了3.6。</p><p>关于API变更的具体细节可在GitHub页面查看。</p><p>此外Dahl还提到，他们计划缩短发布周期，尝试赶在与Google发布Chrome新版本V8（用于Google Chrome的JavaScript引擎）的同时，也将Node.js的新版本发布。</p><p>查看英文原文：Node.js Now Runs Natively on Windows</p><p class="miniBio"><em> 译者  贾国清  是InfoQ中文站高级策划编辑，热爱生活，喜欢旅游和体育运动。 </em></p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

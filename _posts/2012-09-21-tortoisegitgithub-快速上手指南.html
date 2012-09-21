@@ -1,0 +1,8 @@
+---
+layout: post
+title: TortoiseGit + GitHub 快速上手指南
+---
+
+<p>TortoiseGit + GitHub 快速上手指南</p><p>名词解释:</p><p>1. TortoiseGit 是 TortoiseSVN的Git版，它很好的实现了与windows资源管理器的融合，使用界面与TortoiseSVN非常类似。 2. TortoiseGit运行在msysgit(git的windows开源版本)之上，因此，在安装TortoiseGit前需要安装msysgit。 3. GitHub是提供在线git空间的平台,免费的账号只能使用公开的空间并且需要公布所有原始码,没有其他限制。</p><p>快速上手步骤: 1. 安装msysgit. 2. 安装最新版的TortoiseGit 3. 配置TortoiseGit,在Setting-General-Msysgit中指定git.exe为msysgit安装目录下的\bin目录里的git.exe,另外External dll 为msysgit安装目录下的\mingw\bin; 4. 打开TortoiseGit程序组中的Puttygen 5. 鼠标点击"generate"，使用鼠标在空间面板中任意活动,产生你的Putty密钥,无需输入key passphrase,然后点击Save private key到本地. 6. 从Puttygen中copy你的公钥，你的公钥是一个位于第一个文本域中的比较大的随机的字母数字串，它看起来如下:　　 ssh-rsa　　 AAAB3NzaC1yc2EAAAABJQAAAIBqFftopEl3HNQ+SUmh9dFW39+IYU1ZYLG04GU　　 Nh02DEbgKn9qaCJDjqCh9a7LO+oN6RjcWLIwaPPlwZI1w6el5WaZKeKEOtWqgQW+　　 trnLRijgF9sPRR7jweM13S8lnpSvCUQbPxUyaNHZkEmY2PI1BaANv3d9YGnnhbKXPz　　 m0rmQ== rsa-key-20091128 7. 在GitHub中创建一个帐户，导航到Account settings，点击"ssh public keys", 把你在上面产生的公钥增加进去。8. 在GitHub中新建一个Repository-"yourproject"，进入你的Repository-"yourproject" 9. 从你的Repository-"yourproject"库的主页顶部中，点击copy to clipboard 图标,你的Git地址看起来如下："git@github.com:yourname/yourproject.git" 10. 在你的硬盘上为这个"yourproject"源码创建一个新目录, 点击右键选择"Git Clone...". 11. 在URL中输入你在第8步中的URL clone地址. 12. 选中"Load Putty Key" ,并选择你在第4步存储的私钥位置。 13. 点击OK即可获取你的项目"yourproject"分支了。</p><p>日常开发步骤:</p><p>1.Git Commit 提交到本机.</p><p>2.Push 提交到GitHub.</p><p>随笔:</p><p>Git控制文件全部在项目根目录下,Svn则和文件在同一层目录</p><p>Git中一个文件会产生三个版本控制文件,而Svn只产生一个</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: PhoneGap原理分析（Android版）
+---
+
+<p>PhoneGap提供了Native Api的支持（如：重力感应、相机、联系人、文件、地址位置&#8230;），</p>  <p>比如要用js获取本机的联系人，可以用：</p>  <p style="text-align:left;text-autospace:none" align="left"> <em>var</em><em> options = new ContactFindOptions();</em></p>  <p style="text-align:left;text-autospace:none" align="left"><em> options.filter = "</em><em>李</em><em>";</em></p>  <p style="text-align:left;text-autospace:none" align="left"><em> options.multiple = true;</em></p>  <p style="text-align:left;text-autospace:none" align="left"><em> var fields = ["displayName", "phoneNumbers", "emails"];</em></p>  <p><em> navigator.contacts.find(fields, onSuccess, onError, options);</em></p>  <p>就样就可以获取到名称中包含&#8216;李&#8217;的人了。</p>    <p>现在PhoneGap似乎已经成为apache开源项目</p>    <p><em>PhoneGap</em><em>主页</em></p>  <p>http://phonegap.com/</p>    <p><em>apache cordova</em><em>（android版）</em></p>  <p>http://incubator.apache.org/cordova/index.html</p>  <p>源码：https://github.com/apache/incubator-cordova-android</p>  <p>文档：https://github.com/apache/incubator-cordova-docs</p>    <p style="text-align:left;text-autospace:none" align="left"><em>org.apache.cordova.CordovaChromeClient.onJsConfirm(WebView view, String url, String message, </em><em>final</em><em> JsResult result);</em></p>  <p style="text-align:left;text-autospace:none" align="left"><em>这个方法会拦截html页面发送过来的Native Api请求（调用window.prompt()），然后交由对应的Plugin处理。</em></p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

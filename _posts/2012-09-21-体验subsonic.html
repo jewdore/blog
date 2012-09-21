@@ -1,0 +1,8 @@
+---
+layout: post
+title: 体验SubSonic
+---
+
+<p>　　最近在项目中用到了SubSonic,忍不住拿出来share下.</p><p>阅读目录：</p><ol>SubSonic简介SubSonic配置利用sonic.exe来生成代码通过Substage来生成代码简单操作示例</ol><p>1.SubSonic简介</p><p> 一句讲完就是：SubSonic就是一个ORM开源框架。作者是Robe Conery,用c#语言写的. SubSonic遵循了Ruby on Rails的一些准则，比如在建表时一些约定(建议每个表都加CreatedOn[Datetime],CreatedBy[nvarchar],ModifyOn[DateTime],ModifyBy[nvarchar])....，这些详细信息可以去参考Ruby on Rails.</p><p> 该ORM框架可以支持多种数据库，包括sql server,mysql,oracle,sqlite...，最新版本是v3.0, PS:我本次测试还是用v2.2</p><p>2.SubSonic配置</p><p> 我的测试环境：window 7 + sql server 2005 + vs 2010 + subsonic 2.2</p><p> 配置之前，先Download Subsonic, 官方网站 MS打不开，我这里公开另一个链接，可以去下载：https://github.com/subsonic/SubSonic-3.0，github这个网站做得很像SVN一样 :)</p><p> 先看看Download下来之后的目录:</p><p>根目录下包含了主dll，SubCommber目录下包含一个sonic.exe的可执行文件(基于命令行的)，用来生成代码的，另一个SubStage目录下包含一个SubStage的UI工具，可以借助UI来生成代码。</p><p> 预先准备数据：</p><p> 1：我们在利用IDE先新建一个项目，并引用subsonic.dll</p><p> 2：建立一个测试数据库(我这里用的是sql server 2005)，我只建立一个表来测试</p><p><pre>create table Customer(ID int not null identity(1,1) primary key,[Name] nvarchar(30),[Sex] bit)
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: Linux下编译安装php扩展phpredis
+---
+
+<p>安装扩展不需要PHP源码, 只需要扩展包的源码即可.</p><p>1. 下载redis扩展包.</p><p>cd /usr/local/src/</p><p>wgethttps://nodeload.github.com/nicolasff/phpredis/zipball/master</p><p>mv master phpredis-2.1.3.zip</p><p>unzipphpredis-2.1.3.zip</p><p>2. 安装redis扩展</p><p>(php安装后的路径)</p><p>/usr/local/php/bin/phpize</p><p>./configure --with-php-config=/usr/local/php/bin/php-config</p><p>make &amp;&amp; make install</p><p>3. 修改php.ini文件.</p><p>vi /usr/local/php/lib/php.ini</p><p>增加如下内容:</p><p>extension_dir = "/usr/local/php/lib/php/extensions/no-debug-zts-20090626"</p><p>extension=redis.so</p><p>4. 重启apache.</p><p>/usr/local/httpd-2.4.1/bin/httpd -k start</p><p>写段php脚本用phpinfo函数看下有没有出现redis项就知道redis扩展是否启用了.</p><p>参考资料:</p><p>为PHP安装Redis扩展模块:http://hi.baidu.com/michael7768/blog/item/88a681a2835350b0cbefd0b2.html</p><p>github源码:https://github.com/nicolasff/phpredis</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

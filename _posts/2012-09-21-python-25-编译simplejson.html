@@ -1,0 +1,8 @@
+---
+layout: post
+title: Python 2.5 编译simplejson
+---
+
+<p>https://github.com/simplejson/simplejson/issues/#issue/5/comment/963728</p><p>在_speedups.c文件的20行后插入如下代码，原因是Py_SIZE在2.6中才存在</p><p>#if PY_VERSION_HEX &lt; 0x02060000 &amp;&amp; !defined(Py_SIZE)</p><p>#define Py_SIZE(ob)     (((PyVarObject*)(ob))-&gt;ob_size)</p><p>#endif</p><p>最初来源：http://www.mail-archive.com/dulwich-users@lists.launchpad.net/msg00352.html</p> 类别：默认分类查看评论
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

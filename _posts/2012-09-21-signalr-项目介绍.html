@@ -1,0 +1,8 @@
+---
+layout: post
+title: SignalR 项目介绍
+---
+
+<p>SignalR 是 ASP.NET 团队正在开发的一个 Microsoft .NET Framework 库和 jQuery 插件，可能包括在以后版本的 ASP.NET 平台中。 它提供了一些前景极为光明的功能，而这些功能正是 .NET Framework 当前不曾具有的，并且是越来越多的开发者所需要的。</p><p>SignalR 是一个集成的客户端与服务器库，基于浏览器的客户端和基于 ASP.NET 的服务器组件可以借助它来进行双向多步对话。 换句话说，该对话可不受限制地进行单个无状态请求/响应数据交换；它将继续，直到明确关闭。 对话通过永久连接进行，允许客户端向服务器发送多个消息，并允许服务器做出相应答复，值得注意的是，还允许服务器向客户端发送异步消息。它和AJax类似，都是基于现有的技术。本身是一个复合体。一般情况下，SignalR会使用Javascript的长轮询（ long polling），实现客户端和服务端通信。在WebSockets出现以后，SignalR也支持WebSockets通信。当然SignalR也使用了服务端的任务并行处理技术以提高服务器的扩展性。</p><p>任何一个技术的出现都是为了解决特定的问题。SignalR也不例外。我们知道网站开发中最长见到的一个功能就是在线聊天室。现在的网上的大部分在线聊天室都是基于2种技术，1.AJAX 2.Flash.</p><p>聊天室要解决最大的问题就是 消息的推送。当N个在线用户 同时加入一个聊天室时，1个用户发送消息，服务端就要把这个消息转发给特定的人。</p><p>之前的技术都是通过Javascript来不停地发送请求来轮训 服务端的新的消息。这种定期发送Ajax请求给服务器的方式，在用户很大的情况下给服务器带来很大的压力。</p><p>WebSockets这个技术的出现，很好地解决了这个问题，恰恰支持可以主动推送消息，SignalR 支持WebSockets。我们可以看到未来网络应用中会大量出现自己吃WebSockets的程序，而SignalR应该也会广泛在ASP.NET 网站中出现。</p><p>项目官网：http://signalr.net/</p><p>GitHub：https://github.com/SignalR/SignalR</p><strong style="margin: 12px 0px 4px; display: block;">SignalR. Code, not toothpaste View more presentations from Microsoft Developer Network (MSDN) - Belgium and Luxembourg
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

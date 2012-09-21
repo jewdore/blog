@@ -1,0 +1,8 @@
+---
+layout: post
+title: zkbrowser-lite for zookeeper在CentOS的搭建
+---
+
+因为工作中需要用到Zookeeper的图形界面，在网上搜索下，有如下几个： 1.https://github.com/killme2008/node-zk-browser,是基于Node.js实现的，需要安装Node.js和express.js，所以，没有采用; 2.https://github.com/abbaspour/zkbrowser-lite是用webpy实现的简单图形界面，应该够用了，所以就用这个  系统环境： CentOS5.5、Zookeeper3.3.3  根据ReadMe文件可以看出，zkbrowser-lite是基于zkpython和web.py的  步骤如下：  1.从https://zookeeper.apache.org/下载zookeeper-3.3.3.tar.gz  2.解压缩zookeeper-3.3.3.tar.gz到/usr/zookeeper-3.3.3  3.CentOS的python默认版本是2.5,需要升级到2.6以上，在http://www.python.org下载python2.7.1安装好  4.从http://webpy.org/下载WEBPY，支持web的python扩展包  5.安装apache-ant,可以采用yum的方式安装好   6.进入目录/usr/zookeeper-3.3.3/src/c,编译，./configure&amp;&amp;make&amp;make install  7.切换到目录/usr/zookeeper-3.3.3/src/contrib/zkpython/,运行ant install命令  8.从https://github.com/abbaspour/zkbrowser-lite下载ZIP包，解压缩到/usr/zkbrowser-lite  9.在/etc/profile添加环境变量LD_LIBRARY_PATH=/usr/zookeeper-3.3.3/src/c/.libs，用命令source /etc/profile使它生效  10.启动Zookeeper Server，首先创建号zookeeper的data目录和dataLog目录，然后修改配置文件zoo.cfg,运行./zkServer.sh start启动  11.进入/usr/zkbrowser-lite目录，修改code.py.注意：如果报错socket.error,需要把code.py最后几行改成这样：  Python代码
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

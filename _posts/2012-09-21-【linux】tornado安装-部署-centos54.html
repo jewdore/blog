@@ -1,0 +1,8 @@
+---
+layout: post
+title: 【Linux】tornado安装、部署--CentOS5.4
+---
+
+<p>前期准备：安装python</p><p>一、安装Python</p><p>#wget http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tgz　　</p><p>#mv -b /root/Python-2.7.1.tgz /root/user　　　　　　　　　　　　　　</p><p>#tar zxvf Python-2.7.1.tgz　　　　　　　　　　　　　　　　　　　　　</p><p>#cd user/Python-2.7.1　　　　　　　　　　　　　　　　　　　　　　 </p><p>#./configure </p><p>#make　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 </p><p>#make install　　　　　　 </p><p>#python　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 </p><p>如果没有报错，即Python安装完成。</p><p>步骤：下载安装包-&gt;将安装包移至指定的目录-&gt;解压缩-&gt;将工作目录改为Python所在目录-&gt;检查Python特征，cc,gcc等-&gt;编译-&gt;安装-&gt;检查是否安装成功</p><p>二、安装Tornado</p><p>#wget http://github.com/downloads/facebook/tornado/tornado-1.2.1.tar.gz</p><p>#mv -b /root/tornado-1.2.1.tar.gz /root/user</p><p>#tar xvzf tornado-1.2.1.tar.gz</p><p>#cd tornado-1.2.1</p><p>#python setup.py build</p><p>#python setup.py install</p><p>到此，tornado已安装完成。</p><p><code>三、开启服务，运行hello world程序</code></p><p>#cd user/tornado-1.2.1 </p><p>#ls </p><p>#ls ./demos </p><p>#vim ./demos/helloworld/helloworld.py </p><p>#./demos/helloworld/helloworld.py　　　　 </p><p>此时打开浏览器，地址栏输入：http://127.0.0.1:8888，即可看到hello，world</p><p>步骤：将工作目录改为tornado所在目录-&gt;检查是否存在demos目录-&gt;检查demos目录下是否有helloworld-&gt;查看helloworld代码-&gt;运行程序</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

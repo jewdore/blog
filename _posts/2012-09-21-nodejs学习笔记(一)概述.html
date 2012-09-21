@@ -1,0 +1,8 @@
+---
+layout: post
+title: Node.js学习笔记(一)概述
+---
+
+什么是Node.JS？<p>引用豆瓣Node.JS小组的回答：</p><p>把事件驱动IO库绑定给V8 JavaScript虚拟机实现的通用编程环境. </p><p>2月10日发布的0.4.0版成为新的稳定分支, 已更新至0.4.12 </p><p>非稳定分支开始加入原生 Windows 支持, 已更新至0.5.6 </p><p>官方网站, 包括API文档, 邮件列表等: http://nodejs.org </p><p>项目地址: https://github.com/joyent/node</p>它有什么不同? <p>* 网络通信与文件系统IO无阻塞, 避免CPU时间浪费. </p><p>* 单线程, 程序模型简单, 推荐使用多进程而非多线程的方式来实现多核并行计算. </p><p>* 全新的生态系统, 不像EventMachine/Tornado那样难于整合Ruby/Python旧有的坚持同步IO的模块. </p><p>* 使用V8, 一个把执行效率放在首位的JS引擎, 而且开发非常活跃. </p><p>* 对于Web开发者而言, 能在客户端和服务器端使用同样的语言, 减少切换环境带来的头疼.</p>安装<p>说实话，安装起来确实有点费力气，挺耗时的，而且很容易出错。这里安装方法我就不多介绍，给出一个教程地址：</p><p>http://www.11gz.com/blog/2011/06/22/windows-nodejs-configuration/(步骤比较详细，我就是参考该教程的)。</p><p>需要特别注意的是，在安装cygwin的时候，尽量一次性将所有的package安装完成，并且必须全部安装，否则后面的步骤会出错。同时，由于是在线下载并安装，据说选择日本的镜像站点会比较快(就是选择的时候，URL里面有jp后缀的)。</p><p>再提供一个参考教程：http://blog.miniasp.com/post/2011/02/03/Getting-Started-with-NodeJS-on-Windows-using-Cygwin.aspx</p>测试<p>在cygwin的安装目录，新建一个js文件，命名test.js，输入：</p><p><textarea readonly name="code" class="javascript">var http = require('http');//获取http modules//构建服务器http.createServer(function (request, response) {  //响应头  response.writeHead(200, {'Content-Type': 'text/html'});  //响应内容  response.end('&lt;b&gt;Hello World Cygwin&lt;/b&gt;');}).listen(8124);//侦听端口//控制台打印console.log('Server running at http://127.0.0.1:8124/');</textarea></p><p>在cygwin命令窗口中输入 node /test.js 回车。</p><p>命令窗口中显示Server running at http://127.0.0.1:8124/</p><p>打开浏览器，输入http://127.0.0.1:8888/，显示内容</p><p>NodeJS帮助文档，稍后上传！</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

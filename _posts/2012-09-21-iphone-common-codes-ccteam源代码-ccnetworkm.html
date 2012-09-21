@@ -1,0 +1,8 @@
+---
+layout: post
+title: iphone-common-codes-ccteam源代码  CCNetwork.m
+---
+
+<pre>////  CCNetwork.m//  CCFC////  Created by xichen on 11-12-23.//  Copyright 2011 ccteam. All rights reserved.//#import "CCNetwork.h"@implementation CCNetwork// get the total info of network flow, if returns FALSE, the returns upFlow and downFlow value can't be used.+ (BOOL)getTotalNetworkFlow:(size_t *)upFlow withDownFlow:(size_t *)downFlow {    struct ifaddrs *ifa_list = 0, *ifa;    if (getifaddrs(&amp;ifa_list) &lt; 0)    {        return FALSE;    }                *upFlow = 0;        *downFlow = 0;            for (ifa = ifa_list; ifa; ifa = ifa-&gt;ifa_next)     {        if (ifa-&gt;ifa_addr-&gt;sa_family != AF_LINK)            continue;                        if (!(ifa-&gt;ifa_flags &amp; IFF_UP) &amp;&amp; !(ifa-&gt;ifa_flags &amp; IFF_RUNNING))            continue;                        if (ifa-&gt;ifa_data == 0)            continue;                        if (strncmp(ifa-&gt;ifa_name, "lo", 2))         {            struct if_data *if_data = (struct if_data *)ifa-&gt;ifa_data;                                    *downFlow += if_data-&gt;ifi_ibytes;            *upFlow += if_data-&gt;ifi_obytes;        }    }    freeifaddrs(ifa_list);        return TRUE;}@end</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

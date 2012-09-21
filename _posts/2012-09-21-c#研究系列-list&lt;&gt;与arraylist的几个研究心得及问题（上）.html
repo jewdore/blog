@@ -1,0 +1,8 @@
+---
+layout: post
+title: C#研究系列-List&lt;&gt;与ArrayList的几个研究心得及问题（上）
+---
+
+<p>代码放在https://gist.github.com/921076 上了，看不到的请留言。</p><p>第一个心得，是我看某本书提到，IList用起来要比ArrayList快。</p><p>这里面用到了我上一篇博客提到的高精度计时器（在这里能看到代码 http://sunxiunan.com/?p=1829 ）</p><p>在开始定义了两个类。</p><p>//---------------------</p><p>    // public class List : IList, ICollection, IEnumerable, IList, ICollection, IEnumerable    class CFromList : List</p><p>{}</p><p>    // public class ArrayList : IList, ICollection, IEnumerable, ICloneable    class CFromArrayList : ArrayList</p><p>{}</p><p>//---------------------</p><p>List和ArrayList的定义在注释中给出，可以看出来其实都差不多。ArrayList只是多了ICloneable，还少了几个泛型接口继承。</p><p>在后面代码中都用Add方法向list中添加int类型数据，然后通过foreach形式枚举数据，注意！枚举部分的代码是有问题的，我们在（下）中会提到。</p><p>这里还要推荐一个非常棒的工具ILSpy，是sharpdevelop开发的，强烈建议dotnet程序员都下载使用。</p><p>我把ILSpy disassemble出来的C#代码和IL代码分别列在后面。注意对于ArrayList的foreach语句，C#形式的代码与源代码有些差别（79到96行），编译器加入一个IEnumerator enumerator2 = cFromArrayList.GetEnumerator();本地变量。</p><p>另外使用int num5 = (int)enumerator2.Current;这样访问iterator。而且还加入了IDisposable的finally部分。</p><p>再继续看IL代码部分，对于List形式，IL代码没有box装箱指令，而ArrayList在145行有个box指令，这是性能差别之一。但是奇怪的是，在枚举部分，ILSpy生成的（以及ILDasm）IL代码，对于ArrayList和List而言，基本上差别不大，一样也有对MoveNext和Current以及IDisposable接口的调用。</p><p>只不过ArrayList多出unbox和box的指令。</p><p>运行结果如我们所料，List要比ArrayList快不少。</p><p>但是我们在枚举部分的代码是有问题的，我明天在（下）中会介绍。</p><pre>// public class List&lt;T&gt; : IList&lt;T&gt;, ICollection&lt;T&gt;, IEnumerable&lt;T&gt;, IList, ICollection, IEnumerable
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

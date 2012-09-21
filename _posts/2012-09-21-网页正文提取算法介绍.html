@@ -1,0 +1,8 @@
+---
+layout: post
+title: 网页正文提取算法介绍
+---
+
+<p>查找发现了两个比较好的网页正文提取算法：</p><ol>国内：哈工大的《基于行块分布函数的通用网页正文抽取》该算法开源网址为http://code.google.com/p/cx-extractor/，效果为亲测，文章中呈准确率95%以上，对1000个网页抽取耗时21.29秒。看了文章感觉不错，无需html解析，效率应该会高些。国外：大名鼎鼎的arc90实验室的Readability，该算法已经商业化实现了firefox,chrome插件，及flipboard，并且已经集成进了safari浏览器。未详细测试，大致测试感觉准确率应该至少在90%以上。该算法需要解析DOM树，因此稍执行效率稍微慢一些。大致过程为，先解析DOM树，所有标签小写。然后去除所有&ldquo;script&rdquo;标签内容，再通过一对正则表达式的配合提取。具体算法还未看。其插件中包含算法JAVASCRIPT源码。有热心人士已将其用c#和php实现，源码地址如下:<ol>官方网站http://www.readability.com/c#实现一：https://github.com/marek-stoj/NReadability（亲测，效果不错）c#实现二：http://code.google.com/p/nreadability/（未亲测）　php实现一:　http://code.fivefilters.org/p/php-readability/(未亲测)php实现二:https://github.com/feelinglucky/php-readability(未亲测)作者主页:http://www.gracecode.com/archives/3061/node.js版：https://github.com/arrix/node-readability/（未亲测）</ol></ol>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

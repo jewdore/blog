@@ -1,0 +1,8 @@
+---
+layout: post
+title: 代码管理工具svn实践
+---
+
+<p>　　有时候在家里修改公司的项目，每次copy发现很麻烦，就想到了用代码管理工具。一开始我选择的是github，是因为我经常逛这个网站，轮到我自己管理一个项目时候发现，github上面的项目都必须的是开源的(当然花钱的除外哈)，由于公司的项目没有办法，找不到其它的替代品。突然想到了公司本身就有个svn服务器，只不过我很少用（之所以很少用是因为我以前一直使用git来管理项目，习惯了），那就现在开始使用吧。</p><p>　　svn也零零总总的用了几次，不过现在看来，以前的都是花架子，根本没有搞懂原理，自从使用了git之后，搭建了一个完整的客户--服务器模式时候，才渐渐搞明白版本管理工具到底是怎么回事。</p><p>　　最开始，项目代码我已经开发了一些，所以我一直希望可以在本地初始化本地库。发现svn跟git还是有点区别的，svn简单许多，步骤如下：</p><pre>svn checkout svn://192.168.1.1/pro/domain这里把你的项目代码复制过来svn statussvn add *　　//删除文件就用svn delete xxsvn commit -m 'init project'svn update</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

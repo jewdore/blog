@@ -1,0 +1,8 @@
+---
+layout: post
+title: 批量更改飞信好友备注名称
+---
+
+<p>突然想根据通讯录批量更改飞信上好友的备注名称，发现使用中国移动wap飞信的接口最简单，网上有个已经实现wap飞信通讯的东东，叫pywapfetion(https://github.com/whtsky/PyWapFetion)，不过没有更改昵称的功能，可以直接在代码里的fetion类中加入以下代码:</p><pre>1     def fetionren(self,phone,newname):2         if self.findid(phone) is not None:3             print('renning ' + phone +' as ' + newname)4             self.open('im/user/updateLocalnames.action',{'touserid':self.findid(phone),'localName':newname})5        6             print('renning ' + phone +' as ' + newname + '.....done')7         else:8             print('Err ' + phone +'' + newname + ' is not in your friend list')9         return None</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

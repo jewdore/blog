@@ -1,0 +1,8 @@
+---
+layout: post
+title: Validation-Engine—jquery表单验证插件详解
+---
+
+<p>demo</p><p>（ps:RIA之家的全部demo，明河已经托管到github，如果要下载博客的全部demo，传送门在此：https://github.com/minghe/36ria-demo。）</p><p>已经把验证规则的提示内容翻译成中文了，请看validation-engine-2.2\js\languages\jquery.validationEngine-cn.js。关于时间有二处提示没找到地方，目前没做修改。明河的英文太菜，翻译难免词不达意，欢迎纠正，O(&cap;_&cap;)O哈！</p>如何处理ajax验证？<p>典型场景：如何使用Validation-Engine验证用户名或email的存在性？这个需求在大部分的注册页面都会用到，那如何使用Validation-Engine进行ajax验证呢？Validation-Engine的ajax验证有二种模式：</p>Inline：表单元素即时验证，比如失去焦点后触发ajax验证请求Submit：整个表单的验证inline验证<p>inline验证当表单字段的值发生改变时会触发相应的ajax事件，比如用户名的输入框失去焦点后。想要使用ajax验证，需要你在语言规则文件上加上相应的ajax验证规则，打开validation-engine-2.2\js\languages\jquery.validationEngine-cn.js，找到如下代码：</p><pre>1 "ajaxUserCallPhp": {2                     "url": "phpajax/ajaxValidateFieldUser.php",3                     // you may want to pass extra data on the ajax call4                     "extraData": "name=eric",5                     // if you provide an "alertTextOk", it will show as a green prompt when the field validates6                     "alertTextOk": "* 恭喜你，此用户名可以使用",7                     "alertText": "* 该用户名已经存在",8                     "alertTextLoad": "* 正在验证中，请稍等..."9                 }</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

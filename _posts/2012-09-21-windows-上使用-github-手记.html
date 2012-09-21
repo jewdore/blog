@@ -1,0 +1,8 @@
+---
+layout: post
+title: Windows 上使用 Github 手记
+---
+
+<p>本准备玩一下 Google Code 上的 Git ，孰料 Google 提供的这个服务极其蛋疼，也许是本人才疏学浅吧，那个莫名其妙的 .netrc 文件就是不能让我免于在 pull/push 时输入密码，各种文档和解释也是含糊其辞，忍无可忍，纵然作为一名 Google 粉丝，我也只有投入 Github 的怀抱了（当然，该使用 SVN 的地方还是继续）。直接进入正题吧，首先是环境的搭建（本人使用的是 Git + msysgit + TortoiseGit + Putty 的组合）：</p> <p>1. 先下载所需要的安装程序：Git、msysgit、TortoiseGit（32bit，64bit）、Putty （以上均为官方下载链接，如担心有毒请自行Google）； 2. 顺序安装以上下载的程序（先关闭所有的窗口，360会报不安全，信任就好），基本就是一路Next了，这个没啥好说的； 3. 注册一个Github帐号：https://github.com/plans，不必理会那些Plans，免费账号就可以创建无限制的开源项目了，只是容量小点（300M，不知道是每月还是总共，反正小项目来说是够用了）； 4. 创建一个新的项目：https://github.com/repositories/new； 5. 在开始菜单中找到Putty的文件夹，打开PuTTYgen（密钥生成器），点击生成，然后出来一个类似于这样的东西（公钥）：  点击保存私钥，随便起个名字随便放在哪（无视关于叫你填写密码的提示）；将图中黄底的内容复制，打开Github中Account Setting页面里的SSH Public Key 选项卡，选择 Add another public key ，将刚才复制的公钥复制进去，随便起个名字，提交； 6. 在开始菜单中找到Putty的文件夹，打开 Pageant ，选择增加密钥，把刚才保存的那个后缀名为 ppk 的私钥导进去； 7. 在 Dashboard 页面的 Your Repositories 栏目下可以找到自己创建的那个项目，点击进去。能得到该项目的 Git 地址，比如我创建的 Shadowblue 地址就是：</p>  <pre style="font-family:monospace;">git@github.com:interjc/ShadowBlue.git</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

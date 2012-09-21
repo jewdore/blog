@@ -1,0 +1,8 @@
+---
+layout: post
+title: 小试MVVM（2）
+---
+
+<p>上一次演示了如何设计View和ViewModel，这次重点是Model、ViewModel和View之间的交互。源码可以从github上下载。</p>1、提取Model<p>一般的应用设计应该是先设计Model，然后才会设计View和ViewModel。现在我们在上一篇的基础上提取Model，代码如下：</p>ReaderModel<pre><!--Code highlighting produced by Actipro CodeHighlighter (freeware)http://www.CodeHighlighter.com/-->public class ReaderModel : NotifyPropertyChangedHelper{    public static readonly ReaderModel Instance = new ReaderModel();    private SyndicationFeed _selectedFeed;    private ReaderModel()    {        Feeds = new ObservableCollection&lt;SyndicationFeed&gt;();    }    public ObservableCollection&lt;SyndicationFeed&gt; Feeds { get; private set; }    public SyndicationFeed SelectedFeed    {        get { return _selectedFeed; }        set        {            _selectedFeed = value;            NotifyPropertyChanged("SelectedFeed");            Debug.WriteLine(SelectedFeed.Title.Text);        }    }}
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

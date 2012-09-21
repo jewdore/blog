@@ -1,0 +1,8 @@
+---
+layout: post
+title: NHibernate ModelBinder for mvc3
+---
+
+<p>所有源码在 https://github.com/luqizheng/Qi4Net</p><p>特色</p><ol>支持DTO和Mapping Entity，并且会自动忽略没有Set的Property(包括集合属性也会被忽略)支持Array，IList，IList&lt;T&gt;，Iesi.Collection.ISet&lt;T&gt;, Iesi.Collection.ISet, 但是并不支持System.Collection.Generic.ISet&lt;T&gt;</ol><p>注意事项</p><ol>获取的Mapping entity 都是Deatached的，所以如果包保存要使用Session.SaveOrUpdate的方法保存。</ol><p>和一个持久化对象自动绑定 </p>//持久化对象//Qi4Net\src\Qi\MvcTest\Models\User.cspublicclassUser:DomainObject&lt;Guid&gt;{publicstringLoginId{get;set;}publicstringName{get;set;}publicstringPassword{get;set;}publicoverrideintGetHashCode(){return(Name+Password).GetHashCode();}}
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

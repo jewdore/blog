@@ -1,0 +1,8 @@
+---
+layout: post
+title: ubuntu11.10下CyanogenMod刷机文件的编译及打包（for samsung I9100）
+---
+
+<p>昨天刚完成了CyanogenMod刷机包的编译，并在i9100上刷成功。在此记录下过程，以供以后查阅和广大群众们参考。</p><p>一、前言篇</p><p>在编译之前，我首先把港行的系统刷成了CM 7.1系统，重做了内核。</p><p>刷机ROM及相关文件下载地址：http://dl.dbank.com/c0kxb56tek#</p><p>包括gapps-gb-20110828-signed.zip，Odin3-v1.85.zip，recovery-clockwork-4.0.1.4-galaxys2.tar，update-cm-7.1.0-GalaxyS2-signed.zip四个文件。</p><p>流程完全参照http://bbs.gfan.com/thread-2916412-1-1.html</p><p>刷完系统如下：</p><p>不多说，过程都很单一直接照做，下面是Rom编译过程。</p><p>二、下载CyanogenMod源码</p><p>CM wiki：http://wiki.cyanogenmod.com/wiki/Samsung_Galaxy_S_II:_Compile_CyanogenMod_(Linux)</p><p>关于获取源码的准备工作（包括初始化repo，安装编译依赖包等），在之前的文章中（http://www.cnblogs.com/dwayne/archive/2011/11/16/2250732.html）已经详细概括了，这里补充一点：</p><p>根据CM wiki提供的信息，安装如下包：</p><blockquote><p align="left">For 32-bit &amp; 64-bit systems:</p><p align="left">git-core gnupg flex bison gperf libsdl1.2-dev libesd0-dev libwxgtk2.6-dev squashfs-tools build-essential zip curl libncurses5-dev zlib1g-dev sun-java6-jdk pngcrush schedtool</p></blockquote><p>针对I9100，下载gingerbread版本</p><pre>$repo init -u git://github.com/CyanogenMod/android.git -b gingerbread</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

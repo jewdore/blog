@@ -1,0 +1,8 @@
+---
+layout: post
+title: Lua模块化编程——使用require加载自己的dll模块
+---
+
+<p>　　Lua本身是一个轻量级的脚本语言，包含在Lua源码中的库功能通常相对单一，用户通常需要自己内嵌Lua解释器到自己的应用中，并且一个一个地将需要导出的函数导出给Lua使用。</p><p>　　假如我们需要使用第三方的库，比如LuaFileSystem库&mdash;&mdash;lfs、用于网络的Socket库或者计算Base64编码的库，除了找到其源码，并拷贝到自己的应用代码中之外，还有没有别的什么方式呢？</p><p>　　大家都知道Windows DLL，这是一种动态链接的方式。Lua同样也支持这样一种模块加载的方式。你只需将所需的第三方库的DLL放到Lua的环境路径中&mdash;&mdash;这个我暂时并不能穷举出具体有哪些，期待高人解答&mdash;&mdash;或者简单地将其放入你的Lua解释器目录下。接着，在需要使用的脚本中，直接调用Lua的require函数，将DLL的名字去除扩展名作为参数，Lua就可以自动加载指定的DLL模块，并将其模块导出的内容打包到一个table中并返回。你可以使用一个全局的table来接收其引用。</p><p>　　对于自己编写的模块，也可以采用相同的方式去编写。只需导出一个可以通过require加载的函数符号就可以了&mdash;&mdash;require内部通过Windows API GetProcAddress来寻找其地址。这个函数的格式需要遵循Lua的模块标准，格式如下：</p>View Code <pre>static int foo(lua_State *L){    lua_pushnumber(L, 1);    return 1;}static const struct lua_Reg modulename[] = {    {"foo", foo},    {NULL,NULL},};int luaopen_modulename(lua_State *L){    luaL_newlib(L, modulename); // 5.2之前使用luaL_register(L, "modulename", modulename);    return 1;}</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

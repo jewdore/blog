@@ -1,0 +1,8 @@
+---
+layout: post
+title: nginx comet
+---
+
+Nginx加Comet:低延迟的服务器端推送<p>要做实时的网络程序，比如在线聊天等，现在的技术有两种，一种是拉（pull)、一种是推（push)，哪种方式好我相信接触网络的朋友们都知道， 服务器端推送服务这种方式能够满足完全的实时交互，不需要客户端做太多的东西。NGiNX_HTTP_Push_Module这个nginx的插件就是为 了这个目的来做的，它保持客户的长连接状态（当然了，不是每个客户一个线程，而是采用事件方式来处理，即保持了连接状态，又节约了资源，这就是nginx 这个轻量级web服务器的可爱之处）并且维护一个事件队列，提供发布者和订阅者服务。</p><p>要使用它，需要编译ngnix，从http://pushmodule.slact.net/下载模块，使用</p><pre class="bash">./configure --add-module=/path/to/plugin &amp;&amp; make &amp;&amp; make install</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

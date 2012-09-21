@@ -1,0 +1,8 @@
+---
+layout: post
+title: win32 port of the gnu dbm
+---
+
+<p>gdbm GNU网址 http://www.gnu.org.ua/software/gdbm/gdbm.html</p><p>Port of the GNU GDBM library to Win32网址 http://www.xmailserver.org/gdbm-win32.html</p><p>源代码已经提交到 https://github.com/frank-jsks/gdbm_src-win32-port， 以方便查阅</p><p>在我的VC++2008, 需要对getopt.c做如下修改， 才能通过编译</p><pre>1 #ifdef    __GNU_LIBRARY__2 #undef    alloca3 /* Don't include stdlib.h for non-GNU C libraries because some of them4    contain conflicting prototypes for getopt.  */5 #include &lt;stdlib.h&gt;6 #else    /* Not GNU C library.  */7 //#define    __alloca    alloca //注释掉这行, alloca在stack上分配内存8 #define    __alloca    malloc  //改成malloc, malloc在heap上分配内存9 #endif    /* GNU C library.  */</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: Rails 3.0更換jQuery
+---
+
+<p>在<em>Rails 3.1</em>之前的版本，預設是使用<em>prototype.js</em>這套<em>JavaScript</em>函式庫。但本書改為使用<em>JQuery</em>這套目前學習資源最多的 <em>JavaScript</em>函式庫。<em>Rails3</em>在設計上支援更換不同的<em>JavaScript</em>函式庫。</p><blockquote><p><em>prototype.js</em>一開始就是為了讓<em>Ruby on Rails</em>支援<em>Ajax</em>所發明的(2005年)，其作者<em>Sam Stephenson</em>正是<em>Ruby on Rails</em>核心成員之一。</p></blockquote><p>首先我們先更換<em>public/javascript/rails.js</em>的內容為<em>jQuery</em>版本，這個檔案是<em>Rails</em>的<em>JavaScript driver</em>。請下載<em>http://github.com/rails/jquery-ujs/blob/master/src/rails.js</em>這個檔案覆蓋至<em>public/javascript/rails.js</em></p><p>接著，我們需要<em>jQuery</em>。請至<em>jQuery 官網</em>下載最新的<em>JQuery</em>至<em>public/javascript/jquery.js</em>，然後修改<em>config/application.rb</em>將以下註解移除</p><pre>config.action_view.javascript_expansions[:defaults] = %w(jquery rails)</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

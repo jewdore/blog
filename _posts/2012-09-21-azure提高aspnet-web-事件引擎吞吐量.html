@@ -1,0 +1,8 @@
+---
+layout: post
+title: Azure提高ASP.NET Web 事件引擎吞吐量
+---
+
+<p>Windows Azure 团队架构设计师，Clements Vasters，在最近一篇博文中介绍了一个新的 GitHub 项目&mdash;&mdash;SignalR。该项目使用 Windows Azure 服务总线(Service Bus)在服务器和客户端之间进行双向分发信息，它的出现让异步 ASP.NET Web 事件引擎具有向外扩展以及高吞吐消息传送能力成为可能。</p><p>　　SignalR 类似与 JavaScript 实时框架，如 Socket.IO。SignalR 能够完成客户端向服务器的异步通信，并同时支持服务器向浏览器客户端推送事件。虽然没有直接绑定在 ASP.NET 中，但是 SignalR 项目由微软 ASP.NET 团队打造，用作为 ASP.NET Web 应用程序提供持久连接机制。SignalR 的连接通过日益流行的 WebSockets API 完成，而如果 WebSockets 无法使用，它会透明地回落为长轮询技术(long-polling technique)。如果开发人员想使用 Signal，需要在客户端层使用像 jQuery 的 JavaScript 框架，并在服务端层使用 .NET 代码编写应用和服务。SignalR 具有多种编程模型(PersistentConnections 和 Hubs)，它为开发人员提供了连接、消息接收群以及事件处理器的不同层次的访问。</p><p>　　虽然 SignalR 显示已经可在单台机器上扩展至上万个连接，但是开发人员还没有办法跨越多台 Web 服务器进行服务端组件部署。这会带来单点故障，而且限制应用程序可支持的并发连接数。Vasters 说他使用 Azure 服务总线解决了这个问题：</p><p>　　上周，我为 SignalR 建立了一个 Windows Azure 服务总线底板(backplane)，它能够部署 SignalR 解决方案到多个结点上，并可以跨越这些结点进行消息分发，确保每一个发送端拥有合理的顺序，以及光标 cookie 中结点到结点的正确性和一致性。</p><p>　　只要你的后端主机能够访问服务主线命名空间，不管你托管的 SignalR 解决方案中在什么地方，你都可以你使用这个底板。如果你的解决方案是放在 Windows Azure 的数据中心，那显然是最好不过的;当然，放在其他的地方也行，只是会多几(毫秒)的延迟。</p><p>　　使用基于 Azure 的 SignalR 项目，用户可以选择跨越服务总线 Topics 对消息进行分流，从而达到超过单个 Topic 能够支持的吞吐量。由于 Vasters 的这个项目利用到了已受支持的 SignlR 扩展点，因此只需对服务器应用程序进行很小的改动即可。你可以通过访问它在 GitHub 中的站点以下载或查看该项目的源代码。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

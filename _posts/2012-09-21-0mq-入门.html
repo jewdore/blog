@@ -1,0 +1,8 @@
+---
+layout: post
+title: 0mq 入门
+---
+
+<p>  最近做后台发现很多地方需要队列，我用东西一般有两个要求： 　　1) 够傻够简单。  　　2) 有源码，能看又能改。  最后相中了0mq，下面介绍如何安装和写个简单的例子。一. linux平台：ubuntu&amp;python。</p><p style="margin-left: 30px;">安装软件下载页面:http://www.zeromq.org/intro:get-the-software1. prerequisites安装：sudo apt-get install libtool autoconf automake uuid-dev build-essential2. 下载解压安装包:wget http://download.zeromq.org/zeromq-2.1.11.tar.gztar -zxf zeromq-2.1.11.tar.gz3. 编译安装：./configure &amp; makesudo make install4. 刷新库：sudo ldconfig5. 安装python开发环境:sudo apt-get install python-dev python-setuptools6. 安装python的0mq库: 简单安装： sudo easy_install pyzmq (可能失败,鳖在这里就O了) 手动安装: wget https://github.com/downloads/zeromq/pyzmq/pyzmq-2.1.11.zip unzip pyzmq-2.1.11.zip cd pyzmq-2.1.11 sudo python setup.py install --zmq=/usr/local</p><p style="margin-left: 30px;">简单例子：hello world</p>client<pre>#encoding=utf-8#   Hello World client in Python#   Connects REQ socket to tcp://localhost:5555#   Sends "Hello" to server, expects "World" back#import zmqcontext = zmq.Context()#欢迎信息print "正在连接hello world服务器"socket = context.socket(zmq.REQ) #socket 模式通讯socket.connect ("tcp://localhost:5555") # 连接到本地的5555端口#发出10次请求，每次等待服务器的一个响应for request in range (1,10):    print "客户端发送请求", request,"..."    socket.send ("土鳖，你好吗？")    #获取服务器响应    message = socket.recv()    print "客户端收到回复", request, "[", message, "]"</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

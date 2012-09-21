@@ -1,0 +1,8 @@
+---
+layout: post
+title: git 初步使用
+---
+
+<p>看到好多同学转战到github上，抛弃了googlecode，偶也是个赶潮流的人哪。</p><p>git 概况</p><p>Git是一个分布式的版本控制系统，最初由Linus Torvalds编写，作者把他描述为一个&ldquo;傻瓜式的版本管理系统&rdquo;，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。目前，包括Rubinius和Merb在内的很多知名项目都使用了Git。Git同样可以被诸如Capistrano和Vlad the Deployer这样的部署工具所使用。使用GIT系统，不需要像SVN那样搭建一台SVN服务器来存放代码库。</p><p>git 安装</p><p>git主要是为Linux而开发的，在Linux上取得了良好的应用。广大程序员不甘寂寞移植到Window下了</p><p>主要工具</p><p>msysGit和tortoiseGit </p><p>是移植到Windows上的工具，无须编译。</p><p>其中msysGit 有便携版下载，tortoiseGit 是大名鼎鼎类似于tortoisesvn 的一个图形前端，依赖于msysGit。</p><p>两者可以到如下链接下载。</p><p>msysGit:http://code.google.com/p/msysgit/downloads/list</p><p>TortoiseGit: http://code.google.com/p/tortoisegit/downloads/list</p><p>使用github</p><p>GitHub是使用Ruby开发的，具有清爽的界面。GitHub提供免费的源代码库托管，同时也提供付费的托管服务。通过付费私有库托管服务在财务上支持免费部分的持续运营。GitHub提供了一套独特的代码库管理界面功能，并提供项目Wiki的能力。GitHub提供了一系列的指南，也可以到这里去看看：http://github.com/guides/home</p><p>主要参考文章《创建GitHub账号》的相关内容</p><p>主要有通过ssh-key生成一对key</p><p>ssh-keygen -t rsa -C "yourmail@163.com" -f git.key</p><p>将生成的key git.key git.key.pub 拷贝到~/.ssh中去。</p><p>将git.key.pub拷贝到github上去（《创建GitHub账号》有图示）</p><p>编辑~/.ssh中的config文件（没有的话，新建一个），输入如下内容（git.key是私有的key文件）</p><pre>Host github.comUser gitHostname github.comPreferredAuthentications publickeyIdentityFile ~/.ssh/git.key</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

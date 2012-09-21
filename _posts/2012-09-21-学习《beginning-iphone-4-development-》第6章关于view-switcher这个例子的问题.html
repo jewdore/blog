@@ -1,0 +1,8 @@
+---
+layout: post
+title: 学习《Beginning iPhone 4 Development 》第6章关于View Switcher这个例子的问题
+---
+
+<p>我在学习《Beginning iPhone 4 Development Exploring the iOS SDK》（中文版的名称为《iPhone 4与iPad开发基础教程》）这本书 有一个关于第6章View Switcher这个例子中 - (IBAction)switchViews:(id)sender 这个函数中处理动画flip效果的一个问题 请看代码 - (IBAction)switchViews:(id)sender {  [UIView beginAnimations:@"View Flip" context:nil];  [UIView setAnimationDuration:1.25];  [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];   if (self.yellowViewController.view.superview == nil) //如果要换入黄色view  {  。。。。。 //如果没有则创建  [UIView setAnimationTransition:  UIViewAnimationTransitionFlipFromRight  forView:self.view cache:YES]; //设定动画方式   [blueViewController viewWillAppear:YES]; //不明白这里为什么是 蓝色的将要出现，而不是黄色视图将要出现，(以下同)  [yellowViewController viewWillDisappear:YES];   [blueViewController.view removeFromSuperview];  [self.view insertSubview:yellowViewController.view atIndex:0]; //去掉蓝色的，换入黄色的view  [yellowViewController viewDidDisappear:YES];  [blueViewController viewDidAppear:YES];  } 。。。。 }</p><p>以上内容是我在如下地址引用的：</p><p>http://www.cocoachina.com/bbs/simple/?t88356.html</p><p>由于我也遇到了同样的问题，所以问题我也不再描述。Cocoa China博客园升级中。。。</p><p>1、我在下面地址中找到了《Beginning iPhone 4 Development 》的源代码:</p><p>https://github.com/ronco/Beginning-iPhone-4-Development</p>- (IBAction)switchViews:(id)sender
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: 快速正确的安装 Ruby, Rails 运行环境
+---
+
+<p>Ubuntu 安装，开发包</p><p>$ sudo apt-get install wget vim build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt-dev autoconf automake libtool imagemagick libpcre3-dev</p><p>步骤1 － 安装 RVM</p><p>RVM 是干什么的这里就不解释了，后面你将会慢慢搞明白。</p><p>$ bash &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)</p><p>等待一段时间后就可以成功安装好 RVM，这个时候会有一段提示，要你把类似这段代码放到 ~/.bashrc 或 ~/.bash_profile (Mac) 的最后。</p><p># 注意将 /Users/jason 改为你的 home 路径，比如 /home/lgn21st</p><p>[[ -s "/Users/jason/.rvm/scripts/rvm" ]] &amp;&amp; source &ldquo;/Users/jason/.rvm/scripts/rvm&rdquo;</p><p>然后重新加载 .bashrc 或 .bash_profile 文件</p><p>$ source ~/.bash_profile</p><p>测试是否安装正确</p><p>$ rvm -v</p><p>rvm 1.9.2 by Wayne E. Seguin (wayneeseguin@gmail.com) [https://rvm.beginrescueend.com/]</p><p>步骤2 － 用 RVM 安装 Ruby 环境</p><p>$ rvm pkg install readline</p><p>$ rvm install 1.9.2 &ndash;with-readline-dir=$rvm_path/usr</p><p>或者可以安装 1.8.7 版本，也可以是 1.9.3，只要将后面的版本号跟换一下就可以了</p><p>同样继续等待漫长的下载，编译过程，完成以后，Ruby, Ruby Gems 就安装好了。</p><p>步骤3 － 设置 Ruby 版本</p><p>RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本</p><p>$ rvm 1.9.2 &ndash;default</p><p>同样，也可以用其他版本号，前提是你有用 rvm install 安装过那个版本</p><p>这个时候你可以测试是否正确</p><p>$ ruby -v</p><p>ruby 1.9.2p290 (2011-07-09 revision 32553) [x86_64-darwin10.8.0]</p><p>$ gem -v</p><p>1.8.6</p><p>$ gem source -r http://rubygems.org/</p><p>$ gem source -a http://ruby.taobao.org</p><p>步骤4 － 安装 Rails 环境</p><p>上面 3 步过后，Ruby 环境就安装好了，接下来安装 Rails</p><p>$ gem install bundler rails</p><p>然后测试安装是否正确</p><p>$ bundle -v</p><p>Bundler version 1.0</p><p>$ rails -v</p><p>Rails 3.2.1</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

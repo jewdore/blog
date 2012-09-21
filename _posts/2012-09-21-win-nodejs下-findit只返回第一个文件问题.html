@@ -1,0 +1,8 @@
+---
+layout: post
+title: win nodejs下 findit只返回第一个文件问题
+---
+
+<p>目前截至本文的win nodejs v0.6.10下，findit依旧存在这个问题</p><p>参考https://github.com/substack/node-findit/issues/5，目前解决方案。</p><p>修改findit的index.js中的createInodeChecker函数，修改为</p><pre>function createInodeChecker() {    var inodes = {};    return function inodeSeen(inode) {        if (inode == 0) {            return false;        }        if (inodes[inode]) {            return true;        } else {            inodes[inode] = true;            return false;        }    }}</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

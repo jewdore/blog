@@ -1,0 +1,8 @@
+---
+layout: post
+title: 中文前端UI框架Kit（八）无插件异步文件上传组件源码解析
+---
+
+<p>号外：kitjs官方讨论QQ群建立了，QQ群号88093625，欢迎大家加入，讨论前端相关话题</p> <p>上一篇介绍了上传组件的用法，以及api，这一篇，我们通过代码分析，从原理上给大家做下讲解</p> <p>demo地址:http://xueduany.github.com/KitJs/KitJs/index.html#upload</p> (一)Dom结构 <p>我们首先看下上传按钮的dom结构</p> <p> </p> <p>我们可以比较清楚看到在一层层div里面，嵌套了一个form元素input file，并且这个input file的面积足够大到覆盖外面的div通过Css渲染的按钮。这样点击了外面的div做的按钮，等于点击到input file，这样就能通过input file打开文件选择了。同理，图片上传的预览也是同理</p> <p>*可能有童鞋会问，input file不是有颜色的吗，ok，我们把他设置为透明就不会显示出来了，同时他的dom位置还在。</p> （二）选择文件上传 <p> </p> <p>首先绑定input file的change事件，当选中文件之后，触发上传事件</p> <p> </p> <p>取到input.files开始上传</p> <p> </p> <p>创建ajax链接，用post方式上传文件内容，在request头设置fileName</p> <p>content-type设置为Content-Type", "application/octet-stream"</p> <p>上传过程调用onprogress方法，显示进度条</p>  <p>对于ie不支持这种上传方式，改为</p> <p> </p> <p>创建iframe，在iframe创建form，并且利用表单提交的方式上传</p>  （三）拖拽上传 <p>拖拽上传，只支持高级浏览器，</p>  <p> </p> <p>关键点在于，浏览器会在drag和drop事件，把文件放入event对象的dataTransfer属性里面。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

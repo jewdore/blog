@@ -1,0 +1,8 @@
+---
+layout: post
+title: 编译havlenapetr的ffmpeg工程播放视频
+---
+
+Copy from http://wingjang.blog.163.com/blog/static/47913442201112161310334/1. 从 https://github.com/havlenapetr/FFMpeg 下载havlenapetr 的工程 ，最后更新是在 August 10, 20102. 将工程导入到Eclipse3. 运行该工程，logcat提示缺少 libffmpeg_jni.so 库4. 在cygwin + NDK 环境下，编译libffmpeg_jni.so  步骤： 1. 将工程拷贝至 NDK的samples目录下 2. 将工程中libs\armeabi目录的 libjniaudio.so、libjnivideo.so拷贝至 obj\local\armeabi 3. 运行 ndk-build 进行编译 4.编译出错，drivers_map.h:32: error: invalid conversion from 'int (*)()' to 'int (*)(JNIEnv*, _jobject*)' 解决办法：修改 audiotrack.h 的第91行为： int AndroidAudioTrack_register(JNIEnv* env,jobject ob); 修改com_media_ffmpeg_android_FFMpegPlayerAndroid.cpp 的第306行为：                  if(AudioDriver_register(env,obj) != ANDROID_AUDIOTRACK_RESULT_SUCCESS) { 5.重新编译，提示错误： <code>AVFormatContext_re lease': /cygdrive/c/android-ndk-r4b/samples/ffmpeg/jni/jni  /com_media_ffmpeg_FFMpegAVFormatContext.c:85: undefined reference to</code>__android_log_print' 解决办法：修改 jni\jni\Android.mk,将      ifeq ($(IN_NDK),true)  LOCAL_LDLIBS := -llog else LOCAL_PRELINK_MODULE := false LOCAL_SHARED_LIBRARIES := liblog endif 改为： LOCAL_LDLIBS := -llog6.重新编译，生成 libffmpeg_jni.so。7. 将 libjniaudio.so、libjnivideo.so 拷贝到工程的 libs 目录8. 在Eclipse里面刷新工程，run，安装到模拟器上。问题：libjniaudio.so、libjnivideo.so 怎么编译的？回答： these two libs are wrappers to android native AudioTrack and surface flinger so they couldn't be build in ndk. So I have build them in  android build system and copy them into my ffmpeg project通过nm命令，可以看到，libjniaudio.so主要提供了AudioTrack相关接口，libjnivideo.so主要提供surface相关接口。这些东西包含在android源码下，必须在android build 环境中编译。PS，NDK的版本是android-ndk-r4b-windows
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

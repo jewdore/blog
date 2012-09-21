@@ -1,0 +1,8 @@
+---
+layout: post
+title: cyanogenmod源代码下载编译笔记
+---
+
+<p>1.在cygwin环境下下载源代码</p><p>1）cygwin下进入工程目录，建立cyanogenmod目录</p><p>2）进入cyanogenmod目录，下载repo文件</p><p>现在repo已经迁移到google服务器，</p><p>wget https://dl-ssl.google.com/dl/googlesource/git-repo/repo &gt; /usr/local/bin/repo</p><p>提示error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed</p><p>关闭git的SSL检测</p><p>git config --global http.sslVerify false</p><p>再执行wget下载，成功。</p><p>3）repo init -u git://github.com/CyanogenMod/manifest.git -b gingerbread</p><p>如果是android源代码，则是</p><p>repo init -u https://android.googlesource.com/platform/manifestrepo</p><p>cygwin出错，Resource temporarily unavailable。</p><p>退出cygwin，找到cygwin目录下的ash.exe，双击运行。执行shell命令</p><p>/bin/rebaseall</p><p>执行完毕，重新进入cygwin，重新repo init，应该能正常执行了。</p><p>4）repo sync来获取源代码</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

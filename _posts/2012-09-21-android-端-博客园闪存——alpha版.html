@@ -1,0 +1,8 @@
+---
+layout: post
+title: Android 端 博客园闪存——alpha版
+---
+
+前言：<p>     利用快过年这2天的空闲，弄了个android 端的 闪存发送APK。由于时间冲忙还有很多问题存储在，所以先把alpha 版APK放出，等到了Bate版的时候我会连代码一起发布。</p>主要技术：<p>   android的发布主要是利用了HttpClient 进行POST 和 Get的请求，发送数据到服务器并获取相关的数据信息。因为闪存是需要登录才能够发送，所以我们还需要保存通过验证的信息，就是将Cookie保存下来。</p><p>  需要注意的是由于博客园是.net 网站，所以POSt 数据是需要将 ViewState 和Event这两个信息一起发送过去。</p><pre> 1 httpClient = buildHttpClient(); 2         HttpPost httpPost = new HttpPost(url); 3 //        pasteHeaders(httpPost); 4         HttpEntity entity; 5         try { 6             entity = new UrlEncodedFormEntity(forms, charSet); 7             httpPost.setEntity(entity); 8             HttpResponse response = httpClient.execute(httpPost, 9                     httpLocalContext);10             if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {11                 result = EntityUtils.toString(response.getEntity(), charSet);12                 cookieStore = ((DefaultHttpClient) httpClient).getCookieStore();13             }14         } catch (UnsupportedEncodingException e) {15             Log.e("cnblogs", e.getLocalizedMessage());16             e.printStackTrace();17         }</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: 检测用户向麦克吹气
+---
+
+<p>转自http://blog.chinaunix.net/u1/49717/showart_2180166.html</p><p>如果几年前你告诉我人们可以通过晃动手机或向麦克吹气使手机有所动作，我一定会大笑不止。但现在这已经是事实了。</p><p>检查晃动动作是很直接的，所有这些在3.0&ldquo;motion event&rdquo;（动作事件)中都有介绍。</p><p>检测向麦克吹气困难一点。本教程将建立一个简单的单视图程序，它将在用户向麦克吹气时向控制台写入记录信息。</p>源代码/Github<p>教程源代码可从GitHub获得。 你可以克隆软件仓库或直接下载zip文件。</p>概述<p>检测向麦克吹气的工作可分为两部分：(1) 获取麦克输入 (2) &ldquo;听&rdquo;吹气的声音。 </p><p>我们将使用3.0中新的AVAudioRecorder类来捕获麦克输入。使用AVAudioRecorder可以让我们使用Objective-C，而不需像其他方法一样使用C。</p><p>向麦克吹气的噪声/声音是由低频声音组成的。我们将使用low pass filter（低频滤波） 来降低来自麦克的高频声音；当滤波信号的电平等级突然增大时，我们就知道有人向麦克吹气了。</p>创建项目<p>启动Xcode创建一个View-Based iPhone程序，叫MicBlow：</p><blockquote><ol>使用Xcode菜单<i>File &gt; New Project&hellip;</i> 创建一个新项目 从 <i>iPhone OS &gt; Application</i> 选择<i>View-based Application</i>s然后按<i>Choose&hellip;</i> 将项目命名为<i>MicBlow，</i>按<i>Save</i> </ol></blockquote>添加AVFoundation Framework<p>为使用AVAudioRecorder类，我们需要向项目添加AVFoundation framework：</p><blockquote><ol>在项目<i>Groups &amp; Files</i>面板上展开<i>Targets</i> 按Control-点击或右击<i>MicBlow</i> 选择<i>Add &gt; Existing Frameworks&hellip;</i> 按下<i>Linked Libraries</i>左下角的<i>+</i>按钮 选择<i>AVFoundation.framework</i>并按下<i>Add</i> <i>AVFoundation.framework</i>出现在<i>Linked Libraries</i>下。关闭窗口 </ol></blockquote><p>然后，我们在view controller接口中引入AVFoundation头文件并设置AVAudioRecorder实例变量：</p><blockquote><ol>展开项目<i>Groups &amp; Files</i>面板下的<i>MicBlow</i> 展开<i>Classes</i>文件夹 选择<i>MicBlowViewController.h</i>进行编辑 更新文件。修改见如下2，3，7行： </ol></blockquote>123456789
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

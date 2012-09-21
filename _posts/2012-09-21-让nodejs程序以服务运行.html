@@ -1,0 +1,8 @@
+---
+layout: post
+title: 让node.js程序以服务运行
+---
+
+<p>初学Node.js后每个人都会最终以node demo.js来运行一个写好的node.js脚本，可是既然身为服务器语言，居然不提供让程序以服务运行的方式，这实在有点让人费解，网上海搜，都是一些折衷的方法，列出来吧，希望node.js官方直接支持以apache, iis等应用服务器的形式来伺服这些服务器脚本</p><ol>Monit:http://mmonit.com/monit/Upstart:http://upstart.ubuntu.com/Daemontools:http://cr.yp.to/daemontools.htmlLaunchtool:http://people.debian.org/~enrico/launchtool.htmlForever:https://github.com/indexzero/forever</ol><p>中文社区里得推荐得多的会是upstart和forever，当然还有不使用第三方的简单方法：</p><ol>node demo.js &amp;nohup node demo.js &gt; output.log &amp;</ol><p>这篇文章介绍了forever的用法，之所以用这篇文章，因为它是讲得最简单的，别的文章都把forever和一个init.d的脚本来配合，而archlinux并不是用inid.d而是rc.d，所以我在寻找能不能一句话搞定的，那就是这句了：</p><p>forever start demo.js</p><pre class="mycode"></pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

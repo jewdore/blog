@@ -1,0 +1,8 @@
+---
+layout: post
+title: iPhone上的UIPopoverController
+---
+
+<p>好久没有更新博客了，也不知道每天在忙什么，好像挺忙的，但是一点有系统有东西似乎都没有搞出来，今天闲来无事，算是发一个口水帖。最近一段时间以来因为工作上的需要，开始学习Object-C了，当然，主要的方向是iOS，通过一段学习，算是掌握了些皮毛吧。本来非常担心内存管理的问题，但经过一番了解后，发现原来这并不是一件非常困难的事，更没有想到的是XCode 4.2.1中，居然有了自动引用记数(ARC)这么个东西，一下子让事情变的简单了，虽然在iPhone没有垃圾回收机制，但是编译器自动帮你写了那些诸如dealloc，release,autorelease之类的语句了，这对于习惯了C#语法的人来说，不啻为一个福音啊。总的说来，Cocoa Touch中类型的命名还是让人感觉舒服，Object-C的方法签名模式也相当不错，以前使用其他语言时老是感觉文不达意，使用Object-C定义方法时就不会有这种尴尬了。基于我的了解，我发现C#程序员去学Object-C应该不算一件很难的事。</p><p>在iPhone开发时，在UINavigationController或UITabBarController上因BarButtonItem太多而位置不够用时，多会选择使用UIActionSheet，但UIActionSheet的显示区域较大，而且UIActionSheet和UIAlertView一样，都是iOS SDK中自带的类型，想要对其样式做些个性化的处理就稍麻烦了。</p><p>UIActionSheet样式</p><p>在我现在的项目中，也有类似的需求，要在点击一个BarButtonItem后显示更多的操作，有点类似UC浏览器工具栏最中间的那个按钮(&ldquo;更多&rdquo;)点击后的效果</p><p>UC浏览器的Popover样式</p><p>貌似在Apple建议中，不推荐使用Popover样式，因为iPhone屏幕本来就不大，如果放太多东西了不好，但是UIActionSheet个人感觉实在是看起来不咋的，还是想使用Popover样式，但是又不知道该怎么实现，经过一番好找，在Apple官方的示例中找到一个例程(ToolbarSearch),其中使用UIPopoverController类，实现了这个功能，结果激动劲还没有过，发现一个非常悲惨的现实，这个类型只能使用于iPad，而不能使用于iPhone上！！！原因还是基于Apple认为应该在iPhone上使用UIActionSheet!</p><p>我觉得肯定有方法能使用在iPhone上(现成的代码，而不是自已去实现一个)，经过又一番好找，终于发现了了WEPopover，一个相当不错的包，项目地址：</p><p>https://github.com/werner77/WEPopover</p><p>现在，剩下最后一个问题了，在启用了ARC的环境下如何使用WEPopover,很快，找到了几个ARC的实现：</p><p>https://github.com/pmilanez/WEPopover</p><p>https://github.com/dhoerl/WEPopover</p><p>https://github.com/darknoon/WEPopover/tree/feature/arc</p><p>WEPopover效果图</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

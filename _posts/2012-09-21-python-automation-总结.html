@@ -1,0 +1,8 @@
+---
+layout: post
+title: Python automation 总结
+---
+
+<p>web:</p><p>Python web automation 网页自动化技术</p><p>看看我自己写的程序，在web automation这个方面的数量最多。网上对这方面程序的需求也很多，因为web的时代，操作的工作量移到web上来了， 机器替代人的需求增大也就不足为奇。</p><p>无疑python是做这方面工作的好手：</p><p>总结一下python做web automation常用手段：</p><p>基于urllib2、urllib： 绝大多数都是这一类，如mechanize,twill，等等。基础模块都是urllib2，也就是wrapper。这类的是基于http请求响应的封装。我自己也写了一个叫autoform，调用文件模板填表，原理都一样。GOOGLE 每天都要在他的</p><p>内嵌webbrowser：如pyqt的webkit、PAMIE、spynner(基于webkit)，这一类是我正准备研究的，因为urllib2处理有局限性，即不能处理动态的脚本如js，一些操作无法实现。这种内嵌的方式类似于com调用，所以支持所有浏览器操作，兼容性更好，但不如urllib快捷。</p><p>spynner： https://github.com/kiorky/spynner/</p><pre> 1 A basic example: 2  3 import spynner 4 browser = spynner.Browser() 5 browser.load("http://www.wordreference.com") 6 browser.runjs("console.log('I can run Javascript')") 7 browser.runjs("console.log('I can run jQuery: ' + jQuery('a:first').attr('href'))") 8 browser.select("#esen") 9 browser.wk_fill("input[name=enit]", "hola")10 browser.click("input[name=b]")11 browser.wait_page_load()12 print browser.url, browser.html13 browser.close()14 15 #Sometimes you'll want to see what is going on:16 17 browser = spynner.Browser()18 browser.debug_level = spynner.DEBUG19 browser.create_webview()20 browser.show()
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

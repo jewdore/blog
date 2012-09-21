@@ -1,0 +1,8 @@
+---
+layout: post
+title: nodejs初探
+---
+
+<p>这两天在研究nodejs的内容，渐渐的也有了一些心得，在这里简单记录一下。nodejs是什么？ 我个人觉得它就是一个特别的webserver。说它特别主要还是因为它的一些特性在某些应用场景还是很有竞争力的，比如高连接量支持，这对于微博，聊天室或前端负载均衡服务器来说是很有用的，</p><p>这篇文章很好的介绍了nodejs是什么这个概念：</p><p>http://www.oschina.net/question/129540_21801</p><p>下面我们先从安装开始：</p><p>https://github.com/joyent/node/wiki/Installation</p><p>创建一个nodejs的应用并调试它：</p><p>https://github.com/joyent/node/wiki/using-eclipse-as-node-applications-debugger</p><p>如何使用npm来部署nodejs项目：</p><p>http://blog.miniasp.com/post/2011/02/05/Using-Node-Package-Manager-npm-to-manage-NodeJS-apps.aspx</p><p>这里值得注意的是，也是我这两天遇到的问题</p><p>1. javascript 对json的转换有这样一个问题： '["key": "&lt;a href=\"xxxx\"&gt;&lt;/a&gt;"]' 这个串虽然合法但是无法被JSON.parse()和 eval()转换。你必须搞成这样</p><p>'["key": "&lt;a href=\\"xxxx\\"&gt;&lt;/a&gt;"]' 或'["key": "&lt;a href=\'xxxx\'&gt;&lt;/a&gt;"]'</p><p>2. 调试nodejs时，一定要先打开被调试程序，然后同时新建一个v8的调试项目来调试，（千万不能先新建v8调试项目，再打开被调试程序，这样一定不work.而且要使用127.0.0.1代替localhost来调试）</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

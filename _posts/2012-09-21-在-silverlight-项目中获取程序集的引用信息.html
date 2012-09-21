@@ -1,0 +1,8 @@
+---
+layout: post
+title: 在 Silverlight 项目中获取程序集的引用信息
+---
+
+<p>在完整的 .Net 环境下，如果要获取程序集的引用信息，可以使用下面的代码：</p>  <pre class="brush:c#">var assembly = Assembly.LoadFrom(assemblyFile);var references = assembly.GetReferencedAssemblies();</pre><p>得到的 references 对象是一个 AssemblyName 数组， 这个对象包含了程序集的所有引用信息， 关于 AssemblyName 类的信息， 可以参考 MSDN 中相应的文档。</p><p>众所周知， 获取程序集的引用信息对于插件式开发是非常重要的， 但是， 在 Silverlight 环境下， Assembly 类却没有这个方法， 因此我们无法通过反射获取到程序集的引用信息。 不过幸运的是我们有开源的 Mono.Cecil 项目， 而且 Cecil 已经开始完整的支持 Silverlight 了， 因此我们需要 Cecil 来获取程序集的引用信息。</p><p>首先我们需要获取 Cecil 的源代码并且编译成 Silverlight 类库，这是非常容易的。 只要访问 Cecil 的 github 站点， 下载最新版本的源代码， 然后将配置修改为 silverlight_release 或者 silverlight_debug 编译即可。</p><p>然后在我们的 Silverlight 项目中添加对 Cecil 的引用就可以使用了， 使用 Cecil 获取程序集的代码如下：</p><pre class="brush:c#">var entryPointPart = Deployment.Current.Parts.First(asmPart =&gt; asmPart.Source == assemblyName);var entryPointResourceInfo = Application.GetResourceStream(new Uri(entryPointPart.Source, UriKind.Relative));var asmDef = AssemblyDefinition.ReadAssembly(entryPointResourceInfo.Stream);var references = asmDef.MainModule.AssemblyReferences.ToArray();</pre><p>这样获取到的 references 对象是一个 Mono.Cecil.AssemblyNameReference 数组， AssemblyNameReference 与 .Net 环境下的 AssemblyName 类似， 包含了程序集所有的引用信息。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

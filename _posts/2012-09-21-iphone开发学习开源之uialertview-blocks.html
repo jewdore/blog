@@ -1,0 +1,8 @@
+---
+layout: post
+title: iphone开发学习，开源之UIAlertView-Blocks
+---
+
+<p>使用方法简单，说明文档很详细。</p><p>给UIAlertView增加扩展方法，使它支持多按钮。</p><p>按钮事件通过Blocks</p><pre>RIButtonItem *cancelItem = [RIButtonItem item];cancelItem.label = @"No";cancelItem.action = ^{//...};RIButtonItem *deleteItem = [RIButtonItem item];deleteItem.label = @"Yes";deleteItem.action = ^{//...};UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Delete This Item?"                                                     message:@"Are you sure?"                                            cancelButtonItem:cancelItem                                            otherButtonItems:deleteItem, nil];[alertView show];[alertView release];</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

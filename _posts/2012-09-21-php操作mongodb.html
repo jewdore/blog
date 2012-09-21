@@ -1,0 +1,8 @@
+---
+layout: post
+title: PHP操作MongoDB
+---
+
+<p>安装MongoDB可以参照我的C#操作MongoDB那篇文章。</p><p>php的话首先从网上下载MongoDB的扩展包，https://github.com/mongodb/mongo-php-driver/downloads，选择对应的扩展包。</p><p>这是我下的，然后解压，VC6适合apache，VC9适合IIS，ts（thread safe）指PHP以模块形式运行的。</p><p>然后把其中的php_mongo.dll放在PHP中的ext文件夹中，然后在PHP.INI里面加入extension=php_mongo.dll，重启apache。</p><p>至此PHP扩展MongoDB的包安装完毕。</p><p>关于查询MongoDB一些使用函数可以查询手册http://us.php.net/manual/en/class.mongocollection.php</p><pre>&lt;pre&gt;&lt;?phperror_reporting(7);$conn = new Mongo();$db = $conn-&gt;PHPDataBase;$collection = $db-&gt;PHPCollection;/*----------------------------- * 删除 *-----------------------------$collection-&gt;remove(array("name" =&gt; "xixi111"));*//*------------------------------ * 插入 *------------------------------for($i = 0;$i &lt;= 50;$i++) {    $data = array("name" =&gt; "xixi".$i,"email" =&gt; "673048143_".$i."@qq.com","age" =&gt; $i*1+20);    $collection-&gt;insert($data);}*//*------------------------------- * 查找 *-------------------------------$res = $collection-&gt;find(array("age" =&gt; array('$gt' =&gt; 25,'$lt' =&gt; 40)),array("name" =&gt; true));foreach($res as $v) {    print_r($v);}*//*------------------------------- * 更新 *------------------------------- $collection-&gt;update(array("age" =&gt;22),array('$set' =&gt; array("name" =&gt; "demoxixi")));*/?&gt;</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

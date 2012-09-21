@@ -1,0 +1,8 @@
+---
+layout: post
+title: redis使用笔记
+---
+
+<p>一、Linux下redis下载与安装：</p><p>下载：</p><p>最新版本2.4.4</p><p>官网http://redis.io</p><p>下载地址：http://redis.googlecode.com/files/redis-2.4.4.tar.gz</p><p>2、安装</p><p>cd redis-2.4.4</p><p>make 32bit</p><p>编译完成后在src目录下生成redis-server redis-cli等</p><p>make install(安装目录：/usr/local/bin)</p><p>二、配置与命令：</p><p>配置文件:</p><p>requirepass xxxx ------- 要求密码验证（由于redis效率很高，为防止被枚举出密码，请设置很多位的密码，以防被破解）</p><p>启动redis-server:</p><p>　　redis-server xxxx.conf（/usr/local/bin/redis-server /etc/redis/6379.conf）</p><p>安全关闭redis-server-&gt;</p><p>　　redis-cli -p 端口 shutdown</p><p>三、C客户端库（hiredis）</p><p>redis-2.4.4.tar.gz 包含有hiredis的代码，这个版本应该比较老，make hiredis-example-libevent会报错，因为redisAsyncContext结构已经改变，可以从：https://github.com/antirez/hiredis获取。</p><p>这个客户端支持同步及异步(libevent)方式来访问redis-server</p><p>当client空闲N秒后，就会被server关闭掉，在conf中可以配置timeout N</p><p>(</p><p># Close the connection after a client is idle for N seconds (0 to disable)timeout 300</p><p>)</p><p>四、主从式架构(容灾备份)</p><p>1、1个master可以有多个slave，在slave的conf文件中增加slaveof &lt;masterip&gt; &lt;masterport&gt;即可</p><p>2、如果master有密码要求，则在slave的conf文件中增加masterauth &lt;master-password&gt;即可</p><p>3、在slave启动时，会自动从master把当前已有的数据同步到slave</p><p>4、如果slave没有在运行，master有更新，则会在下次slave启动时自动同步最新的</p><p>五、Windows上Redis的下载</p><p>　　https://github.com/dmajkic/redis/downloads</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

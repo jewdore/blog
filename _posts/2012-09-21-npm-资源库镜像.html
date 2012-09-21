@@ -1,0 +1,8 @@
+---
+layout: post
+title: npm 资源库镜像
+---
+
+使用方法<p>@mashihua 同学在cnode新闻组发布了他维护的npm镜像源，速度很快！</p><p>以下是邮件内容：</p><p>很高兴的通知大家。在周末的空闲时间里，我们搭建了一个镜像的npm资源库，服务器在日本的Linode上。大家可用下面的命令来安装npm的模块：</p><pre><code>$ npm --registry "http://npm.hacknodejs.com/" install express</code></pre><p>或下面的命令：</p><pre><code>$ env npm_config_registry="http://npm.hacknodejs.com/" npm install express </code></pre><p>如果你想把它设成默认的资源库，可用下面的命令：</p><pre><code>$ npm config set registry "http://npm.hacknodejs.com/"</code></pre><p>欢迎反馈，感谢大家的支持。</p><p>PS: 还有一个资源镜像 http://registry.npmjs.vitecho.com，由 Senmiao 同学维护。</p>自己动手搭建一个<p>@mashihua 同学还分享了搭建经验：</p><p>大家可以查看 https://github.com/isaacs/npmjs.org 如何安装 npm 资源库。安装比较简单，最大的问题在于 couchdb 上。如果得到这样的错误：</p><p>Error: insecure_rewrite_rule too many ../.. segments: registry/<em>design/app/</em>rewrite/<module></p><p>请配置 /usr/local/etc/couchdb/local.ini 里 httpd 的选项  secure_rewrites = false</p><p>当design文档和replication在同一个库时需要认证。可对registry这个资源采用用户名和密码认证的方式，http://user:pwd@localhost/registry 。因为可能碰到replication时，会返回401错误。</p><p>可参考：http://guide.couchdb.org/draft/replication.html， https://github.com/isaacs/npmjs.org/issues/19</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

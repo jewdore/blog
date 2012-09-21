@@ -1,0 +1,8 @@
+---
+layout: post
+title: Three20的命令行与手动加载[用于Xode4.2]
+---
+
+<p>1.首先到Three20官网最新版下载地点http://three20.info/roadmap/1.0.6.2[以后网址可能改变]</p><p> 建议用命令行下载，[本人发现直接下载和用命令行下载的文件有所不同]，下载后的文件夹名字为</p><p> Three20。</p><p>2.新建工程，在命令行中键入 python three20文件夹位置/src/scripts/ttmodule.py -p 你工程的</p><p> 位置/工程名.xcodeproj Three --xcode-version=4，就把Three20的工程加载到工程里了。我在</p><p> 加载时遇到了文件名的问题，好像工程名字里不能有下划线。</p><p>3.新建工程，先将含有Three20工程的工程全部关闭。将Three20/src/Three20/Three20.xcodeproj</p><p> 拖到你的工程里。xcode会编译一会，这时你到Build Phases中的Target Dependencies中点加号</p><p> 看看里面有没有Three20,如果没有的话就把它移除再加入一次[不知道是不是因为xcode反应有点慢]</p><p> 然后展开加入的Three20工程把Dependencies中的工程都拖出来，加入你的工程，并且将这些工程</p><p> 右边一栏属性里的Location值设为Relative to Project。接下来的步骤就是在Build Phases中分别把</p><p> Target Dependencies和Link Binary With Libraries都加上，TargetDependencies中的UnitTests</p><p> [我没有加，不知道要不要]。最后，把Build Setting中的Other LinkerFlags设为-all_load[别人的</p><p> 博客中设为-Objc，但我没有成功]，Header Search Paths的Debug和Release设为</p><p>还有问题的可以看看下面两个网站：</p><p> https://github.com/facebook/three20[上面有工程设置说明]</p><p> http://facebook.github.com/three20/api/[这个类似apple的文档]</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

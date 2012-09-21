@@ -1,0 +1,8 @@
+---
+layout: post
+title: Adding OmniGroup to Your Project
+---
+
+<p>之前尝试做iOS上的RTF编辑器,搜索资料的时候用到了OmniGroup这个库.Omni很多产品都做的很炫,而且价格都很贵.由此可以想象一下Omni的强大.网上开源的部分应该囊括了大部分核心代码,但问题是相应的文档太少,而且去他们的论坛发帖求助,应者寥寥.尽管这个项目最终没有完成,这里还是总结一下.</p><p>2012-02-0615:27:59</p><p>首先就是如何添加OmniGroup，项目主页在：https://github.com/omnigroup/OmniGroup。</p><p>1新建文件夹，将下载的OmniGroup复制过来，然后在xcode中新建一个workspace：RTFWS，然后再添加一个新的工程：RTFPro。</p><p>然后在RTFWS下添加工程：OmniGroup/Tools/FixStringsFile/FixStringsFile.xcodeproj，注意引用添加即可。</p><p>完成后，workspace里有两个工程，如图：</p><p>2选中RTFPro，新建一个Group：Configuration，添加如下的配置文件（选择复制到本地）</p><p>这些配置文件在build／release下设置了不同的参数，文件在 Configurations文件夹内。</p><p>3下面把相关的库添加进来。先建立一个Omni Frameworks的Group，然后将如下的头文件添加进UI Headers的sub－group，</p><p>文件在OmniUI/iPad下，完成后，再将下列的工程引用添加进来：</p><p>这些工程都在Frameworks文件夹内。</p><p>4 选择RTFPro工程，在info－Configurations中选择配置文件：</p><p>5选择RTFPro Target，在Build Phases下设置Target Dependencies：</p><p>设置Link Binary With Libraries,</p><p>点击右下角Add Build Phase,选择Add Run Script</p><p>6 接着要修改schema，点击左上角，在RTFPro下选择edit schema，</p><p>记得不要选中build options，另外：添加进的Target注意排列次序。</p><p>至此，和RTF相关的Omni资源添加完毕，接下来就可以进行RTF编辑器的自定义以及进一步开发了。</p><p>对了，如果你添加完后发现某个ios库找不到，比如4.3 (4E71d)下SenTestingKit会找不到，这时需要修改</p><p>Framework Search Paths为："Developer/Library/Frameworks"</p><p>最后，Omni中和RTF编辑相关的是：</p><p>&lt;OmniUI/OUIRTFReader.h&gt;：读取RTF文件，得到NSAttributedString</p><p>&lt;OmniUI/OUIEditableFrame.h&gt;：将NSAttributedString绘制到View，并且实现编辑功能</p><p>&lt;OmniUI/OUIRTFWriter.h&gt;：将NSAttributedstring保存到RTF文件。</p><p>关于RTF编辑器的详细部分在后节继续。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

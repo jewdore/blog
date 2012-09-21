@@ -1,0 +1,8 @@
+---
+layout: post
+title: 我们将生活在云上-云端开发，云端部署
+---
+
+<p>相信云这个概念对于专业的开发人员来说已经不是什么新名词了。这年头搞个应用不与云沾点边都拿不出手。最近在研究node.js，我在想既然node.js能将javascript作为服务器端语言来用，那么只要将js脚本提交到云上是不是就可以直接运行了呢? 答案是可以的，来看看Cloud9吧！一个node.js的在线IDE，实现云端开发和云端部署不是梦。作为一个入门级的介绍文章，我还是从hello world开始。但在我们写代码之前，我们先来看看这个云端IDE的样子：</p><p>怎么样,是不是很酷！酷的不仅仅是这些，它支持把代码直接push到Github和Bitbucket， 还支持直接deploy你的app到heroku,joyent和window azure云上。</p><p>下面的步骤告诉你如何实施一次云端开发和部署：</p><p>1. 你需要至少3个帐号:Cloud9, Github/Bitbucket, Heroku/Joyent/Azure。我个人建议是Cloud9, Github, Heroku组合，因为都是免费的。注册的事情我想就不需要多说了，不过有一点是建议都用一样的用户名和密码，这样不容易忘记^_^!</p><p>2. 登录到Cloud9，并激活Github/Bitbucket</p><p>3. 创建一个在线工程，你可以选择新建一个或是从Git/Bit上clone一个（我相信用过Git或Hg的朋友们都知道）。</p><p>4. 打开这个工程，如果你第一次用的话可以看一下Cloud9的演示程序（我觉得蛮不错的）</p><p>你可以右键工程文件夹来新建一个文件（提示：IDE有一个bug就是演示完的文件，你修改了是保存不了的，所以建议你新建一个文件，然后把原来的那个删除）。之后，请贴入如下代码：</p><pre>var http = require('http');http.createServer(function(req, res) {    res.writeHead(200, {'Content-Type': 'text/plain'});    res.end('hello cloud9');}).listen(process.env.PORT);console.log('server is running on port : ' + process.env.PORT );</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

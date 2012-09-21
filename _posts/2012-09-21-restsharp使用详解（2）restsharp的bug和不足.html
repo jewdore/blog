@@ -1,0 +1,8 @@
+---
+layout: post
+title: RestSharp使用详解（2）RestSharp的BUG和不足
+---
+
+<p> 书接上文，按照上篇文章的基础类搭建起运行环境后，你可能会发现，请求OSS服务报错，至少我是这样的。经过Fiddler抓包分析后发现http请求中根本没有Dat文档中要求的Date字段。</p>1、HTTP协议头中的Date字段<p> 发现有这个问题后立马上Google Group看看是否为RestSharp的bug。讨论组上给的答复很无语啊。</p><p>This is a bug. There is currently a pull request for this. https://github.com/restsharp/RestSharp/pull/275This will only be supported in .NET 4.0, when the next version ships(no timeline).</p><p>看来是可以解决的。首先查看上面链接的代码，仔细看在http头设置中有一下代码，其中r为System.Net.HttpWebRequest类型，v为要设置的值：</p><pre>#if NET4     _restrictedHeaderActions.Add("Date", (r, v) =&gt;        {        DateTime parsed;        if (DateTime.TryParse(v, out parsed))         {        r.Date = parsed;          }   });  _restrictedHeaderActions.Add("Host", (r, v) =&gt; r.Host = v); #else </pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

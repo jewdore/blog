@@ -1,0 +1,8 @@
+---
+layout: post
+title: Twitter Bootstrap Tab支持历史记录（History）- hash change
+---
+
+<p>Twitter Bootstrap Tab已经可以做出比较完美的tab切换效果，但是在切换的时候，地址栏的URL是不会变化的，也就是说没有办法记录历史状态，这直接导致没有办法通过前进后退来操作点击过的历史记录。目前关于这类问题的解决方案有很多，google一下jQuery hash或者jQuery history就可以看到很多解决方案，但是看了一圈，也没有完美支持bootstrap tab的。</p><p>我期望的解决方案是，完全不需要改动bootstrap tab的任何代码，包括js和html。</p><p>最后在github上发现了一个相对完美的解决方案，步骤如下：</p><p>1. 下载并包含 Ben Alman's hashchange plugin：</p><p>http://benalman.com/projects/jquery-hashchange-plugin/</p><p>2. 程序中添加如下代码：</p><pre> 1 $(function(){ 2     // Function to activate the tab 3     function activateTab() { 4         var activeTab = $('[href=' + window.location.hash.replace('/', '') + ']'); 5         activeTab &amp;&amp; activeTab.tab('show'); 6     } 7  8     // Trigger when the page loads 9     activateTab();10 11     // Trigger when the hash changes (forward / back)12     $(window).hashchange(function(e) {13         activateTab();14     });15 16     // Change hash when a tab changes17     $('a[data-toggle="tab"], a[data-toggle="pill"]').on('shown', function () {18         window.location.hash = '/' + $(this).attr('href').replace('#', '');19     }); 20 });</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

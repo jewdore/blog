@@ -1,0 +1,8 @@
+---
+layout: post
+title: Android 源代码服务器终于又上线了（转）
+---
+
+<p>过去的3年里，android的源代码一直托管在 android.git.kernel.org 上，而自从今年8月底Linux kernel.org被黑了，android 的源代码就没有发布了。只有github.com上的一个镜像还可以使用。9月份kernel.org虽然恢复了，但是 android的源代码库一直没有上线。据一个开发人员说，这次kernel.org被黑与android源代码托管到kernel.org也有关系，他们在想办法避免此类事情再次发生，所以一直没有上线。今天终于又上线了。</p><p>不过这次没有再托管在 kernel.org 了。据 android team 的 Dan Morill 说，之前把android的代码托管到kernel.org实在是占他们便宜了，经常android这边的更新操作会影响到linux kernel那边很久都用不了，这对 linux 社区是不公平的，所以，经过一段时间准备后，他们决定把 android 代码放到 google 自己的服务器上。</p><p>操作跟以前一样，只不过地址变了。另外，可以用google account登录了。</p><p>repo的下载地址是：https://dl-ssl.google.com/dl/googlesource/git-repo/repo</p><p><code></code>准备好工作目录后，在目录下执行：</p><pre>repo init -u https://android.googlesource.com/platform/manifest  repo sync </pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

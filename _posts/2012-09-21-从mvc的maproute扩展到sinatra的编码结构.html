@@ -1,0 +1,8 @@
+---
+layout: post
+title: 从MVC的MapRoute扩展到Sinatra的编码结构
+---
+
+<p>ASP.NET MVC 真的很不错。很适合开发和测试。太犀利了，用着很容易入迷。但是实在不习惯里面的MapRoute和RegisterRoutes。配置来配置去，一出错就要拿RouteDebug去兢兢业业的测试，如果短路参数短还好，如果参数多MapRoute到方法真要人老命。</p><p>为了改善这个问题，有了什么TypeRoute还有什么SCanRoute之类的注册方法。不过觉得实在不大好用。果断放弃。然后就看到一个扩展这快的方法，用的很爽。前段时间在github上看到这样一个扩展。大家遇到这些问题的时候直接贴代码解决之。</p><p>首先</p><pre class="brush:csharp;collapse:true;;gutter:true;">using System;using System.Web;namespace Oxite.Web.Routing{    [AspNetHostingPermission(System.Security.Permissions.SecurityAction.LinkDemand, Level = AspNetHostingPermissionLevel.Minimal)]    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]    public class RouteOrderAttribute : Attribute    {        public RouteOrderAttribute(int order)        {            Order = order;        }        public int Order { get; set; }    }}</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

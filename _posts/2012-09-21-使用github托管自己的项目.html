@@ -1,0 +1,8 @@
+---
+layout: post
+title: 使用github托管自己的项目
+---
+
+<p>今天注册了自己的github账号，并把自己的一个小项目托管到了github上，写篇日志记录下。</p><p>1.注册github账号。可以上github官方网站上进行注册。</p><p>2.安装git。windows下可以使用msysgit客户端。下载完成后一路默认安装即可。具体步骤可以参考官方教材set up git。</p><p>3.经过第二步的步骤，完成ssh key的生成，将key添加到guthub账户，申明用户名和邮箱，创建新的存储库后，就可以将自己的项目上传到github服务器。</p><p>4.可以使用git gui来操作，也可以使用git bash的命令行模式操作。</p><p>使用git下载android源码</p><p>1.本地新建文件夹，如D:/android_source.</p><p>2.在刚刚新建的文件内右键，选择git bash</p><p>3.运行命令git clone https://android.googlesource.com/platform/manifest</p><p>4.运行完成后会多出一个manifest文件夹，打开里面的default.xml文件</p><p>5.根据default中的清单name值构建想下的文件的git命令，如有一个节点是 &lt;project path="frameworks/base" name="platform/frameworks/base" /&gt;,我们可以构建命令git clone https://android.googlesource.com/platform/platform/frameworks/base</p><p>6.运行完成后即下载成功.</p><p>下载内核源码:</p><p><code>$ git clone https://android.googlesource.com/kernel/common.git </code></p><p><code>$ git clone https://android.googlesource.com/kernel/goldfish.git</code></p><p><code>$ git clone https://android.googlesource.com/kernel/msm.git </code></p><p><code>$ git clone https://android.googlesource.com/kernel/omap.git </code></p><p><code>$ git clone https://android.googlesource.com/kernel/samsung.git </code></p><p><code>$ git clone https://android.googlesource.com/kernel/tegra.git </code></p><p><code></code>git 的优势 Why Git is Better than X</p><p>git 的用法可以参考下 git 简易指南 pro git中文版</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

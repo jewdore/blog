@@ -1,0 +1,8 @@
+---
+layout: post
+title: ListView 在Activity中添加 Context Menu
+---
+
+<p>oming from a Windows and .NET background, I had some trouble understanding how to interact with the ListView control and context menu creation in Android. Context menus are supposed to be shown on your mobile device when you touch/click the screen and hold on for a longer time. So here is how to determine which item is long-clicked and how to show a context menu for it.Source code for this blog post is available as a complete Eclipse project athttp://github.com/mikeplate/ListViewDemo(zip download link in upper right corner).</p><p>An Activity with an expanding ListView and a docked TextViewIf you have an activity that will only contain a single ListView control, you can derive your activity from the ListActivity instead of Activity. However, I think I might like to show some extra info below my ListView so I chose to have a separate ListView object. My activity layout looks like this:</p><pre> 1 &lt;?xml version="1.0" encoding="utf-8"?&gt; 2 &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 3   android:layout_width="fill_parent" 4   android:layout_height="fill_parent" 5   android:orientation="vertical" 6   &gt; 7   &lt;ListView 8     android:id="@+id/list" 9     android:layout_width="fill_parent"10     android:layout_height="0px"11     android:layout_weight="1"12     /&gt;13   &lt;TextView14     android:id="@+id/footer"15     android:layout_width="fill_parent"16     android:layout_height="60dip"17     android:text="@string/footer"18     android:padding="4dip"19     android:background="#FF666666"20     /&gt;21 &lt;/LinearLayout&gt;
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

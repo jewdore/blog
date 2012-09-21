@@ -1,0 +1,8 @@
+---
+layout: post
+title: Redis
+---
+
+<p>Redis：高性能key-value存储，持久化，支持string,list等多种数据类型，支持N多命令，相当灵活。</p><p>官网：http://redis.io/</p><p>中文：http://www.redis.cn/</p><p>Demo:</p><p>windows版(非官方，开发调试用，Redis本身不支持Windows)</p><p>https://github.com/dmajkic/redis/</p><p>prebuilt binarieshttps://github.com/dmajkic/redis/downloads</p><p>下载解压后的文件：</p><p>libhiredis.dllredis-benchmark.exeredis-check-aof.exeredis-check-dump.exeredis-cli.exeredis-server.exeredis.conf</p><p>redis-server.exe是Redis服务程序，命令行运行后启动服务端[2624] 28 May 17:19:30 * Server started, Redis version 2.4.2[2624] 28 May 17:19:30 # Open data file dump.rdb: No such file or directory[2624] 28 May 17:19:30 * The server is now ready to accept connections on port 6379</p><p>redis-cli.exe是一个客户端程序，命令行下运行，简单的一个Set/Get</p><p>redis 127.0.0.1:6379&gt; set mykey "this is a value"OKredis 127.0.0.1:6379&gt; get mykey"this is a value"redis 127.0.0.1:6379&gt;</p><p>C#客户端</p><p>有好几个，本文使用ServiceStack.Redis</p><p>https://github.com/ServiceStack/ServiceStack.Redis</p><p>常用方法</p> //初始化连接RedisClient(stringhost,intport);//setkeyvalueboolSet&lt;T&gt;(stringkey,Tvalue);//getvaluebyte[]Get(stringkey);//setlistAddItemToList(stringlistId,stringvalue);//getlistList&lt;string&gt;GetAllItemsFromList(stringlistId);//setobject&lt;T&gt;boolSet&lt;T&gt;(stringkey,Tvalue);//getobject&lt;T&gt;TGet&lt;T&gt;(stringkey);
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

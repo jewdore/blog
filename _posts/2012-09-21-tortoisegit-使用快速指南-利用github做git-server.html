@@ -1,0 +1,8 @@
+---
+layout: post
+title: TortoiseGit 使用快速指南: 利用GitHub做Git Server
+---
+
+<p>　　TortoiseGit 是 TortoiseSVN的Git版，它很好的实现了与windows资源管理器的融合，使用界面与TortoiseSVN非常类似。</p><p>　　TortoiseGit运行在msysgit(git的windows开源版本)之上，因此，在安装TortoiseGit前需要安装msysgit。GitHub可以免费为用户提供一个git server的环境，但该环境是不保证的，一般来说，你可以利用这个环境熟悉和学习git。 如果是真正的项目，建议你搭建自己的git server.</p><p>　　以下是一个TortoiseGit与git hub相结合的快速配置指南：</p><p>　　配置TortoiseGit 快速指南:</p><p>　　1. 安装最新版的TortoiseGit (先安装msysgit)</p><p>　　2. 使用你TortoiseGit程序目录中的快捷方式运行[C:\Program Files\TortoiseGit\bin\puttygen.exe Puttygen]</p><p>   3. 鼠标点击"generate"，产生你的Putty密钥</p><p>　　4. 从Puttygen中copy你的公钥，你的公钥是一个位于第一个文本域中的比较大的随机的字母数字串，它看起来如下:</p><p>　　   ssh-rsa</p><p>　　   AAAB3NzaC1yc2EAAAABJQAAAIBqFftopEl3HNQ+SUmh9dFW39+IYU1ZYLG04GU</p><p>　　   Nh02DEbgKn9qaCJDjqCh9a7LO+oN6RjcWLIwaPPlwZI1w6el5WaZKeKEOtWqgQW+</p><p>　　   trnLRijgF9sPRR7jweM13S8lnpSvCUQbPxUyaNHZkEmY2PI1BaANv3d9YGnnhbKXPz</p><p>　　   m0rmQ== rsa-key-20091128</p><p>　　5. 在GitHub中创建一个帐户，导航到Account settings，点击"ssh public keys", 把你在上面产生的公钥增加进去。</p><p>　　6.返回Puttygen, 点击"存储私钥"，存储你的私钥。</p><p>　　7. 导航到Imprudence库中，在GitHub中点击"fork"来创建你自己的Imprudence库。</p><p>   8. 从你的Imprudence库的主页中，copy "Your Clone URL:"这个URL看起来如下：</p><p>　　　　"git@github.com:yourname/imprudence.git"</p><p>   9. 在你的硬盘上为这个Imprudence源码创建一个新目录, 点击右键选择"Git Clone...".</p><p>　　10. 在URL中输入你在第8步中的URL clone地址.</p><p>   11. 使能"Load Putty Key" 并选择你在第4步存储的私钥位置。</p><p>   12. 点击OK即可获取你的新的Imprudence 分支了。</p><p>　　</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

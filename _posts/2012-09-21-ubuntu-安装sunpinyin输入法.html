@@ -1,0 +1,8 @@
+---
+layout: post
+title: Ubuntu 安装sunpinyin输入法！！！
+---
+
+<p>最近在研究linux，所以就弄了个ubuntu10.04中文版，但是其中的输入法确实让人很着急，网上找了很多帖子，感觉google输入法，和sunpinyin确实不错。</p><p>所以在这里把这两个输入法也介绍给大家。</p><p>1。google输入法。</p><p>　　</p><p>在Ubuntu10.04下安装Google拼音输入法，如下：</p><p>A. 获取代码：（没有git的先安装git：sudo apt-get install git-core）</p><p>$ git clone git://github.com/tchaikov/scim-googlepinyin.git</p><p>$ cd scim-googlepinyin</p><p>B. 编译前提：</p><p>上面给的链接里面有介绍怎么编译的，但少提了几个必需组件，这里列一下：</p><p>* autotools-dev</p><p>* libgtk2.0-dev</p><p>* libscim-dev</p><p>* libtool</p><p>* automake</p><p>用下面命令看看是不是安装了，如果没有，会自动帮你安装上：</p><p>$ aptitude install autotools-dev libgtk2.0-dev libscim-dev libtool automake</p><p>C. 编译：</p><p>记住系统必须先存在SCIM（没有的话 sudo apt-get install scim 一下）</p><p>$ ./autogen.sh</p><p>$ make</p><p>$ sudo make install</p><p>现在重启scim:</p><p>关闭scim:pkill scim</p><p>然后启动： scim -d</p><p>去首选项里的&ldquo;语言支持&rdquo;的&ldquo;输入法&rdquo;选择scim作为默认输入法,然后注销就OK了。</p><p>2。sunpinyin</p><ol>首先打开终端，依次输入以下命令。<blockquote><pre class="bash">$ sudo add-apt-repository ppa:shawn-p-huang/ppa$ sudoapt-get update$ sudoapt-getinstall ibus-sunpinyin$ sudoapt-get upgrade</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

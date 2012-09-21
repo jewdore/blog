@@ -1,0 +1,8 @@
+---
+layout: post
+title: jQuery1.6c新增的适配器
+---
+
+<p>其实在jQuery1.5中已有这东西，cssHooks，或者更早之前的jQuery.event.special, 或者 Sizzle.selectors里面更多的对象。它们共同的特点是包含了许多相关的函数，cssHooks是专门处理css属性的获取与设置，如IE的opacity,event.special用于装载与卸载submit, change, focus ,mouseenter等特别事件与自定义事件， Sizzle.selectors里面的过滤器与候选集获取器就更不用说了。由于JS用对象做为表进行查找是比if条句与switch语句快很多，加之，适配器这种模式对于扩展新功能非常有利，因为jQuery1.6便把它发扬光大了。</p><p>在jQuery的attributes模块（github是这样分割的，但耦合这么高很难说是模块），共增加了三个这样对象，valHooks，attrHooks, propHooks，分别对应val，attr与prop这个三个方法。prop是新增的，表示jQuery决定区分属性与特性的决心，但IE6/7还是无法区分它们，因此attr基本上涵盖了prop的功能。</p><p>我们看一下它们各自的运用吧！</p><code class="jscript comments">// jQuery.style 方法</code>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

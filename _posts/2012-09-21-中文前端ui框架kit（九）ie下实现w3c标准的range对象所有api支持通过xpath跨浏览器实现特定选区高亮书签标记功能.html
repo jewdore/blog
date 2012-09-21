@@ -1,0 +1,8 @@
+---
+layout: post
+title: 中文前端UI框架Kit（九）IE下实现W3C标准的range对象所有api，支持通过xpath跨浏览器实现特定选区高亮，书签标记功能
+---
+
+<p>号外：kitjs官方讨论QQ群建立了，QQ群号88093625，欢迎大家加入，讨论前端相关话题 </p>kit是目前已知框架中第一个支持完美IE下跨段落，跨任意元素，以及多个textNode的偏移问题的高亮工具，以及对range对象的修复，完美修复IE下的range对象以支持了W3C标准range模型的所有的属性以及接口<p>demo地址：http://xueduany.github.com/KitJs/KitJs/index.html#highlight，类似iCloud的高亮书签，类似有道阅读类似的书签功能，与他不同的是，kit支持跨段落，且标准化以及兼容性更好</p>（一）Fix IE range对象，模拟W3C的标准模型，支持开始节点，结束节点，开始位移，结束位移等 <p>我们都知道IE9之前不支持W3C的标准Selection和Range对象，无法或者选区内容的开始节点和结束节点，以及开始位移和结束位移</p> <p>现在kit帮你fix了IE下的range对象兼容</p> <p>中文api doc地址: http://xueduany.github.com/jsdoc/out/$Kit.Selection.html</p> （二）可以根据选中内容生成xpath字符串，保存高亮标签 <p>先用鼠标选中一段文本</p>   <p>，然后在console里面，可以看到选中内容，可以序列化为一条xpath的字符串</p> <p>//BODY/DIV[1]/DIV[3]/DIV[2]/P[4]/text()[5]|31|//BODY/DIV[1]/DIV[5]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/LI[1]/I[1]/I[1]/text()[1]|17</p>  （三）根据xpath实现跨浏览器高亮 <p>根据之前的xpath字符串，在IE的console里面输入</p> <p>$kit.selection.highlight('//BODY/DIV[1]/DIV[3]/DIV[2]/P[4]/text()[5]|31|//BODY/DIV[1]/DIV[5]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/LI[1]/I[1]/I[1]/text()[1]|17') </p>  <p>我们可以看到同样的选区在ie中被高亮了</p> （四）扩展 <p>这样，基于kit，你可以很轻松的实现任意设备的高亮书签保存，类似iCloud的书签功能，有任何疑问，欢迎讨论</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

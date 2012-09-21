@@ -1,0 +1,8 @@
+---
+layout: post
+title: 使用Vundle 来管理 Vim 插件
+---
+
+<p>VIM 是编辑器之神，没有自带插件管理功能比较遗憾，不过vim的扩张性非常好，今天发现有一个叫Vundle的插件可以通过git来查找和更新vim插件。以前我是使用pathogen來安装和管理的，</p><p>不过pathogen没有自动查找插件的功能，需要自己将插件一个个文件分开来更新管理。现在只要进入 vim 执行:BundleInstall就可以下载插件了，如果要更新就输入:BundleInstall!</p><p>下面我来介绍一下Vundle在window下的安装方法：</p><ol>1.下载 msysgit<p>2.安装 msysgit，安装的时候可以入下图一样选择 git 运行在 win 的命令行，或者自己手动将 "git所在路径\git\bin" 添加到系统的PATH里</p>3.将下面的代码保存为 curl.cmd, 然后复制到 "git所在路径\git\cmd\" 目录里。<pre class="brush:Perl;gutter:false;">@rem Do not use "echo off" to not affect any child calls.@setlocal@rem Get the abolute path to the parent directory, which is assumed to be the@rem Git installation root.@for /F "delims=" %%I in ("%~dp0..") do @set git_install_root=%%~fI@set PATH=%git_install_root%\bin;%git_install_root%\mingw\bin;%PATH%@if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%@if not exist "%HOME%" @set HOME=%USERPROFILE%@curl.exe %* </pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: memcached源代码阅读笔记（5）memcached1.4.10 libevent2.0.16在centos安装
+---
+
+<p align="left"> </p><p>memcached1.4.10安装操作系统：CENTOS5.6安装libeventmkdir libeventcd libevent下载libevent2.0.16wget --no-check-certificate https://github.com/downloads/libevent/libevent/libevent-2.0.16-stable.tar.gz 或者通过浏览器下载后通过rz拿到服务器安装rz，sz工具 yum -y install lrzszrztar xzvf libevent-2.0.16-stable.tar.gz cd libevent-2.0.16-stable./configure --prefix=/usr/local/libevent如果出错：configure: error: in `..libevent-2.0.16-stable':configure: error: no acceptable C compiler found in $PATH说明没有安装 gcc,安装gcc #yum -y install gcc #yum search gcc#yum -y install gcc-c++# make# make install# getconf LONG_BIT</p><p>cd memcached/cd memcached-1.4.10./configure --prefix=/usr/local/memcached --with-libevent=/usr/local/libeventmakemake install/usr/local/memcached/bin/memcached -d -m 64 -u root -p 11211 -c 256 -P /tmp/memcached.pidps aux | grep memcached/usr/local/memcached/bin/memcached &#8211;p 11211 &#8211;m 64 -u root &#8211;vv</p><p>之前介绍的是单线程的方式，因为接下来要研究多线程的处理过程，因此需要配置成多线程的版本。</p><p>如果是memcached比较老的版本，缺省是单线程，因此编译的时候需要做如下配置，加上</p><p>--enable-threads 选项</p><p>./configure --prefix=/usr/local/memcached --with-libevent=/usr/local/libevent --enable-threads </p><p>但是memcached1.4以后的版本如果再用这个选项就会报警告：</p><p>configure: WARNING: unrecognized options: --enable-threads</p><p>因为新的版本缺省就是多线程</p><p>可以在启动的时候指定t参数，后面指定线程数。通常为cpu核数</p><p>/usr/local/memcached/bin/memcached &#8211;p 11211 &#8211;m 64 -uroot -t2 -vv</p><p>如果要单线程方式，指定t为1即可。</p><p>/usr/local/memcached/bin/memcached &#8211;p 11211 &#8211;m 64 -uroot -t1 -vv</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

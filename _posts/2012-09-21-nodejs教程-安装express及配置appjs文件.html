@@ -1,0 +1,8 @@
+---
+layout: post
+title: nodejs教程：安装express及配置app.js文件
+---
+
+<p><strong style="color: #008000">原文地址：http://js8.in/774.html</p><p>express.js是nodejs的一个MVC开发框架，并且支持jade等多种模板。下面简单来说说express的安装和app.js文件的配置，然后在今后的教程中一步一步使用express.js搭建个聊天室。</p>安装express.js<p>如果你安装了npm，安装变得很简单，只需要在终端中运行下面的代码即可：</p><blockquote><p>npm install express -gd</p></blockquote><p>-g代表安装到NODE_PATH的lib里面，而-d代表把相依性套件也一起安装。如果沒有-g的话会安装目前所在的目录(会建立一个node_modules的文件夹)，你可以透过以下指令来比较两者的不同：</p><blockquote><p>npm list -gnpm list</p></blockquote><p>如果没有npm，那么我可以使用github来git下来最新的express。好了，现在你可以通过<code>express testapp</code>来建立express实例。以下是示例：</p><blockquote><p>cd ~express testappcd testappnode app.js</p></blockquote><p>这样就建立了一个testapp的nodejs应用，而app.js是默认的应用主js。下面来详细的说说app.js中的各项配置。</p>引入模块<pre style="font-family: monospace" class="javascript">var express = require('express');var app = module.exports = express.createServer();</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

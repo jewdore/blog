@@ -1,0 +1,8 @@
+---
+layout: post
+title: change,propertychange,input事件小议
+---
+
+<p>github上关于mootools一个issue的讨论很有意思，所以就想测试记录下。感兴趣的可以点击原页面看看。</p><p>这个问题来自IE(LTE8)中对checkbox和radio change事件的实现问题，在IE(LTE8)中测试下来，当你点击一个checkbox或者radio，它的change事件是不会立即触发，除非你让它失去焦点，而在其他标准浏览器中(包括IE9)，是点击后立即触发change事件的，这的确是个蛋疼的问题，说到解决方法，倒也比较容易，用IE(LTE8)中元素特有的propertychange事件来处理(IE9已经没这玩意儿了)，就能避免上述问题，如：</p><pre class="brush:javascript;gutter:true;">checkEl.attachEvent('onpropertychange', function() {   console.log('hey man, I am changed');});</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

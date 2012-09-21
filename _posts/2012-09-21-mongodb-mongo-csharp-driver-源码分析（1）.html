@@ -1,0 +1,8 @@
+---
+layout: post
+title: mongodb mongo csharp driver 源码分析（1）
+---
+
+<p>mongodb mongo csharp driver下载地址：<strong jscontent="failedUrl" jstcache="13" class="failedUrl" style="word-wrap: break-word;">https://github.com/mongodb/mongo-csharp-driver/downloads<strong jscontent="failedUrl" jstcache="13" class="failedUrl" style="word-wrap: break-word;"></p><p>具体的下载地址可以到mongodb官方网站上进行查找。</p><p>下面例子是一个简单的查询：</p><p><pre>//创建数据库连接，默认为本地连接端口为27017            MongoServer server = MongoServer.Create();            //获取数据库，如果没有会自动创建            MongoDatabase database = server.GetDatabase("MyDatabase");            //获取collection集合            MongoCollection things = database.GetCollection("things");            try            {                //打开连接                server.Connect();                //设置查询条件  x like (3,4)                QueryConditionList condition = new QueryConditionList("x");                condition.In(new BsonArray().Add(new BsonInt32(3)).Add(new BsonInt32(4)));                MongoCursor&lt;BsonDocument&gt; cur = things.FindAs&lt;BsonDocument&gt;(condition);                foreach (BsonDocument item in cur)                {                    MessageBox.Show(item["j"].AsDouble.ToString());                }            }            finally            {               //关闭连接                server.Disconnect();            }
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

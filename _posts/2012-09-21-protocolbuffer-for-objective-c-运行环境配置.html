@@ -1,0 +1,8 @@
+---
+layout: post
+title: ProtocolBuffer for Objective-C 运行环境配置
+---
+
+<p>1，下载ProtocolBuffer包，并按照包中根目录下README.txt安装。</p> <p>http://code.google.com/intl/zh-CN/apis/protocolbuffers/</p> <p>当前最新版本2.4.1</p> <p>最后make install后，会生成编译器protoc，并拷贝到/usr/local/bin目录下。</p>  <p>2，下载Objective-C compiler for ProtocolBuffer。</p> <p>目前有两种类型的实现。</p> <p>一个针对ProtocolBuffer2.2做修改，使最后生成的.proto文件编译器（protoc）支持Objective-C类型的文件输出。</p> <p>它在这里：http://code.google.com/p/metasyntactic/wiki/ProtocolBuffers</p> <p>另一个针对ProtocolBuffer2.3推出的plugin模式编写插件，以插件方式支持Objective-C类型的文件输出。</p> <p>它在这里：https://github.com/booyah/protobuf-objc</p> <p>我选用第二种方式，这也是Google推荐的方式。</p> <p>git clone https://github.com/booyah/protobuf-objc.git</p> <p>默认会在当前运行目录下创建protobuf-objc目录。进入该目录，并执行：</p> <p>./autogen.sh</p> <p>./configure</p> <p>make</p> <p>make install</p> <p>最终生成的插件名字为protoc-gen-objc，会被安装到/usr/local/bin/目录下。</p>  <p>3，测试.proto文件编译。</p> <p>随便写一个test.proto文件，并编译该文件。命令是：</p> <p>protoc –objc_out=/Output/Directory/ test.proto</p> <p>protoc会自动在/usr/local/bin/目录下寻找名为”protoc-gen-objc”的插件，并使用该插件编译.proto文件，最终生成两个文件：</p> <p>test.pb.h</p> <p>test.pb.m</p> <p>这个步骤通过后，说明ProtocoBuffer Compiler for Objective-C可以正常工作了。</p>  <p>4，在Xcode4.3.1中使用ProtocolBuffer</p> <p>将步骤2中protobuf-obj/src/runtime/Classes目录导入到Xcode项目中，导入时，选中”Copy items into destination group‘s folder（if needed）“。</p> <p>导入位置选择项目根目录。导入完毕后，项目根目录下将会出现Classes目录。将该目录改名为ProtocolBuffers（注意最后的s）：</p> <p>mv Classes ProtocolBuffers</p> <p>修改项目属性中”Build Setting——&gt;Header Search Pathes”，将项目根目录“.”添加到头文件搜索路径中去。</p> <p>这样ProtocolBuffer for Objective-C的工作环境就配置好了。</p> <p>5，使用</p> <p>将步骤3中编译输出的test.pb.h和test.pb.m添加到项目中，就可以直接使用了。</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

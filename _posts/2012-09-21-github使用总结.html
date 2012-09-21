@@ -1,0 +1,8 @@
+---
+layout: post
+title: github使用总结
+---
+
+<p>参考：http://hi.baidu.com/mcspring/blog/item/171b1e38986d39fab211c71b.html</p><p>按照流程创建Repo，创建完以后会有如下界面：</p><textarea readonly name="code" class="csharp">Global setup: Set up git  git config --global user.name &quot;&quot; //输入用户名  git config --global user.email xxx@163.com      Next steps:  mkdir TestRepo  cd TestRepo  git init  touch README  git add README  git commit -m 'first commit'  git remote add origin git@github.com:xwdreamer/TestRepo.git  git push -u origin master      Existing Git Repo?  cd existing_git_repo  git remote add origin git@github.com:xwdreamer/TestRepo.git  git push -u origin master      Importing a Subversion Repo?  Click here      When you're done:  Continue</textarea><p>执行完Next steps中的所有步骤，我们会在github上看到我们新建的TestRepo.git。</p><p>当我们再次想往项目里面创建文件是，我们这个时候使用</p><textarea readonly name="code" class="csharp"> git push -u origin master</textarea>来提交报错如下：<textarea readonly name="code" class="csharp">xxx@xxx ~/Hello-World (master)$ git push -u origin masterTo git@github.com:xxx/Hello-World.git ! [rejected]        master -&gt; master (non-fast-forward)error: failed to push some refs to 'git@github.com:xxx/Hello-World.git'To prevent you from losing history, non-fast-forward updates were rejectedMerge the remote changes (e.g. 'git pull') before pushing again.  See the'Note about fast-forwards' section of 'git push --help' for details.</textarea>根据提示我们先使用<textarea readonly name="code" class="csharp">git pull</textarea>再使用<textarea readonly name="code" class="csharp">git push</textarea>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

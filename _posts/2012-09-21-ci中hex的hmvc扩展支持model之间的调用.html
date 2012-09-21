@@ -1,0 +1,8 @@
+---
+layout: post
+title: CI中Hex的HMVC扩展支持model之间的调用
+---
+
+<p>Hex的HMVC下载地址：https://github.com/CodeIgniter/HMVC</p><p>Hex的HMVC发布地址：http://codeigniter.org.cn/forums/thread-1319-1-1.html</p><pre>&lt;?php//croe下面的MY_Loader类增加属性var $app_path = '';  //保存当前 Module 所在的路径，model之间调用的时候使用//增加方法/** * 功能:设置其他model所在的app * @param $app_name * @return MY_Loader */public function app($app_name){    $this-&gt;_ci_module_path = $app_name;    return $this;}//修改function model//找到下面位置$module_model_name = str_replace(' ', '_', ucwords(str_replace('/', ' ', $this-&gt;_ci_module_path.' '.$model)));//该行下添加代码$this-&gt;_ci_module_path = $this-&gt;app_path;</pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

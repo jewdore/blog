@@ -1,0 +1,8 @@
+---
+layout: post
+title: AppengineJS：使用JavaScript访问Google App Engine Python SDK
+---
+
+<p>AppengineJS是个开源的JavaScript程序库，用于访问Google App Engine Python SDK，开发者可以使用它创建Web应用并部署到GAE上，进而访问Google的持久化存储和服务。虽然AppengineJS使用JavaScript移植了App Engine Python API，但它实际上却运行在Rhino（使用Java编写的Mozilla JavaScript引擎）之上。因此，使用AppengineJS的JavaScript代码最终是部署在JVM上的。AppengineJS的创建者之所以选择该方案是因为他们觉得&ldquo;Python API的设计与JavaScript更相近&rdquo;。Python到JavaScript的移植是通过JS命名约定实现的，Python的this_is_a_name标识符变成了thisIsAName，所有的delete()函数被重命名为remove()以避免与delete关键字冲突。到目前为止已经移植了如下API：Datastore （覆盖率 90%，可以使用，除了少量的API变更）Memcache （覆盖率 : 90%， 可以使用）URL Fetch （覆盖率 : 90%， 可以使用）Mail （覆盖率 : 90%， 可以使用）XMPP （覆盖率 : 90%， 可以使用）Images （覆盖率 : 60%， 可以使用）Users （覆盖率 : 80%， 可以使用）OAuth （覆盖率 : 20%， 处理中）Task Queue （覆盖率 : 80%， 可以使用）Blobstore （覆盖率 : 50%， 可以使用）Quota （覆盖率 : 90%， 可以使用）Local Unit Testing （覆盖率 : 80%， 可以使用，除了一些API变更）GitHub项目包含了源代码、文档链接以及使用AppengineJS的两个示例链接：一个是使用了Datastore API （tar.gz）的JSGI应用，另一个是由AppengineJS和Nitro开发的博客应用（tar.gz）。查看英文原文：AppengineJS, a JavaScript Port of the Google App Engine Python SDK</p><p>http://www.infoq.com/cn/news/2010/06/AppengineJS;jsessionid=F86F7770F761E764B3CCBD8D486D09E4</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

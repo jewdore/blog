@@ -1,0 +1,8 @@
+---
+layout: post
+title: WP7 开发学习（2）：在WP7中使用网络请求
+---
+
+<p>在上一篇中介绍到&#8220;合一微博&#8221;主要是调用腾讯、新浪的开放API实现的，实现这一切都是要请求网络资源的。下面简单介绍一下在WP7中怎样进行网络请求。</p>  <p>在wp7中对网络操作没有同步操作，都是异步的，这和Web有点不同。</p><p style="text-align:left;text-autospace:none" align="left"></p><p><strong style="text-align: left; ">方案一：使用<strong style="text-align: left; ">HttpWebRequest<strong style="text-align: left; ">和<strong style="text-align: left; ">HttpWebResponse<strong style="text-align: left; ">对象</p>  <p style="text-align:left;text-autospace:none" align="left">其基本步骤如下：</p>  <p style="text-align:left;text-indent:19.0pt;text-autospace:none" align="left">1，实例化一个HttpWebRequest对象</p>  <p style="text-align:left;text-autospace:none" align="left"> 2，开始请求</p>  <p style="text-align:left;text-autospace:none" align="left"> 3，实例化一个HttpWebResponse对象来接受请求回来的对象</p>  <p style="text-align:left;text-autospace:none" align="left"> 4，实例化一个流来处理上一步的response</p>  <p style="text-align:left;text-autospace:none" align="left"> 5，对上一步的流进行处理，这就要你最想要的喽</p>  <p style="text-align:left;text-autospace:none" align="left"> 6，记得把流关闭</p>  <p>  7，关闭response响应</p><p>示例代码：</p>publicvoidGetRequest(){//实例化一个HttpWebRequest对象HttpWebRequestrequest=(HttpWebRequest)WebRequest.Create("http://www.google.com.hk/");//开始执行请求request.BeginGetResponse((result)=&gt;{//实例化一个HttpWebResponse对象来接受请求回来的数据HttpWebResponseresponse=(HttpWebResponse)request.EndGetResponse(result);//实例化一个流来处理responseusing(System.IO.StreamReadersr=newStreamReader(response.GetResponseStream())){//dosomething对Stream进行处理//......//......//关闭response响应response.Close();}},request);}
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

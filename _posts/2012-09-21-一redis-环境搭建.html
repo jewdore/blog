@@ -1,0 +1,8 @@
+---
+layout: post
+title: 一.redis 环境搭建
+---
+
+<p>1.简介 redis是一个开源的key-value数据库。它又经常被认为是一个数据结构服务器。因为它的value不仅包括基本的string类型还有 list,set ,sorted set和hash类型。当然这些类型的元素也都是string类型。也就是说list,set这些集合类型也只能包含string 类型。你可以在这些类型上做很多原子性的操作。比如对一个字符value追加字符串（APPEND命令）。加加或者减减一个数字字符串(INCR命令，当 然是按整数处理的).可以对list类型进行push,或者pop元素操作（可以模拟栈和队列）。对于set类型可以进行一些集合相关操作 (intersection union difference)。memcache也有类似与++,--的命令。不过memcache的 value只包括string类型。远没有redis的value类型丰富。和memcahe一样为了性能。redis的数据通常都是放到内存中的。当然 redis可以每间隔一定时间将内存中数据写入到磁盘以防止数据丢失。redis也支持主从复制机制（master-slave replication）。redis的其他特性包括简单的事务支持和 发布订阅(pub/sub)通道功能,而且redis配置管理非常简单。还有各种语言版本的开源客户端类库。2.安装下载地址：http://redis.googlecode.com/files/redis-2.0.4.tar.gz 2.0目前是最新稳定版可以在linux下运行如下命令进行安装  <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: 'Courier New', courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet">$ tar xzf redis-2.0.4.tar.gz$ cd redis-2.0.4$ make</pre>make完后 redis-2.0.4目录下会出现编译后的redis服务程序redis-server,还有用于测试的客户端程序redis-cli下面启动redis服务.
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

@@ -1,0 +1,8 @@
+---
+layout: post
+title: linux下IPC latency 进程间通讯延迟测试结果
+---
+
+<p>详文请见 VLoveIYhttp://ffown.sinaapp.com/?p=40</p><p>CPU name : Intel(R) Xeon(R) CPU E5405 @ 2.00GHzprocessor : 4cpu MHz : 1995.021</p><p>IPC latency:</p><p>IPC TYPE: 　　MessageSize: 　　Average Latency:unix socket 　　10K 　　　　　　9uslocalhost tcp 　10K 　　　　　　11uspipe 　　　　　 10K 　　　　　　6usremote TCP 　　10K 　　　　　　13us</p><p>IPC throughput:IPC TYPE: 　　MessageSize: 　　Average throughput/msg: 　　Average throughput/M:unix socket 　　10K 　　　　　　183049 msg/s 　　　　　　　　14643 Mb/slocalhost tcp 　10K 　　　　　　113901 msg/s 　　　　　　　　9112 Mb/spipe 　　　　　 10K 　　　　　 146724 msg/s 　　　　　　　　 11737 Mb/s</p><p>测试代码：http://github.com/rigtorp/ipc-bench</p><p>想在linux下选择一个IPC，主要倾向于unix socket，ipc-bench测试下来感觉更有底了，10K数据传输9us的延时在大多数应用中都可以接受了，这样某些应用可以使用类似于Nginx的多进程模式，网络层一个进程，逻辑层多进程，而且可以跑脚本，既能利用同步编写逻辑，有可发挥多核优势</p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

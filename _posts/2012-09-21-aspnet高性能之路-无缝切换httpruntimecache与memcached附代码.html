@@ -1,0 +1,8 @@
+---
+layout: post
+title: asp.net高性能之路：无缝切换HttpRuntime.Cache与Memcached，附代码
+---
+
+概述<p>之前网站一直使用asp.net自带的cache，也就是HttpRuntime.Cache。这个的优点是进程内cache，效率非常高，同时对于缓存的对象可以直接获得</p><p>引用，并进行修改，不需要再进行清空缓存。但是使用HttpRuntime.Cache，无法进行扩展，也无法使用web园等等。</p>方案<p>之前有看dudu写的关于northscale memcached的文章，觉得很不错，故进行了一下尝试。由于初次使用，出问题的时候要能随时切换回HttpRuntime.Cache，</p><p>故使用了策略模式，实现无缝切换缓存模式的功能。Memcached的封装类请在https://github.com/enyim/EnyimMemcached/downloads进行下载，我使用的是Northscale.Store.2.8</p>接口View Code <pre>using System;using System.Collections.Generic;using System.Web;/// &lt;summary&gt;/// 缓存策略接口/// &lt;/summary&gt;public interface ICacheStrategy{    void AddObject(string objId, object o);    void AddObjectWithTimeout(string objId, object o, int timeoutSec);    void AddObjectWithFileChange(string objId, object o, string file);    //void AddObjectWithDepend(string objId, object o, string[] dependKey);    void RemoveObject(string objId);    object RetrieveObject(string objId);    int TimeOut { set; get; }} </pre>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

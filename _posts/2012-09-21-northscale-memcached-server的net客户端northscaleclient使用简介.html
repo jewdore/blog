@@ -1,0 +1,8 @@
+---
+layout: post
+title: NorthScale Memcached Server的.NET客户端NorthScaleClient使用简介
+---
+
+<p>博客园已经全面使用NorthScale Memcached Server，用下来感觉不错。下面简单分享一下.NET客户端的使用方法。</p><p>NorthScale Memcached Server官方推荐的.NET客户端是EnyimMemcached。EnyimMemcached有两种方式可以访问NorthScale Memcached Server：</p><p>1) Enyim.Caching.MemcachedClient（Enyim.Caching.dll）；</p><p>2) NorthScale.Store.NorthScaleClient（Northscale.Store.dll）。NorthScaleClient是基于Enyim.Caching针对NorthScale Memcached Server专门开发的客户端。</p><p>这两个客户端的主要区别在于：</p><p>1）Enyim.Caching.MemcachedClientt只能访问NorthScale Memcached Server的默认Bucket(默认访问服务器11211端口)；</p><p>2）NorthScale.Store.NorthScaleClient只能访问NorthScale Memcached Server(默认访问服务器8080端口)。</p><p>这里主要讲一下NorthScaleClient的使用方法：</p><p>1. 下载NorthScaleClient，下载地址：http://github.com/enyim/EnyimMemcached/downloads。</p><p>2. 在项目中添加对Northscale.Store.dll的引用。</p><p>3. 在web.config中添加相应的配置：</p><p>　　a) 在configSections中添加下面的配置：</p><pre><!--Code highlighting produced by Actipro CodeHighlighter (freeware)http://www.CodeHighlighter.com/-->&lt;section name="northscale" type="NorthScale.Store.Configuration.NorthScaleClientSection, NorthScale.Store" /&gt;
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>

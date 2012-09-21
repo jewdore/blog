@@ -1,0 +1,8 @@
+---
+layout: post
+title: Moodstocks 实例测试 - android开发
+---
+
+<p>  因为最近在看增强现实的技术，除了最基本的LBS实现方式，那就是图像识别了，用了ARToolworks和高通的ACAR,这个是效果还不错的一家技术公司。</p><p>  官方网址：http://www.moodstocks.com/</p><p> </p><p align="left">3年前Moodstocks诞生，是一家研究图像识别技术的公司。Moodstocks 提供了一套针对手持设备的图像识别解决方案，几个月前它开始从雪铁龙汽车，大众汽车那里得到订单。但 Moodstocks 并不打算成为一家 &ldquo;外包铺子&rdquo;，它选择了向开发者开放平台，专心做一个图像识别服务商。</p><p align="left">最新版本的 Moodstocks 提供了离线图像识别功能，允许事先存储多达 200 张照片。以上功能将通过 Moodstocks SDK 提供给开发者，费用为每张照片 0.1 欧元/月。</p><p align="left">谁将是 Moodstocks 的潜在服务对象？或者说 Moodstocks 将在哪些应用程序里找到一席之地？</p>购物应用杂志应用广告应用大部分可以运用到现实增强技术的场景里<p>测试过程：</p><p> 1. 下载SDK :https://github.com/Moodstocks/moodstocks-sdk/downloadssdk中包含一个库文件libjmoodstocks-sdk.so 和 源码</p><p>  以及例子程序：git clone git://github.com/Moodstocks/moodstocks-sdk.git，当然，使用git下载</p><p> （ 也可以按照文档提示操作：https://github.com/Moodstocks/moodstocks-sdk/wiki/Getting-Started#wiki-android-tutorial）</p><p>2. 将例子程序中的demo1导入到eclipse中，这时会因为缺少so文件和源文件而报错，这个时候将sdk中的src和libs导入到项目中，便不会报错！</p><p>3. 注册一个账号，注意：注册以后必须等待技术提供商的验证和激活，这个过程你可以发邮件催促下，也可以再聊天室里寻求帮助(如果英文沟通无障碍的话)，</p><p>  他们是巴黎的公司，有-7个时差。</p><p>  注册成功后需要创建你自己的项目，然后会对项目分配你一个key和一个密钥。</p><p>4. 用key和密钥替换 项目中的Scanner.java中的API_KEY 和API_SECRET</p><p>5. 此时还无法演示程序，必须上传你要搜索的图片， 按照文档操作：https://github.com/Moodstocks/moodstocks-api/wiki/api-v2-tuto-indexing</p><p>  必须在linux或者mac下，技术商告诉我 windows 太麻烦，他们暂时没有相应的操作文档。</p><p>如此一番，如果之前安装过项目，将其卸载，然后重新安装就可以时候别你所上传的图片并且显示图片相对应的标签。</p><p>问题是，如何显示更多自定义的信息本人目前还没有找到方法，若有，会续上的...</p><p>  </p>
+
+了解破碎机常识：<a href='http://www.crushermillsupplier.com'>crusher mill supplier</a>
